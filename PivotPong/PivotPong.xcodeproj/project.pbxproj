@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE3EB56818FC649000F21C88 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEAC78A418FC4E3B00C4FF0D /* UIKit.framework */; };
+		AE3EB56918FC649000F21C88 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEAC78A018FC4E3B00C4FF0D /* Foundation.framework */; };
+		AE3EB56A18FC649000F21C88 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEAC78A218FC4E3B00C4FF0D /* CoreGraphics.framework */; };
+		AE3EB57018FC649000F21C88 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AE3EB56E18FC649000F21C88 /* InfoPlist.strings */; };
+		AE3EB57218FC649000F21C88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3EB57118FC649000F21C88 /* main.m */; };
+		AE3EB57618FC649000F21C88 /* Cedar-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE3EB57518FC649000F21C88 /* Cedar-iOS.framework */; };
+		AE3EB57818FC649000F21C88 /* ExampleSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE3EB57718FC649000F21C88 /* ExampleSpec.mm */; };
 		AEAC78A118FC4E3B00C4FF0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEAC78A018FC4E3B00C4FF0D /* Foundation.framework */; };
 		AEAC78A318FC4E3B00C4FF0D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEAC78A218FC4E3B00C4FF0D /* CoreGraphics.framework */; };
 		AEAC78A518FC4E3B00C4FF0D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEAC78A418FC4E3B00C4FF0D /* UIKit.framework */; };
@@ -14,24 +21,18 @@
 		AEAC78AD18FC4E3B00C4FF0D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAC78AC18FC4E3B00C4FF0D /* main.m */; };
 		AEAC78B118FC4E3B00C4FF0D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAC78B018FC4E3B00C4FF0D /* AppDelegate.m */; };
 		AEAC78B318FC4E3B00C4FF0D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEAC78B218FC4E3B00C4FF0D /* Images.xcassets */; };
-		AEAC78BA18FC4E3B00C4FF0D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEAC78B918FC4E3B00C4FF0D /* XCTest.framework */; };
-		AEAC78BB18FC4E3B00C4FF0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEAC78A018FC4E3B00C4FF0D /* Foundation.framework */; };
-		AEAC78BC18FC4E3B00C4FF0D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEAC78A418FC4E3B00C4FF0D /* UIKit.framework */; };
-		AEAC78C418FC4E3B00C4FF0D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AEAC78C218FC4E3B00C4FF0D /* InfoPlist.strings */; };
-		AEAC78C618FC4E3B00C4FF0D /* PivotPongTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAC78C518FC4E3B00C4FF0D /* PivotPongTests.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		AEAC78BD18FC4E3B00C4FF0D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AEAC789518FC4E3B00C4FF0D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AEAC789C18FC4E3B00C4FF0D;
-			remoteInfo = PivotPong;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		55C223EC68D649D9B7912CBA /* Pods-PivotPongTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PivotPongTests.xcconfig"; path = "../Pods/Pods-PivotPongTests.xcconfig"; sourceTree = "<group>"; };
+		AE3EB56718FC649000F21C88 /* Specs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Specs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE3EB56D18FC649000F21C88 /* Specs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Specs-Info.plist"; sourceTree = "<group>"; };
+		AE3EB56F18FC649000F21C88 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AE3EB57118FC649000F21C88 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AE3EB57318FC649000F21C88 /* Specs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
+		AE3EB57418FC649000F21C88 /* Rakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
+		AE3EB57518FC649000F21C88 /* Cedar-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Cedar-iOS.framework"; path = "Frameworks/Cedar-iOS.framework"; sourceTree = "<group>"; };
+		AE3EB57718FC649000F21C88 /* ExampleSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ExampleSpec.mm; sourceTree = "<group>"; };
 		AEAC789D18FC4E3B00C4FF0D /* PivotPong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PivotPong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEAC78A018FC4E3B00C4FF0D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AEAC78A218FC4E3B00C4FF0D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -43,14 +44,22 @@
 		AEAC78AF18FC4E3B00C4FF0D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AEAC78B018FC4E3B00C4FF0D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AEAC78B218FC4E3B00C4FF0D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		AEAC78B818FC4E3B00C4FF0D /* PivotPongTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PivotPongTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEAC78B918FC4E3B00C4FF0D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		AEAC78C118FC4E3B00C4FF0D /* PivotPongTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PivotPongTests-Info.plist"; sourceTree = "<group>"; };
-		AEAC78C318FC4E3B00C4FF0D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		AEAC78C518FC4E3B00C4FF0D /* PivotPongTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PivotPongTests.m; sourceTree = "<group>"; };
+		E21CA42E6F604CD2BE9460B7 /* libPods-PivotPongTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PivotPongTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AE3EB56418FC649000F21C88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE3EB56A18FC649000F21C88 /* CoreGraphics.framework in Frameworks */,
+				AE3EB56818FC649000F21C88 /* UIKit.framework in Frameworks */,
+				AE3EB57618FC649000F21C88 /* Cedar-iOS.framework in Frameworks */,
+				AE3EB56918FC649000F21C88 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AEAC789A18FC4E3B00C4FF0D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -61,26 +70,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AEAC78B518FC4E3B00C4FF0D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AEAC78BA18FC4E3B00C4FF0D /* XCTest.framework in Frameworks */,
-				AEAC78BC18FC4E3B00C4FF0D /* UIKit.framework in Frameworks */,
-				AEAC78BB18FC4E3B00C4FF0D /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE3EB56B18FC649000F21C88 /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				AE3EB57418FC649000F21C88 /* Rakefile */,
+				AE3EB57518FC649000F21C88 /* Cedar-iOS.framework */,
+				AE3EB57718FC649000F21C88 /* ExampleSpec.mm */,
+				AE3EB56C18FC649000F21C88 /* Supporting Files */,
+			);
+			path = Specs;
+			sourceTree = "<group>";
+		};
+		AE3EB56C18FC649000F21C88 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AE3EB56D18FC649000F21C88 /* Specs-Info.plist */,
+				AE3EB56E18FC649000F21C88 /* InfoPlist.strings */,
+				AE3EB57118FC649000F21C88 /* main.m */,
+				AE3EB57318FC649000F21C88 /* Specs-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		AEAC789418FC4E3B00C4FF0D = {
 			isa = PBXGroup;
 			children = (
 				AEAC78A618FC4E3B00C4FF0D /* PivotPong */,
-				AEAC78BF18FC4E3B00C4FF0D /* PivotPongTests */,
+				AE3EB56B18FC649000F21C88 /* Specs */,
 				AEAC789F18FC4E3B00C4FF0D /* Frameworks */,
 				AEAC789E18FC4E3B00C4FF0D /* Products */,
+				55C223EC68D649D9B7912CBA /* Pods-PivotPongTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,7 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				AEAC789D18FC4E3B00C4FF0D /* PivotPong.app */,
-				AEAC78B818FC4E3B00C4FF0D /* PivotPongTests.xctest */,
+				AE3EB56718FC649000F21C88 /* Specs.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,6 +122,7 @@
 				AEAC78A218FC4E3B00C4FF0D /* CoreGraphics.framework */,
 				AEAC78A418FC4E3B00C4FF0D /* UIKit.framework */,
 				AEAC78B918FC4E3B00C4FF0D /* XCTest.framework */,
+				E21CA42E6F604CD2BE9460B7 /* libPods-PivotPongTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -126,27 +149,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		AEAC78BF18FC4E3B00C4FF0D /* PivotPongTests */ = {
-			isa = PBXGroup;
-			children = (
-				AEAC78C518FC4E3B00C4FF0D /* PivotPongTests.m */,
-				AEAC78C018FC4E3B00C4FF0D /* Supporting Files */,
-			);
-			path = PivotPongTests;
-			sourceTree = "<group>";
-		};
-		AEAC78C018FC4E3B00C4FF0D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				AEAC78C118FC4E3B00C4FF0D /* PivotPongTests-Info.plist */,
-				AEAC78C218FC4E3B00C4FF0D /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		AE3EB56618FC649000F21C88 /* Specs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE3EB57918FC649000F21C88 /* Build configuration list for PBXNativeTarget "Specs" */;
+			buildPhases = (
+				AE3EB56318FC649000F21C88 /* Sources */,
+				AE3EB56418FC649000F21C88 /* Frameworks */,
+				AE3EB56518FC649000F21C88 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Specs;
+			productName = Specs;
+			productReference = AE3EB56718FC649000F21C88 /* Specs.app */;
+			productType = "com.apple.product-type.application";
+		};
 		AEAC789C18FC4E3B00C4FF0D /* PivotPong */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AEAC78C918FC4E3B00C4FF0D /* Build configuration list for PBXNativeTarget "PivotPong" */;
@@ -164,24 +186,6 @@
 			productReference = AEAC789D18FC4E3B00C4FF0D /* PivotPong.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AEAC78B718FC4E3B00C4FF0D /* PivotPongTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AEAC78CC18FC4E3B00C4FF0D /* Build configuration list for PBXNativeTarget "PivotPongTests" */;
-			buildPhases = (
-				AEAC78B418FC4E3B00C4FF0D /* Sources */,
-				AEAC78B518FC4E3B00C4FF0D /* Frameworks */,
-				AEAC78B618FC4E3B00C4FF0D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AEAC78BE18FC4E3B00C4FF0D /* PBXTargetDependency */,
-			);
-			name = PivotPongTests;
-			productName = PivotPongTests;
-			productReference = AEAC78B818FC4E3B00C4FF0D /* PivotPongTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -190,11 +194,6 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Pivotal Labs";
-				TargetAttributes = {
-					AEAC78B718FC4E3B00C4FF0D = {
-						TestTargetID = AEAC789C18FC4E3B00C4FF0D;
-					};
-				};
 			};
 			buildConfigurationList = AEAC789818FC4E3B00C4FF0D /* Build configuration list for PBXProject "PivotPong" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -209,12 +208,20 @@
 			projectRoot = "";
 			targets = (
 				AEAC789C18FC4E3B00C4FF0D /* PivotPong */,
-				AEAC78B718FC4E3B00C4FF0D /* PivotPongTests */,
+				AE3EB56618FC649000F21C88 /* Specs */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		AE3EB56518FC649000F21C88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE3EB57018FC649000F21C88 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AEAC789B18FC4E3B00C4FF0D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -224,17 +231,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AEAC78B618FC4E3B00C4FF0D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AEAC78C418FC4E3B00C4FF0D /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AE3EB56318FC649000F21C88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE3EB57218FC649000F21C88 /* main.m in Sources */,
+				AE3EB57818FC649000F21C88 /* ExampleSpec.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AEAC789918FC4E3B00C4FF0D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -244,25 +252,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AEAC78B418FC4E3B00C4FF0D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AEAC78C618FC4E3B00C4FF0D /* PivotPongTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		AEAC78BE18FC4E3B00C4FF0D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AEAC789C18FC4E3B00C4FF0D /* PivotPong */;
-			targetProxy = AEAC78BD18FC4E3B00C4FF0D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
+		AE3EB56E18FC649000F21C88 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE3EB56F18FC649000F21C88 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		AEAC78A918FC4E3B00C4FF0D /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -271,17 +271,58 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		AEAC78C218FC4E3B00C4FF0D /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AEAC78C318FC4E3B00C4FF0D /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		AE3EB57A18FC649000F21C88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Specs/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Specs/Specs-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-all_load",
+					"-lstdc++",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AE3EB57B18FC649000F21C88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Specs/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
+				INFOPLIST_FILE = "Specs/Specs-Info.plist";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-all_load",
+					"-lstdc++",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		AEAC78C718FC4E3B00C4FF0D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -380,49 +421,17 @@
 			};
 			name = Release;
 		};
-		AEAC78CD18FC4E3B00C4FF0D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PivotPong.app/PivotPong";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PivotPong/PivotPong-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "PivotPongTests/PivotPongTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		AEAC78CE18FC4E3B00C4FF0D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PivotPong.app/PivotPong";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PivotPong/PivotPong-Prefix.pch";
-				INFOPLIST_FILE = "PivotPongTests/PivotPongTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AE3EB57918FC649000F21C88 /* Build configuration list for PBXNativeTarget "Specs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE3EB57A18FC649000F21C88 /* Debug */,
+				AE3EB57B18FC649000F21C88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		AEAC789818FC4E3B00C4FF0D /* Build configuration list for PBXProject "PivotPong" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -439,14 +448,7 @@
 				AEAC78CB18FC4E3B00C4FF0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		AEAC78CC18FC4E3B00C4FF0D /* Build configuration list for PBXNativeTarget "PivotPongTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AEAC78CD18FC4E3B00C4FF0D /* Debug */,
-				AEAC78CE18FC4E3B00C4FF0D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
