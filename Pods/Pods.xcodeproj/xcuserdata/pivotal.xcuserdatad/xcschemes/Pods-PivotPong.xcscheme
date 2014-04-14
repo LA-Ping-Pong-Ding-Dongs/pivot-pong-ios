@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A0E2C18CEF7D428B99623B65"
-               BuildableName = "libPods-PivotPongTests.a"
-               BlueprintName = "Pods-PivotPongTests"
+               BlueprintIdentifier = "BC042C063C5B41F690E868C4"
+               BuildableName = "libPods-PivotPong.a"
+               BlueprintName = "Pods-PivotPong"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

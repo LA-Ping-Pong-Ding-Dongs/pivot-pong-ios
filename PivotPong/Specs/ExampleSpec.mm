@@ -9,7 +9,7 @@ SPEC_BEGIN(ExampleSpec)
 describe(@"Example specs on NSString", ^{
 
     it(@"lowercaseString returns a new string with everything in lower case", ^{
-        [@"FOOBar" lowercaseString] should equal(@"foobar lol");
+        [@"FOOBar" lowercaseString] should equal(@"foobar");
     });
 
     it(@"length returns the number of characters in the string", ^{

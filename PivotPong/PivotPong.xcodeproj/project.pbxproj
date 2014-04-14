@@ -7,13 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AE3EB56818FC649000F21C88 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEAC78A418FC4E3B00C4FF0D /* UIKit.framework */; };
-		AE3EB56918FC649000F21C88 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEAC78A018FC4E3B00C4FF0D /* Foundation.framework */; };
-		AE3EB56A18FC649000F21C88 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEAC78A218FC4E3B00C4FF0D /* CoreGraphics.framework */; };
-		AE3EB57018FC649000F21C88 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AE3EB56E18FC649000F21C88 /* InfoPlist.strings */; };
-		AE3EB57218FC649000F21C88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3EB57118FC649000F21C88 /* main.m */; };
-		AE3EB57618FC649000F21C88 /* Cedar-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE3EB57518FC649000F21C88 /* Cedar-iOS.framework */; };
-		AE3EB57818FC649000F21C88 /* ExampleSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE3EB57718FC649000F21C88 /* ExampleSpec.mm */; };
+		5109BE65B6514EEFA186E1D9 /* libPods-PivotPong.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 298179B670EC4C65BA84F82F /* libPods-PivotPong.a */; };
 		AEAC78A118FC4E3B00C4FF0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEAC78A018FC4E3B00C4FF0D /* Foundation.framework */; };
 		AEAC78A318FC4E3B00C4FF0D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEAC78A218FC4E3B00C4FF0D /* CoreGraphics.framework */; };
 		AEAC78A518FC4E3B00C4FF0D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEAC78A418FC4E3B00C4FF0D /* UIKit.framework */; };
@@ -21,18 +15,19 @@
 		AEAC78AD18FC4E3B00C4FF0D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAC78AC18FC4E3B00C4FF0D /* main.m */; };
 		AEAC78B118FC4E3B00C4FF0D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAC78B018FC4E3B00C4FF0D /* AppDelegate.m */; };
 		AEAC78B318FC4E3B00C4FF0D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEAC78B218FC4E3B00C4FF0D /* Images.xcassets */; };
+		AEE820A718FC6D4C000C49A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEAC78A418FC4E3B00C4FF0D /* UIKit.framework */; };
+		AEE820A818FC6D4C000C49A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEAC78A018FC4E3B00C4FF0D /* Foundation.framework */; };
+		AEE820A918FC6D4C000C49A4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEAC78A218FC4E3B00C4FF0D /* CoreGraphics.framework */; };
+		AEE820AF18FC6D4C000C49A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AEE820AD18FC6D4C000C49A4 /* InfoPlist.strings */; };
+		AEE820B118FC6D4C000C49A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE820B018FC6D4C000C49A4 /* main.m */; };
+		AEE820B518FC6D4C000C49A4 /* Cedar-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE820B418FC6D4C000C49A4 /* Cedar-iOS.framework */; };
+		AEE820B718FC6D4C000C49A4 /* ExampleSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AEE820B618FC6D4C000C49A4 /* ExampleSpec.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		55C223EC68D649D9B7912CBA /* Pods-PivotPongTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PivotPongTests.xcconfig"; path = "../Pods/Pods-PivotPongTests.xcconfig"; sourceTree = "<group>"; };
-		AE3EB56718FC649000F21C88 /* Specs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Specs.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE3EB56D18FC649000F21C88 /* Specs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Specs-Info.plist"; sourceTree = "<group>"; };
-		AE3EB56F18FC649000F21C88 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		AE3EB57118FC649000F21C88 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		AE3EB57318FC649000F21C88 /* Specs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
-		AE3EB57418FC649000F21C88 /* Rakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
-		AE3EB57518FC649000F21C88 /* Cedar-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Cedar-iOS.framework"; path = "Frameworks/Cedar-iOS.framework"; sourceTree = "<group>"; };
-		AE3EB57718FC649000F21C88 /* ExampleSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ExampleSpec.mm; sourceTree = "<group>"; };
+		298179B670EC4C65BA84F82F /* libPods-PivotPong.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PivotPong.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		507F1C0B53F94E588568064F /* Pods-Specs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.xcconfig"; path = "../Pods/Pods-Specs.xcconfig"; sourceTree = "<group>"; };
+		5926F102F57D428AA5DBF571 /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEAC789D18FC4E3B00C4FF0D /* PivotPong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PivotPong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEAC78A018FC4E3B00C4FF0D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AEAC78A218FC4E3B00C4FF0D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -45,21 +40,19 @@
 		AEAC78B018FC4E3B00C4FF0D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AEAC78B218FC4E3B00C4FF0D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AEAC78B918FC4E3B00C4FF0D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		AEE820A618FC6D4C000C49A4 /* Specs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Specs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEE820AC18FC6D4C000C49A4 /* Specs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Specs-Info.plist"; sourceTree = "<group>"; };
+		AEE820AE18FC6D4C000C49A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AEE820B018FC6D4C000C49A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AEE820B218FC6D4C000C49A4 /* Specs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
+		AEE820B318FC6D4C000C49A4 /* Rakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
+		AEE820B418FC6D4C000C49A4 /* Cedar-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Cedar-iOS.framework"; path = "Frameworks/Cedar-iOS.framework"; sourceTree = "<group>"; };
+		AEE820B618FC6D4C000C49A4 /* ExampleSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ExampleSpec.mm; sourceTree = "<group>"; };
 		E21CA42E6F604CD2BE9460B7 /* libPods-PivotPongTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PivotPongTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB5B3FC9F4A04CBA9A4D5520 /* Pods-PivotPong.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PivotPong.xcconfig"; path = "../Pods/Pods-PivotPong.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AE3EB56418FC649000F21C88 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AE3EB56A18FC649000F21C88 /* CoreGraphics.framework in Frameworks */,
-				AE3EB56818FC649000F21C88 /* UIKit.framework in Frameworks */,
-				AE3EB57618FC649000F21C88 /* Cedar-iOS.framework in Frameworks */,
-				AE3EB56918FC649000F21C88 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		AEAC789A18FC4E3B00C4FF0D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -67,42 +60,33 @@
 				AEAC78A318FC4E3B00C4FF0D /* CoreGraphics.framework in Frameworks */,
 				AEAC78A518FC4E3B00C4FF0D /* UIKit.framework in Frameworks */,
 				AEAC78A118FC4E3B00C4FF0D /* Foundation.framework in Frameworks */,
+				5109BE65B6514EEFA186E1D9 /* libPods-PivotPong.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEE820A318FC6D4C000C49A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEE820A918FC6D4C000C49A4 /* CoreGraphics.framework in Frameworks */,
+				AEE820A718FC6D4C000C49A4 /* UIKit.framework in Frameworks */,
+				AEE820B518FC6D4C000C49A4 /* Cedar-iOS.framework in Frameworks */,
+				AEE820A818FC6D4C000C49A4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AE3EB56B18FC649000F21C88 /* Specs */ = {
-			isa = PBXGroup;
-			children = (
-				AE3EB57418FC649000F21C88 /* Rakefile */,
-				AE3EB57518FC649000F21C88 /* Cedar-iOS.framework */,
-				AE3EB57718FC649000F21C88 /* ExampleSpec.mm */,
-				AE3EB56C18FC649000F21C88 /* Supporting Files */,
-			);
-			path = Specs;
-			sourceTree = "<group>";
-		};
-		AE3EB56C18FC649000F21C88 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				AE3EB56D18FC649000F21C88 /* Specs-Info.plist */,
-				AE3EB56E18FC649000F21C88 /* InfoPlist.strings */,
-				AE3EB57118FC649000F21C88 /* main.m */,
-				AE3EB57318FC649000F21C88 /* Specs-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		AEAC789418FC4E3B00C4FF0D = {
 			isa = PBXGroup;
 			children = (
 				AEAC78A618FC4E3B00C4FF0D /* PivotPong */,
-				AE3EB56B18FC649000F21C88 /* Specs */,
+				AEE820AA18FC6D4C000C49A4 /* Specs */,
 				AEAC789F18FC4E3B00C4FF0D /* Frameworks */,
 				AEAC789E18FC4E3B00C4FF0D /* Products */,
-				55C223EC68D649D9B7912CBA /* Pods-PivotPongTests.xcconfig */,
+				FB5B3FC9F4A04CBA9A4D5520 /* Pods-PivotPong.xcconfig */,
+				507F1C0B53F94E588568064F /* Pods-Specs.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,7 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				AEAC789D18FC4E3B00C4FF0D /* PivotPong.app */,
-				AE3EB56718FC649000F21C88 /* Specs.app */,
+				AEE820A618FC6D4C000C49A4 /* Specs.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,6 +107,8 @@
 				AEAC78A418FC4E3B00C4FF0D /* UIKit.framework */,
 				AEAC78B918FC4E3B00C4FF0D /* XCTest.framework */,
 				E21CA42E6F604CD2BE9460B7 /* libPods-PivotPongTests.a */,
+				298179B670EC4C65BA84F82F /* libPods-PivotPong.a */,
+				5926F102F57D428AA5DBF571 /* libPods-Specs.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -149,33 +135,40 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		AEE820AA18FC6D4C000C49A4 /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				AEE820B318FC6D4C000C49A4 /* Rakefile */,
+				AEE820B418FC6D4C000C49A4 /* Cedar-iOS.framework */,
+				AEE820B618FC6D4C000C49A4 /* ExampleSpec.mm */,
+				AEE820AB18FC6D4C000C49A4 /* Supporting Files */,
+			);
+			path = Specs;
+			sourceTree = "<group>";
+		};
+		AEE820AB18FC6D4C000C49A4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AEE820AC18FC6D4C000C49A4 /* Specs-Info.plist */,
+				AEE820AD18FC6D4C000C49A4 /* InfoPlist.strings */,
+				AEE820B018FC6D4C000C49A4 /* main.m */,
+				AEE820B218FC6D4C000C49A4 /* Specs-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AE3EB56618FC649000F21C88 /* Specs */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AE3EB57918FC649000F21C88 /* Build configuration list for PBXNativeTarget "Specs" */;
-			buildPhases = (
-				AE3EB56318FC649000F21C88 /* Sources */,
-				AE3EB56418FC649000F21C88 /* Frameworks */,
-				AE3EB56518FC649000F21C88 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Specs;
-			productName = Specs;
-			productReference = AE3EB56718FC649000F21C88 /* Specs.app */;
-			productType = "com.apple.product-type.application";
-		};
 		AEAC789C18FC4E3B00C4FF0D /* PivotPong */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AEAC78C918FC4E3B00C4FF0D /* Build configuration list for PBXNativeTarget "PivotPong" */;
 			buildPhases = (
+				77B912EC34A54E6E94862258 /* Check Pods Manifest.lock */,
 				AEAC789918FC4E3B00C4FF0D /* Sources */,
 				AEAC789A18FC4E3B00C4FF0D /* Frameworks */,
 				AEAC789B18FC4E3B00C4FF0D /* Resources */,
+				68FED82D53344BD0B9A75210 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -184,6 +177,23 @@
 			name = PivotPong;
 			productName = PivotPong;
 			productReference = AEAC789D18FC4E3B00C4FF0D /* PivotPong.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AEE820A518FC6D4C000C49A4 /* Specs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEE820B818FC6D4C000C49A4 /* Build configuration list for PBXNativeTarget "Specs" */;
+			buildPhases = (
+				AEE820A218FC6D4C000C49A4 /* Sources */,
+				AEE820A318FC6D4C000C49A4 /* Frameworks */,
+				AEE820A418FC6D4C000C49A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Specs;
+			productName = Specs;
+			productReference = AEE820A618FC6D4C000C49A4 /* Specs.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -208,20 +218,12 @@
 			projectRoot = "";
 			targets = (
 				AEAC789C18FC4E3B00C4FF0D /* PivotPong */,
-				AE3EB56618FC649000F21C88 /* Specs */,
+				AEE820A518FC6D4C000C49A4 /* Specs */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AE3EB56518FC649000F21C88 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AE3EB57018FC649000F21C88 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		AEAC789B18FC4E3B00C4FF0D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -231,18 +233,50 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		AE3EB56318FC649000F21C88 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+		AEE820A418FC6D4C000C49A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE3EB57218FC649000F21C88 /* main.m in Sources */,
-				AE3EB57818FC649000F21C88 /* ExampleSpec.mm in Sources */,
+				AEE820AF18FC6D4C000C49A4 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		68FED82D53344BD0B9A75210 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Pods-PivotPong-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77B912EC34A54E6E94862258 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
 		AEAC789918FC4E3B00C4FF0D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -252,17 +286,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AEE820A218FC6D4C000C49A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEE820B118FC6D4C000C49A4 /* main.m in Sources */,
+				AEE820B718FC6D4C000C49A4 /* ExampleSpec.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AE3EB56E18FC649000F21C88 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AE3EB56F18FC649000F21C88 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		AEAC78A918FC4E3B00C4FF0D /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -271,58 +306,17 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
+		AEE820AD18FC6D4C000C49A4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEE820AE18FC6D4C000C49A4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		AE3EB57A18FC649000F21C88 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Specs/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Specs/Specs-Info.plist";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-ObjC",
-					"-all_load",
-					"-lstdc++",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		AE3EB57B18FC649000F21C88 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Specs/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
-				INFOPLIST_FILE = "Specs/Specs-Info.plist";
-				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-ObjC",
-					"-all_load",
-					"-lstdc++",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
 		AEAC78C718FC4E3B00C4FF0D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -397,6 +391,7 @@
 		};
 		AEAC78CA18FC4E3B00C4FF0D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB5B3FC9F4A04CBA9A4D5520 /* Pods-PivotPong.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -410,6 +405,7 @@
 		};
 		AEAC78CB18FC4E3B00C4FF0D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB5B3FC9F4A04CBA9A4D5520 /* Pods-PivotPong.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -421,17 +417,58 @@
 			};
 			name = Release;
 		};
+		AEE820B918FC6D4C000C49A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Specs/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Specs/Specs-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-all_load",
+					"-lstdc++",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AEE820BA18FC6D4C000C49A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Specs/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
+				INFOPLIST_FILE = "Specs/Specs-Info.plist";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-all_load",
+					"-lstdc++",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AE3EB57918FC649000F21C88 /* Build configuration list for PBXNativeTarget "Specs" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AE3EB57A18FC649000F21C88 /* Debug */,
-				AE3EB57B18FC649000F21C88 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
 		AEAC789818FC4E3B00C4FF0D /* Build configuration list for PBXProject "PivotPong" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -449,6 +486,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		AEE820B818FC6D4C000C49A4 /* Build configuration list for PBXNativeTarget "Specs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEE820B918FC6D4C000C49A4 /* Debug */,
+				AEE820BA18FC6D4C000C49A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
