@@ -6,6 +6,13 @@
 // project.
 
 
+// Blindside
+#define COCOAPODS_POD_AVAILABLE_Blindside
+// This library does not follow semantic-versioning,
+// so we were not able to define version macros.
+// Please contact the author.
+// Version: 1.0-alpha.
+
 // KSDeferred
 #define COCOAPODS_POD_AVAILABLE_KSDeferred
 #define COCOAPODS_VERSION_MAJOR_KSDeferred 0

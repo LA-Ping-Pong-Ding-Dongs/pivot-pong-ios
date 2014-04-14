@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-PivotPong-Blindside.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-PivotPong-KSDeferred.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1203195AF8A1487AA41D999F</key>
+		<key>AC3FA50E492F400BB978905E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2C1D083E77DF472D9101ADAC</key>
+		<key>C3522C7C3ACD44E98857A7F3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>59D1798A4CAE488AA39592CB</key>
+		<key>DE7399376CEA4245AEBC5445</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BC042C063C5B41F690E868C4</key>
+		<key>F13A63AE04E74FD8A12BF29F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F3F76404769B43EF85CA2A5B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

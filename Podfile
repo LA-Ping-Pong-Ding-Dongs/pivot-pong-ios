@@ -3,6 +3,7 @@ xcodeproj 'PivotPong/PivotPong.xcodeproj'
 
 target :PivotPong do
   pod 'KSDeferred'
+  pod 'Blindside', podspec: 'https://raw.githubusercontent.com/jbsf/blindside/master/Blindside.podspec'
 end
 
 target :Specs do
