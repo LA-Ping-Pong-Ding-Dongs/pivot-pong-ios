@@ -20,7 +20,11 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    ((id<Injectable>)(segue.destinationViewController)).injector = self.injector;
+    UIViewController *destinationController = segue.destinationViewController;
+    if ([destinationController isKindOfClass:[UINavigationController class]]) {
+        destinationController = [((UINavigationController *)destinationController) topViewController];
+    }
+    ((id<Injectable>)destinationController).injector = self.injector;
 }
 
 @end

@@ -42,14 +42,29 @@
                     <navigationItem key="navigationItem" id="QZl-td-DQA"/>
                     <connections>
                         <segue destination="Q4X-tU-Ipf" kind="push" identifier="pushAttestation" id="woH-uF-qhe"/>
-                        <segue destination="rri-Wv-xmJ" kind="modal" identifier="presentIdentification" id="tzt-tU-F03"/>
+                        <segue destination="OZe-w7-6NO" kind="modal" identifier="presentIdentification" id="AFE-So-EzE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ppH-Hj-wlJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1558" y="378"/>
         </scene>
-        <!--Identification Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="DEb-gf-HKO">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="OZe-w7-6NO" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="b3R-WQ-DlO">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rri-Wv-xmJ" kind="relationship" relationship="rootViewController" id="RwD-Cr-wj4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3N6-a4-8ef" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-809" y="962"/>
+        </scene>
+        <!--Identification Controller - Find Yourself!-->
         <scene sceneID="LXB-Mz-GIk">
             <objects>
                 <viewController storyboardIdentifier="IdentificationController" id="rri-Wv-xmJ" customClass="IdentificationController" sceneMemberID="viewController">
@@ -61,19 +76,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lol!!!!!!!!!!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6K-Tv-On1">
-                                <rect key="frame" x="91" y="240" width="115" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="mjd-Ss-QY0">
+                                <rect key="frame" x="20" y="77" width="280" height="471"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mjd-Ss-QY0" firstAttribute="leading" secondItem="gal-WX-28s" secondAttribute="leading" constant="20" id="4FB-p6-8si"/>
+                            <constraint firstAttribute="trailing" secondItem="mjd-Ss-QY0" secondAttribute="trailing" constant="20" id="Khe-GM-Kfx"/>
+                            <constraint firstItem="mjd-Ss-QY0" firstAttribute="top" secondItem="EIh-oK-sAe" secondAttribute="bottom" constant="13" id="atn-qK-Li2"/>
+                            <constraint firstAttribute="bottom" secondItem="mjd-Ss-QY0" secondAttribute="bottom" constant="20" id="nDx-0k-ahh"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Find Yourself!" id="8K1-0W-z4X">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="AoJ-A5-Xbx"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gi4-hJ-fuc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="666" y="1534"/>
+            <point key="canvasLocation" x="-149" y="971"/>
         </scene>
         <!--Attestation Controller-->
         <scene sceneID="SCX-30-ayF">
@@ -100,7 +123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uyj-Ed-ZZ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="666" y="-89"/>
+            <point key="canvasLocation" x="-604" y="21"/>
         </scene>
     </scenes>
     <resources>

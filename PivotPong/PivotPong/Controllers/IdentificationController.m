@@ -1,6 +1,7 @@
 #import "IdentificationController.h"
 
 @interface IdentificationController ()
+@property (nonatomic, strong) UINavigationController *nav;
 @end
 
 @implementation IdentificationController
@@ -18,6 +19,7 @@
 
 - (void)viewDidLoad
 {
+
     [super viewDidLoad];
     NSLog(@"================> yo my injector is what: %@", _injector);
     // Do any additional setup after loading the view.

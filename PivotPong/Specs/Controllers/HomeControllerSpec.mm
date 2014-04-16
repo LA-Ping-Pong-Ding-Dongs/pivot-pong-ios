@@ -29,12 +29,15 @@ describe(@"HomeController", ^{
         });
         
         it(@"presents the Identification Controller as a modal", ^{
-            expect(homeController.presentedViewController).to(be_instance_of([IdentificationController class]));
+            UINavigationController *identificationNav = (UINavigationController *)homeController.presentedViewController;
+            expect(identificationNav).to(be_instance_of([UINavigationController class]));
+            expect(identificationNav.topViewController).to(be_instance_of([IdentificationController class]));
             expect(homeController.navigationController.topViewController).to(be_same_instance_as(homeController));
         });
         
         it(@"assigns the injector", ^{
-            IdentificationController *identification = (IdentificationController *)homeController.presentedViewController;
+            UINavigationController *identificationNav = (UINavigationController *)homeController.presentedViewController;
+            IdentificationController *identification = (IdentificationController *)identificationNav.topViewController;
             expect(identification.injector).to(be_same_instance_as(injector));
         });
     });
