@@ -8,22 +8,30 @@ PODS:
     - PivotalCoreKit/Foundation/Core
     - PivotalCoreKit/UIKit/Core
   - PivotalCoreKit/Foundation/Core (0.0.3)
+  - PivotalCoreKit/Foundation/SpecHelper/Fakes (0.0.3):
+    - PivotalCoreKit/Foundation/SpecHelper/Fixtures
+  - PivotalCoreKit/Foundation/SpecHelper/Fixtures (0.0.3)
   - PivotalCoreKit/UIKit/Core (0.0.3)
+  - PivotalCoreKit/UIKit/SpecHelper/Extensions (0.0.3)
+  - PivotalCoreKit/UIKit/SpecHelper/Stubs (0.0.3)
 
 DEPENDENCIES:
   - Blindside (from `https://raw.githubusercontent.com/jbsf/blindside/master/Blindside.podspec`)
   - Cedar
   - KSDeferred
   - PivotalCoreKit
+  - PivotalCoreKit/Foundation/SpecHelper/Fakes
+  - PivotalCoreKit/UIKit/SpecHelper/Extensions
+  - PivotalCoreKit/UIKit/SpecHelper/Stubs
 
 EXTERNAL SOURCES:
   Blindside:
     :podspec: https://raw.githubusercontent.com/jbsf/blindside/master/Blindside.podspec
 
 SPEC CHECKSUMS:
-  Blindside: 3aae47c0138e6f1cf29cb4ed742bcee3744fdd2a
+  Blindside: 411ed4eb6b6565d6c81feb1b07f7676d9f98a342
   Cedar: 16cbb75084031aa41304cdeb0d0c8319c1af1cae
   KSDeferred: d9989ffa9ae3cba02c94b32c9888bb46be4e2a67
   PivotalCoreKit: 349c342734a46c11fc1e0cfc1fb02d010392f8e5
 
-COCOAPODS: 0.31.1
+COCOAPODS: 0.32.1

@@ -1,21 +1,22 @@
-//
-//  AppDelegate.m
-//  PivotPong
-//
-//  Created by pivotal on 4/14/14.
-//  Copyright (c) 2014 Pivotal Labs. All rights reserved.
-//
-
 #import "AppDelegate.h"
+#import "HomeController.h"
+#import "Configurator.h"
+
+@interface AppDelegate ()
+@property (nonatomic, strong) id<BSInjector> injector;
+@end
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    Configurator *configurator = [[Configurator alloc] init];
+    self.injector = [Blindside injectorWithModule:configurator];
+
+    UINavigationController *nav = (UINavigationController *)self.window.rootViewController;
+    id<Injectable> home = (id)nav.topViewController;
+    home.injector = self.injector;
+    
     return YES;
 }
 
