@@ -28,16 +28,28 @@
     NSURL *url = [[NSURL alloc] initWithString:urlString];
 
     [[self.session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        NSInteger statusCode = ((NSHTTPURLResponse *)response).statusCode;
-        if (statusCode == 200) {
+        NSUInteger statusCode = ((NSHTTPURLResponse *)response).statusCode;
+        if (!error && statusCode == 200) {
             [deferred resolveWithValue:data];
         } else {
-            NSError *responseError = [NSError errorWithDomain:@"Servers borked" code:500 userInfo:nil];
-            [deferred rejectWithError:responseError];
+            [deferred rejectWithError:[self deferredErrorFor:error statusCode:statusCode]];
         }
     }] resume];
 
     return deferred.promise;
+}
+
+-(NSError *)deferredErrorFor:(NSError *)dataTaskWithURlError
+                  statusCode:(NSUInteger)statusCode {
+    NSString *message;
+
+    if (dataTaskWithURlError) {
+        message = NSLocalizedString(@"NetworkConnectivityError", nil);
+    } else {
+        message = [NSString stringWithFormat:NSLocalizedString(@"ServerResponseError", nil), statusCode];
+    }
+
+    return [NSError errorWithDomain:message code:PivotPongErrorCodeServerError userInfo:nil];
 }
 
 @end

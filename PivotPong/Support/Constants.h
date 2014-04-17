@@ -4,4 +4,8 @@
 static NSString * const PivotPongApiURLs    = @"apiURLs";
 static NSString * const PivotPongGetPlayers = @"getPlayers";
 
+enum {
+    PivotPongErrorCodeServerError
+} typedef PivotPongErrorCodes;
+
 #endif

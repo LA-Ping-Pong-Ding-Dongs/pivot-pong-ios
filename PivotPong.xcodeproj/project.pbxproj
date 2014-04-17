@@ -23,6 +23,8 @@
 		AE10BCEC18FC8D2700E9FE34 /* AttestationControllerSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE10BCEB18FC8D2700E9FE34 /* AttestationControllerSpec.mm */; };
 		AE10BCEE18FC8DA200E9FE34 /* AppDelegateSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE10BCED18FC8DA200E9FE34 /* AppDelegateSpec.mm */; };
 		AE5EAF0D18FDECE1008222E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE0F2E2F18FC9FEC007B6EF0 /* Main.storyboard */; };
+		AE7D5F2F190093B30070F512 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AE7D5F2E190093B30070F512 /* Localizable.strings */; };
+		AE7D5F30190093B30070F512 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AE7D5F2E190093B30070F512 /* Localizable.strings */; };
 		AEAAD30A19005DA300A10D57 /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAAD30519005DA300A10D57 /* HTTPClient.m */; };
 		AEAAD30B19005DA300A10D57 /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAAD30519005DA300A10D57 /* HTTPClient.m */; };
 		AEAAD30C19005DA300A10D57 /* JSONClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAAD30719005DA300A10D57 /* JSONClient.m */; };
@@ -89,6 +91,7 @@
 		AE7297DC18FD9BDE00F58A30 /* libPods-PivotPong.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-PivotPong.a"; path = "../Pods/build/Debug-iphoneos/libPods-PivotPong.a"; sourceTree = "<group>"; };
 		AE73D43E18FEED2000AFDD81 /* PivotPongClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PivotPongClient.h; sourceTree = "<group>"; };
 		AE73D43F18FEED2000AFDD81 /* PivotPongClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PivotPongClient.m; sourceTree = "<group>"; };
+		AE7D5F2E190093B30070F512 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		AEA95BD018FDBA2B00306B2A /* libPods-Specs.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Specs.a"; path = "../Pods/build/Debug-iphoneos/libPods-Specs.a"; sourceTree = "<group>"; };
 		AEA95BD218FDBAC100306B2A /* libPods-Specs.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Specs.a"; path = "../Pods/build/Debug-iphoneos/libPods-Specs.a"; sourceTree = "<group>"; };
 		AEA95BD418FDBAC800306B2A /* libPods-PivotPong.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-PivotPong.a"; path = "../Pods/build/Debug-iphoneos/libPods-PivotPong.a"; sourceTree = "<group>"; };
@@ -312,6 +315,7 @@
 				AEAC78A918FC4E3B00C4FF0D /* InfoPlist.strings */,
 				AEAC78AC18FC4E3B00C4FF0D /* main.m */,
 				AEAC78AE18FC4E3B00C4FF0D /* PivotPong-Prefix.pch */,
+				AE7D5F2E190093B30070F512 /* Localizable.strings */,
 			);
 			name = "Target Files";
 			sourceTree = "<group>";
@@ -424,6 +428,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE7D5F2F190093B30070F512 /* Localizable.strings in Resources */,
 				AEAC78AB18FC4E3B00C4FF0D /* InfoPlist.strings in Resources */,
 				AEAC78B318FC4E3B00C4FF0D /* Images.xcassets in Resources */,
 				AE0F2E3018FC9FEC007B6EF0 /* Main.storyboard in Resources */,
@@ -435,6 +440,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE7D5F30190093B30070F512 /* Localizable.strings in Resources */,
 				AEC2389B18FE051700F6217A /* pivID_blue-1004x400.png in Resources */,
 				AE06053B190054AA00A9CFDE /* Default-568h@2x.png in Resources */,
 				AE5EAF0D18FDECE1008222E1 /* Main.storyboard in Resources */,

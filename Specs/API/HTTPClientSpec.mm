@@ -32,7 +32,7 @@ describe(@"HTTPClient", ^{
     describe(@"-fetchUrl:", ^{
         __block KSDeferred *deferred;
 
-        it(@"delegates to NSURLSession", ^{
+        it(@"makes a GET request to the url session", ^{
             id<CedarDouble> dataTask = nice_fake_for([NSURLSessionDataTask class]);
 
             session stub_method("dataTaskWithURL:completionHandler:").and_return(dataTask);
@@ -46,59 +46,83 @@ describe(@"HTTPClient", ^{
             expect(url.path).to(equal(@"/url.json"));
         });
 
-        describe(@"when it is successful", ^{
+        describe(@"when a request is made", ^{
+            describe(@"and the response is successful", ^{
+                __block NSData *data;
+                __block NSHTTPURLResponse *response;
+                __block NSError *error;
+
+                beforeEach(^{
+                    data = [@"datadatadata" dataUsingEncoding:NSUTF8StringEncoding];
+                    response = [[NSHTTPURLResponse alloc] initWithURL:nil statusCode:200 HTTPVersion:nil headerFields:nil];
+                    error = nil;
+                    deferred = [injector getInstance:[KSDeferred class]];
+                    spy_on(deferred);
+                    [injector bind:[KSDeferred class] toInstance:deferred];
+                });
+
+                it(@"resolves with value on the KSDeferred object", ^{
+                    __autoreleasing void(^completionHandler)(NSData *data, NSURLResponse *response, NSError *error);
+                    [client fetchUrl:@"http://example.com/url.json"];
+                    NSInvocation *invocation = [[session sent_messages] lastObject];
+                    [invocation getArgument:&completionHandler atIndex:3];
+                    completionHandler(data, response, error);
+                    expect(deferred).to(have_received("resolveWithValue:"));
+                    expect(deferred.promise.value).to(equal(data));
+                    expect(deferred.promise.error).to(be_nil);
+                });
+            });
+
+            describe(@"and the response is unsuccessful", ^{
+                __block NSData *data;
+                __block NSHTTPURLResponse *response;
+                __block NSError *error;
+
+                beforeEach(^{
+                    data = [@"datadatadata" dataUsingEncoding:NSUTF8StringEncoding];
+                    response = [[NSHTTPURLResponse alloc] initWithURL:nil statusCode:500 HTTPVersion:nil headerFields:nil];
+                    error = nil;
+                    deferred = [injector getInstance:[KSDeferred class]];
+                    spy_on(deferred);
+                    [injector bind:[KSDeferred class] toInstance:deferred];
+                });
+
+                it(@"rejects with error on the KSDeferred object", ^{
+                    __autoreleasing void(^completionHandler)(NSData *data, NSURLResponse *response, NSError *error);
+                    [client fetchUrl:@"http://example.com/url.json"];
+                    NSInvocation *invocation = [[session sent_messages] lastObject];
+                    [invocation getArgument:&completionHandler atIndex:3];
+                    completionHandler(data, response, error);
+                    expect(deferred).to(have_received("rejectWithError:"));
+                    expect(deferred.promise.error.localizedDescription).to(contain([NSString stringWithFormat:NSLocalizedString(@"ServerResponseError", nil), 500]));
+                });
+            });
+        });
+
+        describe(@"when a request cannot be made", ^{
             __block NSData *data;
             __block NSHTTPURLResponse *response;
-            __block NSError *error;
-
 
             beforeEach(^{
                 data = [@"datadatadata" dataUsingEncoding:NSUTF8StringEncoding];
                 response = [[NSHTTPURLResponse alloc] initWithURL:nil statusCode:200 HTTPVersion:nil headerFields:nil];
-                error = nil;
                 deferred = [injector getInstance:[KSDeferred class]];
                 spy_on(deferred);
                 [injector bind:[KSDeferred class] toInstance:deferred];
             });
 
-            it(@"resolves with value on the KSDeferred object", ^{
+            it(@"rejects with error on the KSDeferred object", ^{
                 __autoreleasing void(^completionHandler)(NSData *data, NSURLResponse *response, NSError *error);
                 [client fetchUrl:@"http://example.com/url.json"];
                 NSInvocation *invocation = [[session sent_messages] lastObject];
                 [invocation getArgument:&completionHandler atIndex:3];
-                completionHandler(data, response, error);
-                expect(deferred).to(have_received("resolveWithValue:"));
-                expect(deferred.promise.value).to(equal(data));
-                expect(deferred.promise.error).to(be_nil);
-            });
-        });
-
-        describe(@"when it is not successful", ^{
-            __block NSData *data;
-            __block NSHTTPURLResponse *response;
-            __block NSError *error;
-
-
-            beforeEach(^{
-                data = [@"datadatadata" dataUsingEncoding:NSUTF8StringEncoding];
-                response = [[NSHTTPURLResponse alloc] initWithURL:nil statusCode:500 HTTPVersion:nil headerFields:nil];
-                error = nil;
-                deferred = [injector getInstance:[KSDeferred class]];
-                spy_on(deferred);
-                [injector bind:[KSDeferred class] toInstance:deferred];
-            });
-
-            it(@"resolves with value on the KSDeferred object", ^{
-                __autoreleasing void(^completionHandler)(NSData *data, NSURLResponse *response, NSError *error);
-                [client fetchUrl:@"http://example.com/url.json"];
-                NSInvocation *invocation = [[session sent_messages] lastObject];
-                [invocation getArgument:&completionHandler atIndex:3];
+                NSError *error = [[NSError alloc] initWithDomain:NSLocalizedString(@"NetworkConnectivityError", nil) code:PivotPongErrorCodeServerError userInfo:nil];
                 completionHandler(data, response, error);
                 expect(deferred).to(have_received("rejectWithError:"));
                 expect(deferred.promise.error).to_not(be_nil);
+                expect(deferred.promise.error.localizedDescription).to(contain(NSLocalizedString(@"NetworkConnectivityError", nil)));
             });
         });
-
     });
 });
 

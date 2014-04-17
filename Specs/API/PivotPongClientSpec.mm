@@ -31,7 +31,7 @@ describe(@"PivotPongClient", ^{
         __block KSDeferred *jsonClientDeferred;
         beforeEach(^{
             jsonClientDeferred = [injector getInstance:[KSDeferred class]];
-            NSDictionary *result = @{@"foo":@"bar"};
+            NSDictionary *result = @{@"foo": @"bar"};
             [jsonClientDeferred resolveWithValue:result];
             jsonClient stub_method("fetchUrl:").and_return(jsonClientDeferred.promise);
         });
