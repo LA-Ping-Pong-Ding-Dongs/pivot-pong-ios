@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "633C7C7758E346C7855B46F9"
+               BlueprintIdentifier = "34E501A19EA34085AEFC67A7"
                BuildableName = "libPods-PivotPong-KSDeferred.a"
                BlueprintName = "Pods-PivotPong-KSDeferred"
                ReferencedContainer = "container:Pods.xcodeproj">

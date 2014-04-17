@@ -4,7 +4,7 @@ xcodeproj 'PivotPong/PivotPong.xcodeproj'
 def global
   pod 'KSDeferred'
   pod 'Blindside', podspec: 'https://raw.githubusercontent.com/jbsf/blindside/master/Blindside.podspec'
-  pod 'PivotalCoreKit'
+  pod 'PivotalCoreKit', :inhibit_warnings => true
 end
 
 target :PivotPong do

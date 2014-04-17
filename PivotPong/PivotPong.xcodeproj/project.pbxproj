@@ -9,12 +9,7 @@
 /* Begin PBXBuildFile section */
 		5109BE65B6514EEFA186E1D9 /* libPods-PivotPong.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 298179B670EC4C65BA84F82F /* libPods-PivotPong.a */; };
 		5530DA449D984E6683181461 /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5926F102F57D428AA5DBF571 /* libPods-Specs.a */; };
-		AE06053018FF5BA400A9CFDE /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE06052F18FF5BA400A9CFDE /* HTTPClient.m */; };
-		AE06053118FF5BA400A9CFDE /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE06052F18FF5BA400A9CFDE /* HTTPClient.m */; };
-		AE06053318FF5BB600A9CFDE /* HTTPClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE06053218FF5BB600A9CFDE /* HTTPClientSpec.mm */; };
-		AE06053619003B4000A9CFDE /* JSONClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE06053519003B4000A9CFDE /* JSONClient.m */; };
-		AE06053719003B4000A9CFDE /* JSONClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE06053519003B4000A9CFDE /* JSONClient.m */; };
-		AE06053919003B5800A9CFDE /* JSONClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE06053819003B5800A9CFDE /* JSONClientSpec.mm */; };
+		AE06053B190054AA00A9CFDE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE06053A190054AA00A9CFDE /* Default-568h@2x.png */; };
 		AE0F2E2E18FC98F7007B6EF0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAC78B018FC4E3B00C4FF0D /* AppDelegate.m */; };
 		AE0F2E3018FC9FEC007B6EF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE0F2E2F18FC9FEC007B6EF0 /* Main.storyboard */; };
 		AE0F2E3318FCA070007B6EF0 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE0F2E3218FCA070007B6EF0 /* HomeController.m */; };
@@ -27,14 +22,20 @@
 		AE10BCEA18FC8D1100E9FE34 /* IdentificationControllerSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE10BCE918FC8D1100E9FE34 /* IdentificationControllerSpec.mm */; };
 		AE10BCEC18FC8D2700E9FE34 /* AttestationControllerSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE10BCEB18FC8D2700E9FE34 /* AttestationControllerSpec.mm */; };
 		AE10BCEE18FC8DA200E9FE34 /* AppDelegateSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE10BCED18FC8DA200E9FE34 /* AppDelegateSpec.mm */; };
-		AE5EAF0818FDE8D3008222E1 /* Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = AE5EAF0718FDE8D3008222E1 /* Factory.m */; };
 		AE5EAF0D18FDECE1008222E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE0F2E2F18FC9FEC007B6EF0 /* Main.storyboard */; };
-		AE7297D418FD97C800F58A30 /* Configurator.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7297D318FD97C800F58A30 /* Configurator.m */; };
-		AE7297D518FD97C800F58A30 /* Configurator.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7297D318FD97C800F58A30 /* Configurator.m */; };
-		AE73D44018FEED2000AFDD81 /* PivotPongClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE73D43F18FEED2000AFDD81 /* PivotPongClient.m */; };
-		AE73D44118FEED2000AFDD81 /* PivotPongClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE73D43F18FEED2000AFDD81 /* PivotPongClient.m */; };
-		AE73D44618FEED6A00AFDD81 /* PivotPongClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE73D44518FEED6A00AFDD81 /* PivotPongClientSpec.mm */; };
-		AE73D44918FEF4F300AFDD81 /* SpecConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = AE73D44818FEF4F300AFDD81 /* SpecConfigurator.m */; };
+		AEAAD30A19005DA300A10D57 /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAAD30519005DA300A10D57 /* HTTPClient.m */; };
+		AEAAD30B19005DA300A10D57 /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAAD30519005DA300A10D57 /* HTTPClient.m */; };
+		AEAAD30C19005DA300A10D57 /* JSONClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAAD30719005DA300A10D57 /* JSONClient.m */; };
+		AEAAD30D19005DA300A10D57 /* JSONClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAAD30719005DA300A10D57 /* JSONClient.m */; };
+		AEAAD30E19005DA300A10D57 /* PivotPongClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAAD30919005DA300A10D57 /* PivotPongClient.m */; };
+		AEAAD30F19005DA300A10D57 /* PivotPongClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAAD30919005DA300A10D57 /* PivotPongClient.m */; };
+		AEAAD31619005F9C00A10D57 /* HTTPClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AEAAD31319005F9C00A10D57 /* HTTPClientSpec.mm */; };
+		AEAAD31719005F9C00A10D57 /* JSONClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AEAAD31419005F9C00A10D57 /* JSONClientSpec.mm */; };
+		AEAAD31819005F9C00A10D57 /* PivotPongClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AEAAD31519005F9C00A10D57 /* PivotPongClientSpec.mm */; };
+		AEAAD31F19005FA400A10D57 /* Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAAD31B19005FA400A10D57 /* Factory.m */; };
+		AEAAD32019005FA400A10D57 /* SpecConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAAD31E19005FA400A10D57 /* SpecConfigurator.m */; };
+		AEAAD32419005FD700A10D57 /* Configurator.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAAD32319005FD700A10D57 /* Configurator.m */; };
+		AEAAD32519005FD700A10D57 /* Configurator.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAAD32319005FD700A10D57 /* Configurator.m */; };
 		AEAC78A118FC4E3B00C4FF0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEAC78A018FC4E3B00C4FF0D /* Foundation.framework */; };
 		AEAC78A318FC4E3B00C4FF0D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEAC78A218FC4E3B00C4FF0D /* CoreGraphics.framework */; };
 		AEAC78A518FC4E3B00C4FF0D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEAC78A418FC4E3B00C4FF0D /* UIKit.framework */; };
@@ -65,14 +66,7 @@
 		298179B670EC4C65BA84F82F /* libPods-PivotPong.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PivotPong.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		507F1C0B53F94E588568064F /* Pods-Specs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.xcconfig"; path = "../Pods/Pods-Specs.xcconfig"; sourceTree = "<group>"; };
 		5926F102F57D428AA5DBF571 /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE06052E18FF5BA400A9CFDE /* HTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPClient.h; sourceTree = "<group>"; };
-		AE06052F18FF5BA400A9CFDE /* HTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPClient.m; sourceTree = "<group>"; };
-		AE06053218FF5BB600A9CFDE /* HTTPClientSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HTTPClientSpec.mm; sourceTree = "<group>"; };
-		AE06053419003B4000A9CFDE /* JSONClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONClient.h; path = ../JSONClient.h; sourceTree = "<group>"; };
-		AE06053519003B4000A9CFDE /* JSONClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONClient.m; path = ../JSONClient.m; sourceTree = "<group>"; };
-		AE06053819003B5800A9CFDE /* JSONClientSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = JSONClientSpec.mm; sourceTree = "<group>"; };
-		AE09668818FF055000327CB7 /* OpenerUpper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenerUpper.h; sourceTree = "<group>"; };
-		AE09668918FF065E00327CB7 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		AE06053A190054AA00A9CFDE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../Default-568h@2x.png"; sourceTree = "<group>"; };
 		AE0F2E2F18FC9FEC007B6EF0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AE0F2E3118FCA070007B6EF0 /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeController.h; path = Controllers/HomeController.h; sourceTree = "<group>"; };
 		AE0F2E3218FCA070007B6EF0 /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeController.m; path = Controllers/HomeController.m; sourceTree = "<group>"; };
@@ -85,26 +79,36 @@
 		AE10BCEB18FC8D2700E9FE34 /* AttestationControllerSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AttestationControllerSpec.mm; path = Controllers/AttestationControllerSpec.mm; sourceTree = "<group>"; };
 		AE10BCED18FC8DA200E9FE34 /* AppDelegateSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegateSpec.mm; sourceTree = "<group>"; };
 		AE4F245C18FDD681006907CA /* libPods-Specs.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Specs.a"; path = "../Pods/build/Debug-iphoneos/libPods-Specs.a"; sourceTree = "<group>"; };
-		AE5EAF0618FDE8D3008222E1 /* Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Factory.h; sourceTree = "<group>"; };
-		AE5EAF0718FDE8D3008222E1 /* Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Factory.m; sourceTree = "<group>"; };
 		AE5EAF0918FDEA39008222E1 /* libPods-PivotPong.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-PivotPong.a"; path = "../Pods/build/Debug-iphoneos/libPods-PivotPong.a"; sourceTree = "<group>"; };
 		AE5EAF0B18FDEAB7008222E1 /* libPods-Specs.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Specs.a"; path = "../Pods/build/Debug-iphoneos/libPods-Specs.a"; sourceTree = "<group>"; };
-		AE7297D218FD97C800F58A30 /* Configurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configurator.h; sourceTree = "<group>"; };
-		AE7297D318FD97C800F58A30 /* Configurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configurator.m; sourceTree = "<group>"; };
 		AE7297D618FD9B8D00F58A30 /* libPods-PivotPong-Blindside.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-PivotPong-Blindside.a"; path = "../Pods/build/Release-iphoneos/libPods-PivotPong-Blindside.a"; sourceTree = "<group>"; };
 		AE7297D818FD9BA200F58A30 /* libPods-PivotPong-Blindside.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-PivotPong-Blindside.a"; path = "../Pods/build/Release-iphoneos/libPods-PivotPong-Blindside.a"; sourceTree = "<group>"; };
 		AE7297DA18FD9BB200F58A30 /* libPods-PivotPong-Blindside.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-PivotPong-Blindside.a"; path = "../Pods/build/Release-iphoneos/libPods-PivotPong-Blindside.a"; sourceTree = "<group>"; };
 		AE7297DC18FD9BDE00F58A30 /* libPods-PivotPong.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-PivotPong.a"; path = "../Pods/build/Debug-iphoneos/libPods-PivotPong.a"; sourceTree = "<group>"; };
-		AE7297DE18FDA23600F58A30 /* Injectable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Injectable.h; sourceTree = "<group>"; };
 		AE73D43E18FEED2000AFDD81 /* PivotPongClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PivotPongClient.h; sourceTree = "<group>"; };
 		AE73D43F18FEED2000AFDD81 /* PivotPongClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PivotPongClient.m; sourceTree = "<group>"; };
-		AE73D44518FEED6A00AFDD81 /* PivotPongClientSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PivotPongClientSpec.mm; sourceTree = "<group>"; };
-		AE73D44718FEF4F300AFDD81 /* SpecConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecConfigurator.h; sourceTree = "<group>"; };
-		AE73D44818FEF4F300AFDD81 /* SpecConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecConfigurator.m; sourceTree = "<group>"; };
 		AEA95BD018FDBA2B00306B2A /* libPods-Specs.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Specs.a"; path = "../Pods/build/Debug-iphoneos/libPods-Specs.a"; sourceTree = "<group>"; };
 		AEA95BD218FDBAC100306B2A /* libPods-Specs.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Specs.a"; path = "../Pods/build/Debug-iphoneos/libPods-Specs.a"; sourceTree = "<group>"; };
 		AEA95BD418FDBAC800306B2A /* libPods-PivotPong.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-PivotPong.a"; path = "../Pods/build/Debug-iphoneos/libPods-PivotPong.a"; sourceTree = "<group>"; };
 		AEA95BD718FDBE4000306B2A /* libPods-Specs.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Specs.a"; path = "../Pods/build/Debug-iphoneos/libPods-Specs.a"; sourceTree = "<group>"; };
+		AEAAD30419005DA300A10D57 /* HTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPClient.h; sourceTree = "<group>"; };
+		AEAAD30519005DA300A10D57 /* HTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPClient.m; sourceTree = "<group>"; };
+		AEAAD30619005DA300A10D57 /* JSONClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONClient.h; sourceTree = "<group>"; };
+		AEAAD30719005DA300A10D57 /* JSONClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONClient.m; sourceTree = "<group>"; };
+		AEAAD30819005DA300A10D57 /* PivotPongClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PivotPongClient.h; sourceTree = "<group>"; };
+		AEAAD30919005DA300A10D57 /* PivotPongClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PivotPongClient.m; sourceTree = "<group>"; };
+		AEAAD31119005E0400A10D57 /* Injectable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Injectable.h; sourceTree = "<group>"; };
+		AEAAD31319005F9C00A10D57 /* HTTPClientSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HTTPClientSpec.mm; sourceTree = "<group>"; };
+		AEAAD31419005F9C00A10D57 /* JSONClientSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = JSONClientSpec.mm; sourceTree = "<group>"; };
+		AEAAD31519005F9C00A10D57 /* PivotPongClientSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PivotPongClientSpec.mm; sourceTree = "<group>"; };
+		AEAAD31A19005FA400A10D57 /* Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Factory.h; sourceTree = "<group>"; };
+		AEAAD31B19005FA400A10D57 /* Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Factory.m; sourceTree = "<group>"; };
+		AEAAD31C19005FA400A10D57 /* OpenerUpper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenerUpper.h; sourceTree = "<group>"; };
+		AEAAD31D19005FA400A10D57 /* SpecConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecConfigurator.h; sourceTree = "<group>"; };
+		AEAAD31E19005FA400A10D57 /* SpecConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecConfigurator.m; sourceTree = "<group>"; };
+		AEAAD32219005FD700A10D57 /* Configurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configurator.h; sourceTree = "<group>"; };
+		AEAAD32319005FD700A10D57 /* Configurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configurator.m; sourceTree = "<group>"; };
+		AEAAD3261900602700A10D57 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		AEAC789D18FC4E3B00C4FF0D /* PivotPong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PivotPong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEAC78A018FC4E3B00C4FF0D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AEAC78A218FC4E3B00C4FF0D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -180,6 +184,60 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		AEAAD30319005DA300A10D57 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				AEAAD30419005DA300A10D57 /* HTTPClient.h */,
+				AEAAD30519005DA300A10D57 /* HTTPClient.m */,
+				AEAAD30619005DA300A10D57 /* JSONClient.h */,
+				AEAAD30719005DA300A10D57 /* JSONClient.m */,
+				AEAAD30819005DA300A10D57 /* PivotPongClient.h */,
+				AEAAD30919005DA300A10D57 /* PivotPongClient.m */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		AEAAD31019005E0400A10D57 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				AEAAD31119005E0400A10D57 /* Injectable.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		AEAAD31219005F9C00A10D57 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				AEAAD31319005F9C00A10D57 /* HTTPClientSpec.mm */,
+				AEAAD31419005F9C00A10D57 /* JSONClientSpec.mm */,
+				AEAAD31519005F9C00A10D57 /* PivotPongClientSpec.mm */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		AEAAD31919005FA400A10D57 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				AEAAD31A19005FA400A10D57 /* Factory.h */,
+				AEAAD31B19005FA400A10D57 /* Factory.m */,
+				AEAAD31C19005FA400A10D57 /* OpenerUpper.h */,
+				AEAAD31D19005FA400A10D57 /* SpecConfigurator.h */,
+				AEAAD31E19005FA400A10D57 /* SpecConfigurator.m */,
+			);
+			name = Support;
+			path = API/Support;
+			sourceTree = "<group>";
+		};
+		AEAAD32119005FD700A10D57 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				AEAAD3261900602700A10D57 /* Constants.h */,
+				AEAAD32219005FD700A10D57 /* Configurator.h */,
+				AEAAD32319005FD700A10D57 /* Configurator.m */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		AEAC789418FC4E3B00C4FF0D = {
 			isa = PBXGroup;
 			children = (
@@ -229,39 +287,35 @@
 		AEAC78A618FC4E3B00C4FF0D /* PivotPong */ = {
 			isa = PBXGroup;
 			children = (
-				AE06053419003B4000A9CFDE /* JSONClient.h */,
-				AE06053519003B4000A9CFDE /* JSONClient.m */,
-				AE06052E18FF5BA400A9CFDE /* HTTPClient.h */,
-				AE06052F18FF5BA400A9CFDE /* HTTPClient.m */,
-				AEC2389818FE045C00F6217A /* Assets */,
-				AE10BCD818FC88EB00E9FE34 /* Controllers */,
+				AEAAD30319005DA300A10D57 /* API */,
 				AEAC78AF18FC4E3B00C4FF0D /* AppDelegate.h */,
 				AEAC78B018FC4E3B00C4FF0D /* AppDelegate.m */,
+				AEC2389818FE045C00F6217A /* Assets */,
+				AE10BCD818FC88EB00E9FE34 /* Controllers */,
 				AEAC78B218FC4E3B00C4FF0D /* Images.xcassets */,
-				AEAC78A718FC4E3B00C4FF0D /* Supporting Files */,
 				AE0F2E2F18FC9FEC007B6EF0 /* Main.storyboard */,
-				AE7297D218FD97C800F58A30 /* Configurator.h */,
-				AE7297D318FD97C800F58A30 /* Configurator.m */,
-				AE7297DE18FDA23600F58A30 /* Injectable.h */,
+				AEAAD31019005E0400A10D57 /* Protocols */,
+				AEAAD32119005FD700A10D57 /* Support */,
+				AEAC78A718FC4E3B00C4FF0D /* Target Files */,
 			);
 			path = PivotPong;
 			sourceTree = "<group>";
 		};
-		AEAC78A718FC4E3B00C4FF0D /* Supporting Files */ = {
+		AEAC78A718FC4E3B00C4FF0D /* Target Files */ = {
 			isa = PBXGroup;
 			children = (
 				AEAC78A818FC4E3B00C4FF0D /* PivotPong-Info.plist */,
 				AEAC78A918FC4E3B00C4FF0D /* InfoPlist.strings */,
 				AEAC78AC18FC4E3B00C4FF0D /* main.m */,
 				AEAC78AE18FC4E3B00C4FF0D /* PivotPong-Prefix.pch */,
-				AE09668918FF065E00327CB7 /* Constants.h */,
 			);
-			name = "Supporting Files";
+			name = "Target Files";
 			sourceTree = "<group>";
 		};
 		AEC2389818FE045C00F6217A /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				AE06053A190054AA00A9CFDE /* Default-568h@2x.png */,
 				AEC2389918FE045C00F6217A /* pivID_blue-1004x400.png */,
 			);
 			path = Assets;
@@ -270,32 +324,26 @@
 		AEE820AA18FC6D4C000C49A4 /* Specs */ = {
 			isa = PBXGroup;
 			children = (
-				AE06053819003B5800A9CFDE /* JSONClientSpec.mm */,
-				AE06053218FF5BB600A9CFDE /* HTTPClientSpec.mm */,
+				AEAAD31219005F9C00A10D57 /* API */,
+				AE10BCED18FC8DA200E9FE34 /* AppDelegateSpec.mm */,
+				AEE820B418FC6D4C000C49A4 /* Cedar-iOS.framework */,
 				AE10BCE018FC8C1F00E9FE34 /* Controllers */,
 				AEE820B318FC6D4C000C49A4 /* Rakefile */,
-				AEE820B418FC6D4C000C49A4 /* Cedar-iOS.framework */,
-				AEE820AB18FC6D4C000C49A4 /* Supporting Files */,
-				AE10BCED18FC8DA200E9FE34 /* AppDelegateSpec.mm */,
-				AE73D44518FEED6A00AFDD81 /* PivotPongClientSpec.mm */,
-				AE73D44718FEF4F300AFDD81 /* SpecConfigurator.h */,
-				AE73D44818FEF4F300AFDD81 /* SpecConfigurator.m */,
+				AEAAD31919005FA400A10D57 /* Support */,
+				AEE820AB18FC6D4C000C49A4 /* Target Files */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
 		};
-		AEE820AB18FC6D4C000C49A4 /* Supporting Files */ = {
+		AEE820AB18FC6D4C000C49A4 /* Target Files */ = {
 			isa = PBXGroup;
 			children = (
 				AEE820AC18FC6D4C000C49A4 /* Specs-Info.plist */,
 				AEE820AD18FC6D4C000C49A4 /* InfoPlist.strings */,
 				AEE820B018FC6D4C000C49A4 /* main.m */,
 				AEE820B218FC6D4C000C49A4 /* Specs-Prefix.pch */,
-				AE5EAF0618FDE8D3008222E1 /* Factory.h */,
-				AE5EAF0718FDE8D3008222E1 /* Factory.m */,
-				AE09668818FF055000327CB7 /* OpenerUpper.h */,
 			);
-			name = "Supporting Files";
+			name = "Target Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,6 +432,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEC2389B18FE051700F6217A /* pivID_blue-1004x400.png in Resources */,
+				AE06053B190054AA00A9CFDE /* Default-568h@2x.png in Resources */,
 				AE5EAF0D18FDECE1008222E1 /* Main.storyboard in Resources */,
 				AEE820AF18FC6D4C000C49A4 /* InfoPlist.strings in Resources */,
 			);
@@ -459,14 +508,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE06053619003B4000A9CFDE /* JSONClient.m in Sources */,
-				AE7297D418FD97C800F58A30 /* Configurator.m in Sources */,
+				AEAAD30C19005DA300A10D57 /* JSONClient.m in Sources */,
 				AEAC78B118FC4E3B00C4FF0D /* AppDelegate.m in Sources */,
-				AE73D44018FEED2000AFDD81 /* PivotPongClient.m in Sources */,
 				AE10BCE318FC8CE600E9FE34 /* IdentificationController.m in Sources */,
+				AEAAD32419005FD700A10D57 /* Configurator.m in Sources */,
+				AEAAD30E19005DA300A10D57 /* PivotPongClient.m in Sources */,
 				AE10BCE718FC8CF600E9FE34 /* AttestationController.m in Sources */,
 				AE0F2E3318FCA070007B6EF0 /* HomeController.m in Sources */,
-				AE06053018FF5BA400A9CFDE /* HTTPClient.m in Sources */,
+				AEAAD30A19005DA300A10D57 /* HTTPClient.m in Sources */,
 				AEAC78AD18FC4E3B00C4FF0D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,23 +524,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEAAD31F19005FA400A10D57 /* Factory.m in Sources */,
+				AEAAD30D19005DA300A10D57 /* JSONClient.m in Sources */,
 				AE0F2E3418FCA070007B6EF0 /* HomeController.m in Sources */,
 				AE0F2E2E18FC98F7007B6EF0 /* AppDelegate.m in Sources */,
 				AEE820B118FC6D4C000C49A4 /* main.m in Sources */,
-				AE06053919003B5800A9CFDE /* JSONClientSpec.mm in Sources */,
-				AE06053318FF5BB600A9CFDE /* HTTPClientSpec.mm in Sources */,
+				AEAAD30F19005DA300A10D57 /* PivotPongClient.m in Sources */,
 				AE10BCEE18FC8DA200E9FE34 /* AppDelegateSpec.mm in Sources */,
 				AE10BCEC18FC8D2700E9FE34 /* AttestationControllerSpec.mm in Sources */,
-				AE73D44118FEED2000AFDD81 /* PivotPongClient.m in Sources */,
+				AEAAD31619005F9C00A10D57 /* HTTPClientSpec.mm in Sources */,
 				AE0F2E3618FCA342007B6EF0 /* HomeControllerSpec.mm in Sources */,
-				AE73D44918FEF4F300AFDD81 /* SpecConfigurator.m in Sources */,
-				AE06053118FF5BA400A9CFDE /* HTTPClient.m in Sources */,
+				AEAAD31719005F9C00A10D57 /* JSONClientSpec.mm in Sources */,
 				AE10BCEA18FC8D1100E9FE34 /* IdentificationControllerSpec.mm in Sources */,
-				AE06053719003B4000A9CFDE /* JSONClient.m in Sources */,
+				AEAAD32519005FD700A10D57 /* Configurator.m in Sources */,
 				AE10BCE818FC8CF600E9FE34 /* AttestationController.m in Sources */,
-				AE5EAF0818FDE8D3008222E1 /* Factory.m in Sources */,
-				AE7297D518FD97C800F58A30 /* Configurator.m in Sources */,
-				AE73D44618FEED6A00AFDD81 /* PivotPongClientSpec.mm in Sources */,
+				AEAAD32019005FA400A10D57 /* SpecConfigurator.m in Sources */,
+				AEAAD30B19005DA300A10D57 /* HTTPClient.m in Sources */,
+				AEAAD31819005F9C00A10D57 /* PivotPongClientSpec.mm in Sources */,
 				AE10BCE418FC8CE600E9FE34 /* IdentificationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -616,10 +665,7 @@
 					"$(SDKROOT)/usr/include/libxml2",
 				);
 				INFOPLIST_FILE = "PivotPong/PivotPong-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/pivotal/workspace/pivot-pong-ios/Pods/build/Release-iphoneos",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -643,10 +689,7 @@
 					"$(SDKROOT)/usr/include/libxml2",
 				);
 				INFOPLIST_FILE = "PivotPong/PivotPong-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/pivotal/workspace/pivot-pong-ios/Pods/build/Release-iphoneos",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -677,11 +720,7 @@
 					"\"${PODS_ROOT}/Headers/PivotalCoreKit\"",
 				);
 				INFOPLIST_FILE = "Specs/Specs-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/pivotal/workspace/pivot-pong-ios/Pods/build/Release-iphoneos",
-					"/Users/pivotal/workspace/pivot-pong-ios/Pods/build/Debug-iphoneos",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -714,11 +753,7 @@
 					"\"${PODS_ROOT}/Headers/PivotalCoreKit\"",
 				);
 				INFOPLIST_FILE = "Specs/Specs-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/pivotal/workspace/pivot-pong-ios/Pods/build/Release-iphoneos",
-					"/Users/pivotal/workspace/pivot-pong-ios/Pods/build/Debug-iphoneos",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = (
 					"$(inherited)",

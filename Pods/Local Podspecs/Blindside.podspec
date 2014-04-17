@@ -13,4 +13,3 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Deferred', '{Source,Headers}/**/*.{h,m}'
 end
-
