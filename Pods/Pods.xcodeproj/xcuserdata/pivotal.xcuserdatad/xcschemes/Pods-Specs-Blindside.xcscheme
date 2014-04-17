@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A0894B015CD84F34BDBFD50B"
+               BlueprintIdentifier = "65612D29317C4DD888259458"
                BuildableName = "libPods-Specs-Blindside.a"
                BlueprintName = "Pods-Specs-Blindside"
                ReferencedContainer = "container:Pods.xcodeproj">

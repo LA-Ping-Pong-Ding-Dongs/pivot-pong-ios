@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5109BE65B6514EEFA186E1D9 /* libPods-PivotPong.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 298179B670EC4C65BA84F82F /* libPods-PivotPong.a */; };
-		5530DA449D984E6683181461 /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5926F102F57D428AA5DBF571 /* libPods-Specs.a */; };
+		950A3C7442364D5EADA11F6A /* libPods-PivotPong.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 298179B670EC4C65BA84F82F /* libPods-PivotPong.a */; };
+		9E18BE95F6294387BA9DBF28 /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5926F102F57D428AA5DBF571 /* libPods-Specs.a */; };
 		AE06053B190054AA00A9CFDE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE06053A190054AA00A9CFDE /* Default-568h@2x.png */; };
 		AE0F2E2E18FC98F7007B6EF0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAC78B018FC4E3B00C4FF0D /* AppDelegate.m */; };
 		AE0F2E3018FC9FEC007B6EF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE0F2E2F18FC9FEC007B6EF0 /* Main.storyboard */; };
@@ -63,9 +63,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08A4848F1AD94DAC94B68488 /* Pods-PivotPong.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PivotPong.xcconfig"; path = "Pods/Pods-PivotPong.xcconfig"; sourceTree = "<group>"; };
 		298179B670EC4C65BA84F82F /* libPods-PivotPong.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PivotPong.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		507F1C0B53F94E588568064F /* Pods-Specs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.xcconfig"; path = "../Pods/Pods-Specs.xcconfig"; sourceTree = "<group>"; };
 		5926F102F57D428AA5DBF571 /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABC4B57A38244710987C4B1B /* Pods-Specs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.xcconfig"; path = "Pods/Pods-Specs.xcconfig"; sourceTree = "<group>"; };
 		AE06053A190054AA00A9CFDE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../Default-568h@2x.png"; sourceTree = "<group>"; };
 		AE0F2E2F18FC9FEC007B6EF0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AE0F2E3118FCA070007B6EF0 /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeController.h; path = Controllers/HomeController.h; sourceTree = "<group>"; };
@@ -141,7 +143,7 @@
 				AEAC78A318FC4E3B00C4FF0D /* CoreGraphics.framework in Frameworks */,
 				AEAC78A518FC4E3B00C4FF0D /* UIKit.framework in Frameworks */,
 				AEAC78A118FC4E3B00C4FF0D /* Foundation.framework in Frameworks */,
-				5109BE65B6514EEFA186E1D9 /* libPods-PivotPong.a in Frameworks */,
+				950A3C7442364D5EADA11F6A /* libPods-PivotPong.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +154,7 @@
 				AEE820A918FC6D4C000C49A4 /* CoreGraphics.framework in Frameworks */,
 				AEE820A718FC6D4C000C49A4 /* UIKit.framework in Frameworks */,
 				AEE820A818FC6D4C000C49A4 /* Foundation.framework in Frameworks */,
-				5530DA449D984E6683181461 /* libPods-Specs.a in Frameworks */,
+				9E18BE95F6294387BA9DBF28 /* libPods-Specs.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +249,8 @@
 				AEAC789E18FC4E3B00C4FF0D /* Products */,
 				FB5B3FC9F4A04CBA9A4D5520 /* Pods-PivotPong.xcconfig */,
 				507F1C0B53F94E588568064F /* Pods-Specs.xcconfig */,
+				08A4848F1AD94DAC94B68488 /* Pods-PivotPong.xcconfig */,
+				ABC4B57A38244710987C4B1B /* Pods-Specs.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -453,7 +457,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Pods-PivotPong-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Pods-PivotPong-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		77B912EC34A54E6E94862258 /* Check Pods Manifest.lock */ = {
@@ -498,7 +502,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Pods-Specs-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Pods-Specs-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -649,7 +653,7 @@
 		};
 		AEAC78CA18FC4E3B00C4FF0D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB5B3FC9F4A04CBA9A4D5520 /* Pods-PivotPong.xcconfig */;
+			baseConfigurationReference = 08A4848F1AD94DAC94B68488 /* Pods-PivotPong.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -666,6 +670,7 @@
 				);
 				INFOPLIST_FILE = "PivotPong/PivotPong-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -673,7 +678,7 @@
 		};
 		AEAC78CB18FC4E3B00C4FF0D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB5B3FC9F4A04CBA9A4D5520 /* Pods-PivotPong.xcconfig */;
+			baseConfigurationReference = 08A4848F1AD94DAC94B68488 /* Pods-PivotPong.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -697,7 +702,7 @@
 		};
 		AEE820B918FC6D4C000C49A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 507F1C0B53F94E588568064F /* Pods-Specs.xcconfig */;
+			baseConfigurationReference = ABC4B57A38244710987C4B1B /* Pods-Specs.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -728,13 +733,14 @@
 					"-lstdc++",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		AEE820BA18FC6D4C000C49A4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 507F1C0B53F94E588568064F /* Pods-Specs.xcconfig */;
+			baseConfigurationReference = ABC4B57A38244710987C4B1B /* Pods-Specs.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -762,6 +768,7 @@
 					"-lstdc++",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

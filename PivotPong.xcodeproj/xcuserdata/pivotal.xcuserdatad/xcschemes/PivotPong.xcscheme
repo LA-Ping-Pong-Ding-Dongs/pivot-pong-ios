@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8F49D4DE071442BCABD27417"
-               BuildableName = "libPods-Specs.a"
-               BlueprintName = "Pods-Specs"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               BlueprintIdentifier = "AEAC789C18FC4E3B00C4FF0D"
+               BuildableName = "PivotPong.app"
+               BlueprintName = "PivotPong"
+               ReferencedContainer = "container:PivotPong.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,7 +28,26 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AEAC78B718FC4E3B00C4FF0D"
+               BuildableName = "PivotPongTests.xctest"
+               BlueprintName = "PivotPongTests"
+               ReferencedContainer = "container:PivotPong.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "AEAC789C18FC4E3B00C4FF0D"
+            BuildableName = "PivotPong.app"
+            BlueprintName = "PivotPong"
+            ReferencedContainer = "container:PivotPong.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -39,6 +58,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "AEAC789C18FC4E3B00C4FF0D"
+            BuildableName = "PivotPong.app"
+            BlueprintName = "PivotPong"
+            ReferencedContainer = "container:PivotPong.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -48,6 +76,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "AEAC789C18FC4E3B00C4FF0D"
+            BuildableName = "PivotPong.app"
+            BlueprintName = "PivotPong"
+            ReferencedContainer = "container:PivotPong.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

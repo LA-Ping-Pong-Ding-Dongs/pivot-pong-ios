@@ -1,5 +1,5 @@
-platform :ios, '7.0'
-xcodeproj 'PivotPong/PivotPong.xcodeproj'
+platform :ios, '7.1'
+xcodeproj 'PivotPong.xcodeproj'
 
 def global
   pod 'KSDeferred'
