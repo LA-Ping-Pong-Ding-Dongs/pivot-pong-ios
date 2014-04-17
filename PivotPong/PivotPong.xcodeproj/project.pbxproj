@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		5109BE65B6514EEFA186E1D9 /* libPods-PivotPong.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 298179B670EC4C65BA84F82F /* libPods-PivotPong.a */; };
 		5530DA449D984E6683181461 /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5926F102F57D428AA5DBF571 /* libPods-Specs.a */; };
+		AE06053018FF5BA400A9CFDE /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE06052F18FF5BA400A9CFDE /* HTTPClient.m */; };
+		AE06053118FF5BA400A9CFDE /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE06052F18FF5BA400A9CFDE /* HTTPClient.m */; };
+		AE06053318FF5BB600A9CFDE /* HTTPClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE06053218FF5BB600A9CFDE /* HTTPClientSpec.mm */; };
+		AE06053619003B4000A9CFDE /* JSONClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE06053519003B4000A9CFDE /* JSONClient.m */; };
+		AE06053719003B4000A9CFDE /* JSONClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE06053519003B4000A9CFDE /* JSONClient.m */; };
+		AE06053919003B5800A9CFDE /* JSONClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE06053819003B5800A9CFDE /* JSONClientSpec.mm */; };
 		AE0F2E2E18FC98F7007B6EF0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAC78B018FC4E3B00C4FF0D /* AppDelegate.m */; };
 		AE0F2E3018FC9FEC007B6EF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE0F2E2F18FC9FEC007B6EF0 /* Main.storyboard */; };
 		AE0F2E3318FCA070007B6EF0 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE0F2E3218FCA070007B6EF0 /* HomeController.m */; };
@@ -25,6 +31,10 @@
 		AE5EAF0D18FDECE1008222E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE0F2E2F18FC9FEC007B6EF0 /* Main.storyboard */; };
 		AE7297D418FD97C800F58A30 /* Configurator.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7297D318FD97C800F58A30 /* Configurator.m */; };
 		AE7297D518FD97C800F58A30 /* Configurator.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7297D318FD97C800F58A30 /* Configurator.m */; };
+		AE73D44018FEED2000AFDD81 /* PivotPongClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE73D43F18FEED2000AFDD81 /* PivotPongClient.m */; };
+		AE73D44118FEED2000AFDD81 /* PivotPongClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AE73D43F18FEED2000AFDD81 /* PivotPongClient.m */; };
+		AE73D44618FEED6A00AFDD81 /* PivotPongClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE73D44518FEED6A00AFDD81 /* PivotPongClientSpec.mm */; };
+		AE73D44918FEF4F300AFDD81 /* SpecConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = AE73D44818FEF4F300AFDD81 /* SpecConfigurator.m */; };
 		AEAC78A118FC4E3B00C4FF0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEAC78A018FC4E3B00C4FF0D /* Foundation.framework */; };
 		AEAC78A318FC4E3B00C4FF0D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEAC78A218FC4E3B00C4FF0D /* CoreGraphics.framework */; };
 		AEAC78A518FC4E3B00C4FF0D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEAC78A418FC4E3B00C4FF0D /* UIKit.framework */; };
@@ -55,6 +65,14 @@
 		298179B670EC4C65BA84F82F /* libPods-PivotPong.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PivotPong.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		507F1C0B53F94E588568064F /* Pods-Specs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.xcconfig"; path = "../Pods/Pods-Specs.xcconfig"; sourceTree = "<group>"; };
 		5926F102F57D428AA5DBF571 /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE06052E18FF5BA400A9CFDE /* HTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPClient.h; sourceTree = "<group>"; };
+		AE06052F18FF5BA400A9CFDE /* HTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPClient.m; sourceTree = "<group>"; };
+		AE06053218FF5BB600A9CFDE /* HTTPClientSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HTTPClientSpec.mm; sourceTree = "<group>"; };
+		AE06053419003B4000A9CFDE /* JSONClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONClient.h; path = ../JSONClient.h; sourceTree = "<group>"; };
+		AE06053519003B4000A9CFDE /* JSONClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONClient.m; path = ../JSONClient.m; sourceTree = "<group>"; };
+		AE06053819003B5800A9CFDE /* JSONClientSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = JSONClientSpec.mm; sourceTree = "<group>"; };
+		AE09668818FF055000327CB7 /* OpenerUpper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenerUpper.h; sourceTree = "<group>"; };
+		AE09668918FF065E00327CB7 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		AE0F2E2F18FC9FEC007B6EF0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AE0F2E3118FCA070007B6EF0 /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeController.h; path = Controllers/HomeController.h; sourceTree = "<group>"; };
 		AE0F2E3218FCA070007B6EF0 /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeController.m; path = Controllers/HomeController.m; sourceTree = "<group>"; };
@@ -78,6 +96,11 @@
 		AE7297DA18FD9BB200F58A30 /* libPods-PivotPong-Blindside.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-PivotPong-Blindside.a"; path = "../Pods/build/Release-iphoneos/libPods-PivotPong-Blindside.a"; sourceTree = "<group>"; };
 		AE7297DC18FD9BDE00F58A30 /* libPods-PivotPong.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-PivotPong.a"; path = "../Pods/build/Debug-iphoneos/libPods-PivotPong.a"; sourceTree = "<group>"; };
 		AE7297DE18FDA23600F58A30 /* Injectable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Injectable.h; sourceTree = "<group>"; };
+		AE73D43E18FEED2000AFDD81 /* PivotPongClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PivotPongClient.h; sourceTree = "<group>"; };
+		AE73D43F18FEED2000AFDD81 /* PivotPongClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PivotPongClient.m; sourceTree = "<group>"; };
+		AE73D44518FEED6A00AFDD81 /* PivotPongClientSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PivotPongClientSpec.mm; sourceTree = "<group>"; };
+		AE73D44718FEF4F300AFDD81 /* SpecConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecConfigurator.h; sourceTree = "<group>"; };
+		AE73D44818FEF4F300AFDD81 /* SpecConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecConfigurator.m; sourceTree = "<group>"; };
 		AEA95BD018FDBA2B00306B2A /* libPods-Specs.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Specs.a"; path = "../Pods/build/Debug-iphoneos/libPods-Specs.a"; sourceTree = "<group>"; };
 		AEA95BD218FDBAC100306B2A /* libPods-Specs.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Specs.a"; path = "../Pods/build/Debug-iphoneos/libPods-Specs.a"; sourceTree = "<group>"; };
 		AEA95BD418FDBAC800306B2A /* libPods-PivotPong.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-PivotPong.a"; path = "../Pods/build/Debug-iphoneos/libPods-PivotPong.a"; sourceTree = "<group>"; };
@@ -141,6 +164,8 @@
 				AE10BCE618FC8CF600E9FE34 /* AttestationController.m */,
 				AE0F2E3118FCA070007B6EF0 /* HomeController.h */,
 				AE0F2E3218FCA070007B6EF0 /* HomeController.m */,
+				AE73D43E18FEED2000AFDD81 /* PivotPongClient.h */,
+				AE73D43F18FEED2000AFDD81 /* PivotPongClient.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -204,6 +229,10 @@
 		AEAC78A618FC4E3B00C4FF0D /* PivotPong */ = {
 			isa = PBXGroup;
 			children = (
+				AE06053419003B4000A9CFDE /* JSONClient.h */,
+				AE06053519003B4000A9CFDE /* JSONClient.m */,
+				AE06052E18FF5BA400A9CFDE /* HTTPClient.h */,
+				AE06052F18FF5BA400A9CFDE /* HTTPClient.m */,
 				AEC2389818FE045C00F6217A /* Assets */,
 				AE10BCD818FC88EB00E9FE34 /* Controllers */,
 				AEAC78AF18FC4E3B00C4FF0D /* AppDelegate.h */,
@@ -225,6 +254,7 @@
 				AEAC78A918FC4E3B00C4FF0D /* InfoPlist.strings */,
 				AEAC78AC18FC4E3B00C4FF0D /* main.m */,
 				AEAC78AE18FC4E3B00C4FF0D /* PivotPong-Prefix.pch */,
+				AE09668918FF065E00327CB7 /* Constants.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -240,11 +270,16 @@
 		AEE820AA18FC6D4C000C49A4 /* Specs */ = {
 			isa = PBXGroup;
 			children = (
+				AE06053819003B5800A9CFDE /* JSONClientSpec.mm */,
+				AE06053218FF5BB600A9CFDE /* HTTPClientSpec.mm */,
 				AE10BCE018FC8C1F00E9FE34 /* Controllers */,
 				AEE820B318FC6D4C000C49A4 /* Rakefile */,
 				AEE820B418FC6D4C000C49A4 /* Cedar-iOS.framework */,
 				AEE820AB18FC6D4C000C49A4 /* Supporting Files */,
 				AE10BCED18FC8DA200E9FE34 /* AppDelegateSpec.mm */,
+				AE73D44518FEED6A00AFDD81 /* PivotPongClientSpec.mm */,
+				AE73D44718FEF4F300AFDD81 /* SpecConfigurator.h */,
+				AE73D44818FEF4F300AFDD81 /* SpecConfigurator.m */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -258,6 +293,7 @@
 				AEE820B218FC6D4C000C49A4 /* Specs-Prefix.pch */,
 				AE5EAF0618FDE8D3008222E1 /* Factory.h */,
 				AE5EAF0718FDE8D3008222E1 /* Factory.m */,
+				AE09668818FF055000327CB7 /* OpenerUpper.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -423,11 +459,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE06053619003B4000A9CFDE /* JSONClient.m in Sources */,
 				AE7297D418FD97C800F58A30 /* Configurator.m in Sources */,
 				AEAC78B118FC4E3B00C4FF0D /* AppDelegate.m in Sources */,
+				AE73D44018FEED2000AFDD81 /* PivotPongClient.m in Sources */,
 				AE10BCE318FC8CE600E9FE34 /* IdentificationController.m in Sources */,
 				AE10BCE718FC8CF600E9FE34 /* AttestationController.m in Sources */,
 				AE0F2E3318FCA070007B6EF0 /* HomeController.m in Sources */,
+				AE06053018FF5BA400A9CFDE /* HTTPClient.m in Sources */,
 				AEAC78AD18FC4E3B00C4FF0D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,13 +478,20 @@
 				AE0F2E3418FCA070007B6EF0 /* HomeController.m in Sources */,
 				AE0F2E2E18FC98F7007B6EF0 /* AppDelegate.m in Sources */,
 				AEE820B118FC6D4C000C49A4 /* main.m in Sources */,
+				AE06053919003B5800A9CFDE /* JSONClientSpec.mm in Sources */,
+				AE06053318FF5BB600A9CFDE /* HTTPClientSpec.mm in Sources */,
 				AE10BCEE18FC8DA200E9FE34 /* AppDelegateSpec.mm in Sources */,
 				AE10BCEC18FC8D2700E9FE34 /* AttestationControllerSpec.mm in Sources */,
+				AE73D44118FEED2000AFDD81 /* PivotPongClient.m in Sources */,
 				AE0F2E3618FCA342007B6EF0 /* HomeControllerSpec.mm in Sources */,
+				AE73D44918FEF4F300AFDD81 /* SpecConfigurator.m in Sources */,
+				AE06053118FF5BA400A9CFDE /* HTTPClient.m in Sources */,
 				AE10BCEA18FC8D1100E9FE34 /* IdentificationControllerSpec.mm in Sources */,
+				AE06053719003B4000A9CFDE /* JSONClient.m in Sources */,
 				AE10BCE818FC8CF600E9FE34 /* AttestationController.m in Sources */,
 				AE5EAF0818FDE8D3008222E1 /* Factory.m in Sources */,
 				AE7297D518FD97C800F58A30 /* Configurator.m in Sources */,
+				AE73D44618FEED6A00AFDD81 /* PivotPongClientSpec.mm in Sources */,
 				AE10BCE418FC8CE600E9FE34 /* IdentificationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

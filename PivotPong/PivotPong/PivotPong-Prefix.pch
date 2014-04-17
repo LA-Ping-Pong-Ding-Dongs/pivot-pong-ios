@@ -1,9 +1,3 @@
-//
-//  Prefix header
-//
-//  The contents of this file are implicitly included at the beginning of every source file.
-//
-
 #import <Availability.h>
 
 #ifndef __IPHONE_3_0
@@ -14,4 +8,5 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import "Blindside.h"
+    #import "Constants.h"
 #endif

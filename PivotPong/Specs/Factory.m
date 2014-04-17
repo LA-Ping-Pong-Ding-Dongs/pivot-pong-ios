@@ -1,11 +1,14 @@
 #import "Factory.h"
 #import "Configurator.h"
+#import "SpecConfigurator.h"
 
 @implementation Factory
 
 +(id<BSInjector>)injector {
     Configurator *configurator = [[Configurator alloc] init];
-    return [Blindside injectorWithModule:configurator];
+    SpecConfigurator *specConfigurator = [[SpecConfigurator alloc] init];
+
+    return [Blindside injectorWithModules:@[configurator, specConfigurator]];
 }
 
 @end

@@ -11,7 +11,6 @@
 
 
 -(void)viewDidLoad {
-
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"currentUser"]) {
         [self performSegueWithIdentifier:@"pushAttestation" sender:nil];
     } else {
