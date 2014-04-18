@@ -11,4 +11,12 @@
     return [Blindside injectorWithModules:@[configurator, specConfigurator]];
 }
 
++(UIViewController *)viewControllerFromStoryBoard:(Class)viewControllerClass
+                                         injector:(id<BSInjector, BSBinder>)injector {
+    UIStoryboard *storyBoard = [injector getInstance:[UIStoryboard class]];
+    UIViewController<Injectable> *controller = [storyBoard instantiateViewControllerWithIdentifier:NSStringFromClass(viewControllerClass)];
+    controller.injector = injector;
+    return controller;
+}
+
 @end
