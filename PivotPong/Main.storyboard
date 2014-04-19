@@ -31,13 +31,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pivID_blue-1004x400.png" translatesAutoresizingMaskIntoConstraints="NO" id="NzE-fu-RDm">
-                                <rect key="frame" x="15" y="0.0" width="285" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQb-yc-y49">
-                                <rect key="frame" x="134" y="198" width="53" height="32"/>
+                                <rect key="frame" x="0.0" y="198" width="320" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <state key="normal" title="I WON!">
@@ -55,14 +50,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="FQb-yc-y49" secondAttribute="centerX" id="2ZZ-2e-mAi"/>
                             <constraint firstAttribute="centerY" secondItem="FQb-yc-y49" secondAttribute="centerY" constant="70" id="8Bj-MG-zCN"/>
+                            <constraint firstItem="FQb-yc-y49" firstAttribute="leading" secondItem="YhQ-en-nkZ" secondAttribute="leading" id="JJT-YG-Tho"/>
                             <constraint firstAttribute="centerY" secondItem="ATA-rY-2FC" secondAttribute="centerY" constant="-90" id="ODy-5m-lYh"/>
                             <constraint firstAttribute="centerX" secondItem="ATA-rY-2FC" secondAttribute="centerX" id="OiX-CN-ZvZ"/>
+                            <constraint firstAttribute="trailing" secondItem="FQb-yc-y49" secondAttribute="trailing" id="oHe-Dg-WrV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QZl-td-DQA"/>
                     <connections>
+                        <outlet property="lostButton" destination="ATA-rY-2FC" id="0uT-5e-fct"/>
+                        <outlet property="wonButton" destination="FQb-yc-y49" id="UZD-Uc-Mwn"/>
                         <segue destination="Q4X-tU-Ipf" kind="push" identifier="pushAttestation" id="woH-uF-qhe"/>
                         <segue destination="AIz-P6-lBY" kind="modal" identifier="presentIdentification" modalTransitionStyle="flipHorizontal" id="iWb-xI-qag"/>
                     </connections>
@@ -110,8 +108,8 @@
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find yourself!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVF-nH-s4V">
-                                    <rect key="frame" x="109" y="11" width="103" height="21"/>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who you be?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVF-nH-s4V">
+                                    <rect key="frame" x="109" y="11" width="102" height="21"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -120,7 +118,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPy-XB-Rwu">
                                     <rect key="frame" x="254" y="7" width="46" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Done">
+                                    <state key="normal" title="Go">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <connections>
@@ -156,9 +154,6 @@
             <point key="canvasLocation" x="-604" y="729"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="pivID_blue-1004x400.png" width="1104" height="400"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
