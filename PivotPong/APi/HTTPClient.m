@@ -1,8 +1,10 @@
 #import "HTTPClient.h"
 #import "KSDeferred.h"
+#import "FakeOperationQueue.h"
 
 @interface HTTPClient ()
 @property (strong, nonatomic) NSURLSession *session;
+@property (strong, nonatomic) NSOperationQueue *mainQueue;
 @end
 
 @implementation HTTPClient
@@ -11,13 +13,14 @@
 
 +(BSInitializer *)bsInitializer {
     return [BSInitializer initializerWithClass:self
-                                      selector:@selector(initWithNSURLSession:)
-                                  argumentKeys:[NSURLSession class], nil];
+                                      selector:@selector(initWithNSURLSession:mainQueue:)
+                                  argumentKeys:[NSURLSession class], [NSOperationQueue class], nil];
 }
 
--(instancetype)initWithNSURLSession:(NSURLSession *)session {
+-(instancetype)initWithNSURLSession:(NSURLSession *)session mainQueue:(NSOperationQueue*)mainQueue {
     if (self = [self init]) {
         self.session = session;
+        self.mainQueue = mainQueue;
     }
 
     return self;
@@ -28,12 +31,14 @@
     NSURL *url = [[NSURL alloc] initWithString:urlString];
 
     [[self.session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        NSUInteger statusCode = ((NSHTTPURLResponse *)response).statusCode;
-        if (!error && statusCode == 200) {
-            [deferred resolveWithValue:data];
-        } else {
-            [deferred rejectWithError:[self deferredErrorFor:error statusCode:statusCode]];
-        }
+        [self.mainQueue addOperationWithBlock:^{
+            NSUInteger statusCode = ((NSHTTPURLResponse *)response).statusCode;
+            if (!error && statusCode == 200) {
+                [deferred resolveWithValue:data];
+            } else {
+                [deferred rejectWithError:[self deferredErrorFor:error statusCode:statusCode]];
+            }
+        }];
     }] resume];
 
     return deferred.promise;

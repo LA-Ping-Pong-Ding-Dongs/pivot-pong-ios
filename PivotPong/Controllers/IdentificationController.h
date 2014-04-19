@@ -1,7 +1,6 @@
 #import "Injectable.h"
 #import <UIKit/UIKit.h>
 
-@interface IdentificationController : UIViewController <Injectable, UITableViewDataSource, UITableViewDelegate>
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@interface IdentificationController : UITableViewController <Injectable, UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, weak) id<BSInjector>injector;
 @end

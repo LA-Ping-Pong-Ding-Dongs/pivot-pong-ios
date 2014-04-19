@@ -11,9 +11,7 @@
 
 
 -(void)viewDidLoad {
-    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"currentUser"]) {
-        [self performSegueWithIdentifier:@"pushAttestation" sender:nil];
-    } else {
+    if (![[NSUserDefaults standardUserDefaults] objectForKey:@"currentUser"]) {
         [self performSegueWithIdentifier:@"presentIdentification" sender:nil];
     }
 }

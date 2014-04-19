@@ -1,5 +1,6 @@
 #import "HTTPClient.h"
 #import "KSDeferred.h"
+#import "FakeOperationQueue.h"
 
 using namespace Cedar::Matchers;
 using namespace Cedar::Doubles;
@@ -15,8 +16,12 @@ describe(@"HTTPClient", ^{
     __block id<BSBinder, BSInjector> injector;
     __block id<CedarDouble> session;
 
+
     beforeEach(^{
         injector = [Factory injector];
+        FakeOperationQueue *fakeQueue = [FakeOperationQueue new];
+        fakeQueue.runSynchronously = YES;
+        [injector bind:[NSOperationQueue class] toInstance:fakeQueue];
         session = nice_fake_for([NSURLSession class]);
         [injector bind:[NSURLSession class] toInstance:session];
         client = [injector getInstance:[HTTPClient class]];

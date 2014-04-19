@@ -36,70 +36,40 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQb-yc-y49">
+                                <rect key="frame" x="134" y="198" width="53" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <state key="normal" title="I WON!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATA-rY-2FC">
+                                <rect key="frame" x="124" y="358" width="72" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <state key="normal" title="I lost… :-(">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="FQb-yc-y49" secondAttribute="centerX" id="2ZZ-2e-mAi"/>
+                            <constraint firstAttribute="centerY" secondItem="FQb-yc-y49" secondAttribute="centerY" constant="70" id="8Bj-MG-zCN"/>
+                            <constraint firstAttribute="centerY" secondItem="ATA-rY-2FC" secondAttribute="centerY" constant="-90" id="ODy-5m-lYh"/>
+                            <constraint firstAttribute="centerX" secondItem="ATA-rY-2FC" secondAttribute="centerX" id="OiX-CN-ZvZ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QZl-td-DQA"/>
                     <connections>
                         <segue destination="Q4X-tU-Ipf" kind="push" identifier="pushAttestation" id="woH-uF-qhe"/>
-                        <segue destination="OZe-w7-6NO" kind="modal" identifier="presentIdentification" id="AFE-So-EzE"/>
+                        <segue destination="AIz-P6-lBY" kind="modal" identifier="presentIdentification" modalTransitionStyle="flipHorizontal" id="iWb-xI-qag"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ppH-Hj-wlJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1558" y="378"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="DEb-gf-HKO">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="OZe-w7-6NO" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="b3R-WQ-DlO">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="rri-Wv-xmJ" kind="relationship" relationship="rootViewController" id="RwD-Cr-wj4"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3N6-a4-8ef" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-809" y="962"/>
-        </scene>
-        <!--Identification Controller - Find Yourself!-->
-        <scene sceneID="LXB-Mz-GIk">
-            <objects>
-                <viewController storyboardIdentifier="IdentificationController" id="rri-Wv-xmJ" customClass="IdentificationController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="EIh-oK-sAe"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZZ5-7g-fCL"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gal-WX-28s">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="mjd-Ss-QY0">
-                                <rect key="frame" x="20" y="77" width="280" height="471"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="mjd-Ss-QY0" firstAttribute="leading" secondItem="gal-WX-28s" secondAttribute="leading" constant="20" id="4FB-p6-8si"/>
-                            <constraint firstAttribute="trailing" secondItem="mjd-Ss-QY0" secondAttribute="trailing" constant="20" id="Khe-GM-Kfx"/>
-                            <constraint firstItem="mjd-Ss-QY0" firstAttribute="top" secondItem="EIh-oK-sAe" secondAttribute="bottom" constant="13" id="atn-qK-Li2"/>
-                            <constraint firstAttribute="bottom" secondItem="mjd-Ss-QY0" secondAttribute="bottom" constant="20" id="nDx-0k-ahh"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Find Yourself!" id="8K1-0W-z4X">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="AoJ-A5-Xbx"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="tableView" destination="mjd-Ss-QY0" id="Bqy-Po-xtS"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gi4-hJ-fuc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-331" y="967"/>
         </scene>
         <!--Attestation Controller-->
         <scene sceneID="SCX-30-ayF">
@@ -127,6 +97,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uyj-Ed-ZZ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-604" y="21"/>
+        </scene>
+        <!--Identification Controller - Find Yourself!-->
+        <scene sceneID="BCm-64-Y2Y">
+            <objects>
+                <tableViewController storyboardIdentifier="IdentificationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AIz-P6-lBY" customClass="IdentificationController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Mwz-zo-DF8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="Sl4-xs-VF0">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find yourself!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVF-nH-s4V">
+                                    <rect key="frame" x="109" y="11" width="103" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPy-XB-Rwu">
+                                    <rect key="frame" x="254" y="7" width="46" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Done">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="doneTapped:" destination="AIz-P6-lBY" eventType="touchUpInside" id="mxB-Mt-lmr"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="centerX" secondItem="gVF-nH-s4V" secondAttribute="centerX" id="fSn-E7-nKP"/>
+                                <constraint firstAttribute="centerY" secondItem="gVF-nH-s4V" secondAttribute="centerY" id="mO4-H6-erC"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlayerCellPrototype" id="vBX-aS-eVG">
+                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vBX-aS-eVG" id="WVW-aU-R8n">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="AIz-P6-lBY" id="uUj-al-eLr"/>
+                            <outlet property="delegate" destination="AIz-P6-lBY" id="n34-Up-vma"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Find Yourself!" id="0NU-f0-1HA"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="95Z-ri-JEq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-604" y="729"/>
         </scene>
     </scenes>
     <resources>

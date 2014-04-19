@@ -10,5 +10,7 @@
 
     [binder bind:PivotPongApiURLs toInstance:@{PivotPongGetPlayers: @"http://pivot-pong-staging.cfapps.io/api/players.json"}];
 
+    [binder bind:[NSURLSession class] toInstance:[NSURLSession sharedSession]];
+    [binder bind:[NSOperationQueue class] toInstance:[NSOperationQueue mainQueue]];
 }
 @end

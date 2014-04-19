@@ -47,19 +47,6 @@ describe(@"IdentificationController", ^{
             expect(controller.tableView.dataSource).to(be_same_instance_as(controller));
         });
 
-        describe(@"fetching players", ^{
-            it(@"sets the table view with players fetched from the API", ^{
-                expect([controller tableView:controller.tableView numberOfRowsInSection:0]).to(equal(2));
-            });
-
-            it(@"populates the cells with the player data", ^{
-                NSIndexPath *path = [NSIndexPath indexPathForRow:0 inSection:0];
-                UITableViewCell *cell = [controller.tableView cellForRowAtIndexPath:path];
-                expect([cell valueForKey:@"name"]).to(equal(@"Bob Tuna")); // need to setup table view cells with name property...
-            });
-        });
-
-
     });
 });
 
