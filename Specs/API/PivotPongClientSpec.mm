@@ -31,7 +31,7 @@ describe(@"PivotPongClient", ^{
         __block KSDeferred *jsonClientDeferred;
         beforeEach(^{
             jsonClientDeferred = [injector getInstance:[KSDeferred class]];
-            NSDictionary *result = @{@"foo": @"bar"};
+            NSDictionary *result = @{PivotPongJSONResponsePlayersKey: @[@"foo", @"bar"]};
             [jsonClientDeferred resolveWithValue:result];
             jsonClient stub_method("fetchUrl:").and_return(jsonClientDeferred.promise);
         });
@@ -44,6 +44,11 @@ describe(@"PivotPongClient", ^{
 
         it(@"returns a promise", ^{
             expect([client getPlayers]).to(be_instance_of([KSPromise class]));
+        });
+
+        it(@"returns data from the players key of the response", ^{
+            KSPromise *resultPromise = [client getPlayers];
+            expect(resultPromise.value).to(equal(@[@"foo", @"bar"]));
         });
     });
 });

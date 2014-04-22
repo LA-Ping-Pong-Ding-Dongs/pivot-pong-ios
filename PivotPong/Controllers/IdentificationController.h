@@ -1,6 +1,4 @@
-#import "Injectable.h"
-#import <UIKit/UIKit.h>
+#import "PlayerTableViewController.h"
 
-@interface IdentificationController : UITableViewController <Injectable, UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic, weak) id<BSInjector>injector;
+@interface IdentificationController : PlayerTableViewController
 @end

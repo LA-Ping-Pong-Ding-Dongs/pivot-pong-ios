@@ -1,42 +1,22 @@
 #import "AttestationController.h"
+#import "PivotPongClient.h"
+#import "KSPromise.h"
 
 @interface AttestationController ()
 @end
 
 @implementation AttestationController
 
-@synthesize injector;
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)viewDidLoad
-{
+-(void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    NSString *localizationTitleKey = self.won ? @"AttestationControllerWonTitle" : @"AttestationControllerLostTitle";
+    self.title = NSLocalizedString(localizationTitleKey, nil);
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(NSPredicate *)playerFilterPredicate {
+    NSDictionary *currentUser = [[NSUserDefaults standardUserDefaults] objectForKey:PivotPongCurrentUserKey];
+    NSString *name = [currentUser objectForKey:PivotPongPlayerNameKey];
+    return [NSPredicate predicateWithFormat:[PivotPongPlayerNameKey stringByAppendingString:@"!= %@"], name];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

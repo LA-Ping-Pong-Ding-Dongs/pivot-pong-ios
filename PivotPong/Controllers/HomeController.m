@@ -4,8 +4,6 @@
 #import "Configurator.h"
 
 @interface HomeController ()
-@property (weak, nonatomic) IBOutlet UIButton *wonButton;
-@property (weak, nonatomic) IBOutlet UIButton *lostButton;
 @end
 
 @implementation HomeController
@@ -14,17 +12,15 @@
 
 -(void)viewDidLoad {
     [self labelButtons];
-    if (![[NSUserDefaults standardUserDefaults] objectForKey:@"currentUser"]) {
+    if (![[NSUserDefaults standardUserDefaults] objectForKey:PivotPongCurrentUserKey]) {
         [self performSegueWithIdentifier:@"presentIdentification" sender:nil];
     }
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    UIViewController *destinationController = segue.destinationViewController;
-    if ([destinationController isKindOfClass:[UINavigationController class]]) {
-        destinationController = [((UINavigationController *)destinationController) topViewController];
+    if ([segue.destinationViewController isKindOfClass:[AttestationController class]]) {
+        ((AttestationController *)segue.destinationViewController).won = [segue.identifier isEqualToString:@"wonSegue"];
     }
-    ((id<Injectable>)destinationController).injector = self.injector;
 }
 
 -(void)labelButtons {

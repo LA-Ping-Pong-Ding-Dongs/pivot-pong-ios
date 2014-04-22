@@ -1,6 +1,7 @@
 #import "AppDelegate.h"
 #import "HomeController.h"
 #import "Configurator.h"
+#import "BlindsidedStoryboard.h"
 
 @interface AppDelegate ()
 @property (nonatomic, strong) id<BSInjector> injector;
@@ -13,10 +14,8 @@
     Configurator *configurator = [[Configurator alloc] init];
     self.injector = [Blindside injectorWithModule:configurator];
 
-    UINavigationController *nav = (UINavigationController *)self.window.rootViewController;
-    id<Injectable> home = (id)nav.topViewController;
-    home.injector = self.injector;
-    
+    UIStoryboard *storyBoard = [BlindsidedStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle] injector:self.injector];
+    self.window.rootViewController = [storyBoard instantiateInitialViewController];
     return YES;
 }
 
@@ -28,7 +27,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 

@@ -22,17 +22,38 @@ describe(@"HomeController", ^{
 
     describe(@"When a user has not yet been identified", ^{
         beforeEach(^{
-            [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"currentUser"];
+            [[NSUserDefaults standardUserDefaults] removeObjectForKey:PivotPongCurrentUserKey];
             (void)homeController.view;
         });
 
         it(@"presents the Identification Controller as a modal", ^{
-            expect(homeController.presentedViewController).to(be_instance_of([IdentificationController class]));
+            expect(homeController.presentedViewController).to(be_instance_of([UINavigationController class]));
+            expect(((UINavigationController *)homeController.presentedViewController).topViewController).to(be_instance_of([IdentificationController class]));
+        });
+    });
+
+    describe(@"making a win/loss declaration", ^{
+        beforeEach(^{
+            [[NSUserDefaults standardUserDefaults] setObject:@"Bob Tuna" forKey:@"currentUser"];
+            (void)homeController.view;
         });
 
-        it(@"assigns the injector", ^{
-            IdentificationController *identification = (IdentificationController *)homeController.presentedViewController;
-            expect(identification.injector).to(be_same_instance_as(injector));
+        context(@"winning", ^{
+            it(@"takes the user to the attestation controller", ^{
+                [homeController.wonButton tap];
+                AttestationController *destinationController = (AttestationController *)homeController.navigationController.topViewController;
+                expect(destinationController).to(be_instance_of([AttestationController class]));
+                expect(destinationController.won).to(be_truthy);
+            });
+        });
+
+        context(@"losing", ^{
+            it(@"takes the user to the attestation controller", ^{
+                [homeController.lostButton tap];
+                AttestationController *destinationController = (AttestationController *)homeController.navigationController.topViewController;
+                expect(destinationController).to(be_instance_of([AttestationController class]));
+                expect(destinationController.won).to_not(be_truthy);
+            });
         });
     });
 });

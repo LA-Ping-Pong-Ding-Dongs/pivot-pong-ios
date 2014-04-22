@@ -1,3 +1,5 @@
-"CFBundleDisplayName"      = "PivotPong!";
-"NetworkConnectivityError" = "OMG! Unable to connect to network. LOL!";
-"ServerResponseError"      = "OMG! Server responded with %i status code. LOL!";
+"CFBundleDisplayName"            = "PivotPong!";
+"NetworkConnectivityError"       = "OMG! Unable to connect to network. LOL!";
+"ServerResponseError"            = "OMG! Server responded with %i status code. LOL!";
+"AttestationControllerWonTitle"  = "I won against:";
+"AttestationControllerLostTitle" = "I lost against:";

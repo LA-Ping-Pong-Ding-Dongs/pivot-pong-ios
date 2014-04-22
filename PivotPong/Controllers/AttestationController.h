@@ -1,5 +1,7 @@
-#import "Injectable.h"
-#import <UIKit/UIKit.h>
+#import "PlayerTableViewController.h"
 
-@interface AttestationController : UIViewController <Injectable>
+@interface AttestationController : PlayerTableViewController
+
+@property (nonatomic) BOOL won;
+
 @end

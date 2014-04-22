@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		950A3C7442364D5EADA11F6A /* libPods-PivotPong.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 298179B670EC4C65BA84F82F /* libPods-PivotPong.a */; };
 		9E18BE95F6294387BA9DBF28 /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5926F102F57D428AA5DBF571 /* libPods-Specs.a */; };
+		AE03B72D19058D8000E4E644 /* BlindsidedStoryboard.m in Sources */ = {isa = PBXBuildFile; fileRef = AE03B72C19058D8000E4E644 /* BlindsidedStoryboard.m */; };
+		AE03B72E19058D8000E4E644 /* BlindsidedStoryboard.m in Sources */ = {isa = PBXBuildFile; fileRef = AE03B72C19058D8000E4E644 /* BlindsidedStoryboard.m */; };
+		AE03B7311905C46300E4E644 /* PlayerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE03B7301905C46300E4E644 /* PlayerTableViewController.m */; };
+		AE03B7321905C46300E4E644 /* PlayerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE03B7301905C46300E4E644 /* PlayerTableViewController.m */; };
 		AE06053B190054AA00A9CFDE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE06053A190054AA00A9CFDE /* Default-568h@2x.png */; };
 		AE0F2E2E18FC98F7007B6EF0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAC78B018FC4E3B00C4FF0D /* AppDelegate.m */; };
 		AE0F2E3018FC9FEC007B6EF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE0F2E2F18FC9FEC007B6EF0 /* Main.storyboard */; };
@@ -47,6 +51,8 @@
 		AEAC78B318FC4E3B00C4FF0D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEAC78B218FC4E3B00C4FF0D /* Images.xcassets */; };
 		AEC2389A18FE045C00F6217A /* pivID_blue-1004x400.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC2389918FE045C00F6217A /* pivID_blue-1004x400.png */; };
 		AEC2389B18FE051700F6217A /* pivID_blue-1004x400.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC2389918FE045C00F6217A /* pivID_blue-1004x400.png */; };
+		AEDF07DC1905DEC300AB07CC /* PlayerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEDF07DB1905DEC300AB07CC /* PlayerCell.xib */; };
+		AEDF07DD1905DEC300AB07CC /* PlayerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEDF07DB1905DEC300AB07CC /* PlayerCell.xib */; };
 		AEE820A718FC6D4C000C49A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEAC78A418FC4E3B00C4FF0D /* UIKit.framework */; };
 		AEE820A818FC6D4C000C49A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEAC78A018FC4E3B00C4FF0D /* Foundation.framework */; };
 		AEE820A918FC6D4C000C49A4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEAC78A218FC4E3B00C4FF0D /* CoreGraphics.framework */; };
@@ -70,6 +76,10 @@
 		507F1C0B53F94E588568064F /* Pods-Specs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.xcconfig"; path = "../Pods/Pods-Specs.xcconfig"; sourceTree = "<group>"; };
 		5926F102F57D428AA5DBF571 /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABC4B57A38244710987C4B1B /* Pods-Specs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.xcconfig"; path = "Pods/Pods-Specs.xcconfig"; sourceTree = "<group>"; };
+		AE03B72B19058D8000E4E644 /* BlindsidedStoryboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlindsidedStoryboard.h; sourceTree = "<group>"; };
+		AE03B72C19058D8000E4E644 /* BlindsidedStoryboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlindsidedStoryboard.m; sourceTree = "<group>"; };
+		AE03B72F1905C46300E4E644 /* PlayerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerTableViewController.h; path = Controllers/PlayerTableViewController.h; sourceTree = "<group>"; };
+		AE03B7301905C46300E4E644 /* PlayerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerTableViewController.m; path = Controllers/PlayerTableViewController.m; sourceTree = "<group>"; };
 		AE06053A190054AA00A9CFDE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../Default-568h@2x.png"; sourceTree = "<group>"; };
 		AE0F2E2F18FC9FEC007B6EF0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AE0F2E3118FCA070007B6EF0 /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeController.h; path = Controllers/HomeController.h; sourceTree = "<group>"; };
@@ -89,8 +99,6 @@
 		AE7297D818FD9BA200F58A30 /* libPods-PivotPong-Blindside.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-PivotPong-Blindside.a"; path = "../Pods/build/Release-iphoneos/libPods-PivotPong-Blindside.a"; sourceTree = "<group>"; };
 		AE7297DA18FD9BB200F58A30 /* libPods-PivotPong-Blindside.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-PivotPong-Blindside.a"; path = "../Pods/build/Release-iphoneos/libPods-PivotPong-Blindside.a"; sourceTree = "<group>"; };
 		AE7297DC18FD9BDE00F58A30 /* libPods-PivotPong.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-PivotPong.a"; path = "../Pods/build/Debug-iphoneos/libPods-PivotPong.a"; sourceTree = "<group>"; };
-		AE73D43E18FEED2000AFDD81 /* PivotPongClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PivotPongClient.h; sourceTree = "<group>"; };
-		AE73D43F18FEED2000AFDD81 /* PivotPongClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PivotPongClient.m; sourceTree = "<group>"; };
 		AE7D5F2E190093B30070F512 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		AEA95BD018FDBA2B00306B2A /* libPods-Specs.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Specs.a"; path = "../Pods/build/Debug-iphoneos/libPods-Specs.a"; sourceTree = "<group>"; };
 		AEA95BD218FDBAC100306B2A /* libPods-Specs.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Specs.a"; path = "../Pods/build/Debug-iphoneos/libPods-Specs.a"; sourceTree = "<group>"; };
@@ -127,6 +135,7 @@
 		AEAC78B218FC4E3B00C4FF0D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AEAC78B918FC4E3B00C4FF0D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		AEC2389918FE045C00F6217A /* pivID_blue-1004x400.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pivID_blue-1004x400.png"; sourceTree = "<group>"; };
+		AEDF07DB1905DEC300AB07CC /* PlayerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlayerCell.xib; path = UI/PlayerCell.xib; sourceTree = "<group>"; };
 		AEE820A618FC6D4C000C49A4 /* Specs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Specs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEE820AC18FC6D4C000C49A4 /* Specs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Specs-Info.plist"; sourceTree = "<group>"; };
 		AEE820AE18FC6D4C000C49A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -173,8 +182,8 @@
 				AE10BCE618FC8CF600E9FE34 /* AttestationController.m */,
 				AE0F2E3118FCA070007B6EF0 /* HomeController.h */,
 				AE0F2E3218FCA070007B6EF0 /* HomeController.m */,
-				AE73D43E18FEED2000AFDD81 /* PivotPongClient.h */,
-				AE73D43F18FEED2000AFDD81 /* PivotPongClient.m */,
+				AE03B72F1905C46300E4E644 /* PlayerTableViewController.h */,
+				AE03B7301905C46300E4E644 /* PlayerTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -294,6 +303,7 @@
 		AEAC78A618FC4E3B00C4FF0D /* PivotPong */ = {
 			isa = PBXGroup;
 			children = (
+				AEDF07D71905DE7300AB07CC /* UI */,
 				AEAAD30319005DA300A10D57 /* API */,
 				AEAC78AF18FC4E3B00C4FF0D /* AppDelegate.h */,
 				AEAC78B018FC4E3B00C4FF0D /* AppDelegate.m */,
@@ -304,6 +314,8 @@
 				AEAAD31019005E0400A10D57 /* Protocols */,
 				AEAAD32119005FD700A10D57 /* Support */,
 				AEAC78A718FC4E3B00C4FF0D /* Target Files */,
+				AE03B72B19058D8000E4E644 /* BlindsidedStoryboard.h */,
+				AE03B72C19058D8000E4E644 /* BlindsidedStoryboard.m */,
 			);
 			path = PivotPong;
 			sourceTree = "<group>";
@@ -327,6 +339,14 @@
 				AEC2389918FE045C00F6217A /* pivID_blue-1004x400.png */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		AEDF07D71905DE7300AB07CC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				AEDF07DB1905DEC300AB07CC /* PlayerCell.xib */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 		AEE820AA18FC6D4C000C49A4 /* Specs */ = {
@@ -428,6 +448,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEDF07DC1905DEC300AB07CC /* PlayerCell.xib in Resources */,
 				AE7D5F2F190093B30070F512 /* Localizable.strings in Resources */,
 				AEAC78AB18FC4E3B00C4FF0D /* InfoPlist.strings in Resources */,
 				AEAC78B318FC4E3B00C4FF0D /* Images.xcassets in Resources */,
@@ -440,6 +461,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEDF07DD1905DEC300AB07CC /* PlayerCell.xib in Resources */,
 				AE7D5F30190093B30070F512 /* Localizable.strings in Resources */,
 				AEC2389B18FE051700F6217A /* pivID_blue-1004x400.png in Resources */,
 				AE06053B190054AA00A9CFDE /* Default-568h@2x.png in Resources */,
@@ -522,6 +544,8 @@
 				AEAC78B118FC4E3B00C4FF0D /* AppDelegate.m in Sources */,
 				AE10BCE318FC8CE600E9FE34 /* IdentificationController.m in Sources */,
 				AEAAD32419005FD700A10D57 /* Configurator.m in Sources */,
+				AE03B72D19058D8000E4E644 /* BlindsidedStoryboard.m in Sources */,
+				AE03B7311905C46300E4E644 /* PlayerTableViewController.m in Sources */,
 				AEAAD30E19005DA300A10D57 /* PivotPongClient.m in Sources */,
 				AE10BCE718FC8CF600E9FE34 /* AttestationController.m in Sources */,
 				AE0F2E3318FCA070007B6EF0 /* HomeController.m in Sources */,
@@ -539,10 +563,12 @@
 				AE0F2E3418FCA070007B6EF0 /* HomeController.m in Sources */,
 				AE0F2E2E18FC98F7007B6EF0 /* AppDelegate.m in Sources */,
 				AEE820B118FC6D4C000C49A4 /* main.m in Sources */,
+				AE03B72E19058D8000E4E644 /* BlindsidedStoryboard.m in Sources */,
 				AEAAD30F19005DA300A10D57 /* PivotPongClient.m in Sources */,
 				AE10BCEE18FC8DA200E9FE34 /* AppDelegateSpec.mm in Sources */,
 				AE10BCEC18FC8D2700E9FE34 /* AttestationControllerSpec.mm in Sources */,
 				AEAAD31619005F9C00A10D57 /* HTTPClientSpec.mm in Sources */,
+				AE03B7321905C46300E4E644 /* PlayerTableViewController.m in Sources */,
 				AE0F2E3618FCA342007B6EF0 /* HomeControllerSpec.mm in Sources */,
 				AEAAD31719005F9C00A10D57 /* JSONClientSpec.mm in Sources */,
 				AE10BCEA18FC8D1100E9FE34 /* IdentificationControllerSpec.mm in Sources */,

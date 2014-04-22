@@ -18,16 +18,12 @@ describe(@"AppDelegate", ^{
     });
 
     describe(@"-application:didFinishLaunchingWithOptions:", ^{
-        __block HomeController *homeController;
-        beforeEach(^{
-            homeController = [[HomeController alloc] init];
-            delegate.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:homeController];
-        });
-        
-        it(@"sets the injector on the home controller", ^{
-            expect(homeController.injector).to(be_nil);
+        it(@"sets the injector on the root view controller", ^{
             [delegate application:nil didFinishLaunchingWithOptions:nil];
-            expect([(id)homeController.injector conformsToProtocol:@protocol(BSInjector)]).to(be_truthy);
+            UINavigationController *nav = (UINavigationController *)delegate.window.rootViewController;
+
+            HomeController *homeController = (HomeController *)nav.topViewController;
+            expect(homeController.injector).to(be_same_instance_as(delegate.injector));
         });
     });
 });

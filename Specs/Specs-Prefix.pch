@@ -3,6 +3,7 @@
     #import <Foundation/Foundation.h>
     #import <Cedar-iOS/SpecHelper.h>
     #import "UIKit+PivotalSpecHelperStubs.h"
+    #import "UIKit+PivotalSpecHelper.h"
     #import "Blindside.h"
     #import "Factory.h"
     #import "OpenerUpper.h"

@@ -31,13 +31,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQb-yc-y49">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQb-yc-y49">
                                 <rect key="frame" x="0.0" y="198" width="320" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <state key="normal" title="I WON!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Onf-3w-THP" kind="push" identifier="wonSegue" id="o6E-Yo-TIF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATA-rY-2FC">
                                 <rect key="frame" x="124" y="358" width="72" height="32"/>
@@ -46,6 +49,9 @@
                                 <state key="normal" title="I lost… :-(">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Onf-3w-THP" kind="push" identifier="lostSegue" id="79z-ae-qkP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -61,97 +67,81 @@
                     <connections>
                         <outlet property="lostButton" destination="ATA-rY-2FC" id="0uT-5e-fct"/>
                         <outlet property="wonButton" destination="FQb-yc-y49" id="UZD-Uc-Mwn"/>
-                        <segue destination="Q4X-tU-Ipf" kind="push" identifier="pushAttestation" id="woH-uF-qhe"/>
-                        <segue destination="AIz-P6-lBY" kind="modal" identifier="presentIdentification" modalTransitionStyle="flipHorizontal" id="iWb-xI-qag"/>
+                        <segue destination="qHv-mF-gAC" kind="modal" identifier="presentIdentification" modalTransitionStyle="flipHorizontal" id="WMO-3O-Dgf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ppH-Hj-wlJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1558" y="378"/>
         </scene>
-        <!--Attestation Controller-->
-        <scene sceneID="SCX-30-ayF">
-            <objects>
-                <viewController storyboardIdentifier="AttestationController" id="Q4X-tU-Ipf" customClass="AttestationController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="S75-e4-ahb"/>
-                        <viewControllerLayoutGuide type="bottom" id="jFk-lG-zto"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="9rr-5v-z0b">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I won!!!!!!!!!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gj5-6X-qG6">
-                                <rect key="frame" x="92" y="254" width="162" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="wt7-zd-hj8"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Uyj-Ed-ZZ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-604" y="21"/>
-        </scene>
-        <!--Identification Controller - Find Yourself!-->
+        <!--Identification Controller - Who are you!?-->
         <scene sceneID="BCm-64-Y2Y">
             <objects>
                 <tableViewController storyboardIdentifier="IdentificationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AIz-P6-lBY" customClass="IdentificationController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Mwz-zo-DF8">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" tag="1" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Mwz-zo-DF8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="Sl4-xs-VF0">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who you be?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVF-nH-s4V">
-                                    <rect key="frame" x="109" y="11" width="102" height="21"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPy-XB-Rwu">
-                                    <rect key="frame" x="254" y="7" width="46" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Go">
-                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="doneTapped:" destination="AIz-P6-lBY" eventType="touchUpInside" id="mxB-Mt-lmr"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="centerX" secondItem="gVF-nH-s4V" secondAttribute="centerX" id="fSn-E7-nKP"/>
-                                <constraint firstAttribute="centerY" secondItem="gVF-nH-s4V" secondAttribute="centerY" id="mO4-H6-erC"/>
-                            </constraints>
-                        </view>
+                        <connections>
+                            <outlet property="dataSource" destination="AIz-P6-lBY" id="uUj-al-eLr"/>
+                            <outlet property="delegate" destination="AIz-P6-lBY" id="n34-Up-vma"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Who are you!?" id="kQq-4y-qva">
+                        <barButtonItem key="rightBarButtonItem" title="Go" id="jSr-4D-qW3">
+                            <connections>
+                                <action selector="doneTapped:" destination="AIz-P6-lBY" id="SjT-JT-jS2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="95Z-ri-JEq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-118" y="694"/>
+        </scene>
+        <!--Attestation Controller-->
+        <scene sceneID="tMf-Is-oLk">
+            <objects>
+                <tableViewController storyboardIdentifier="AttestationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Onf-3w-THP" customClass="AttestationController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="eOO-Rb-9nS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlayerCellPrototype" id="vBX-aS-eVG">
-                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="KRv-eV-axL">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vBX-aS-eVG" id="WVW-aU-R8n">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KRv-eV-axL" id="xlp-fo-xaZ">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="AIz-P6-lBY" id="uUj-al-eLr"/>
-                            <outlet property="delegate" destination="AIz-P6-lBY" id="n34-Up-vma"/>
+                            <outlet property="dataSource" destination="Onf-3w-THP" id="hPZ-tT-4PI"/>
+                            <outlet property="delegate" destination="Onf-3w-THP" id="29A-Jx-VAD"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Find Yourself!" id="0NU-f0-1HA"/>
+                    <navigationItem key="navigationItem" id="t2K-js-6Pc"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="95Z-ri-JEq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iQQ-xi-Jrh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-604" y="729"/>
+            <point key="canvasLocation" x="-626" y="4"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OTV-U1-tbQ">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="qHv-mF-gAC" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZAQ-ca-Rg1">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="AIz-P6-lBY" kind="relationship" relationship="rootViewController" id="DCV-15-fj9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wo5-ro-Sqm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-604" y="694"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -159,4 +149,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="79z-ae-qkP"/>
+    </inferredMetricsTieBreakers>
 </document>

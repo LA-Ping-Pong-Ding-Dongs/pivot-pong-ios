@@ -29,7 +29,9 @@
 }
 
 -(KSPromise *)getPlayers {
-    return [self.jsonClient fetchUrl:[self.apiURLs objectForKey:PivotPongGetPlayers]];
+    return [[self.jsonClient fetchUrl:[self.apiURLs objectForKey:PivotPongGetPlayers]] then:^NSArray *(NSDictionary *jsonData) {
+        return [jsonData objectForKey:PivotPongJSONResponsePlayersKey];
+    } error:nil];
 }
 
 @end
