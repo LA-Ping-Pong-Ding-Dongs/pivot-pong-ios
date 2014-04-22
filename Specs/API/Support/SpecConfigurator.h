@@ -1,5 +1,5 @@
-#import <Foundation/Foundation.h>
+#import "Configurator.h"
 
-@interface SpecConfigurator : NSObject
+@interface SpecConfigurator : Configurator
 
 @end

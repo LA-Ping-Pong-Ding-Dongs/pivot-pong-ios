@@ -29,6 +29,8 @@
 		AE5EAF0D18FDECE1008222E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE0F2E2F18FC9FEC007B6EF0 /* Main.storyboard */; };
 		AE7D5F2F190093B30070F512 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AE7D5F2E190093B30070F512 /* Localizable.strings */; };
 		AE7D5F30190093B30070F512 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AE7D5F2E190093B30070F512 /* Localizable.strings */; };
+		AEA262691907279800E96B44 /* environment.json in Resources */ = {isa = PBXBuildFile; fileRef = AEAB239A190720250006840A /* environment.json */; };
+		AEA2626C1907280D00E96B44 /* environment_test.json in Resources */ = {isa = PBXBuildFile; fileRef = AEB853C7190724F700D1D896 /* environment_test.json */; };
 		AEAAD30A19005DA300A10D57 /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAAD30519005DA300A10D57 /* HTTPClient.m */; };
 		AEAAD30B19005DA300A10D57 /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAAD30519005DA300A10D57 /* HTTPClient.m */; };
 		AEAAD30C19005DA300A10D57 /* JSONClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAAD30719005DA300A10D57 /* JSONClient.m */; };
@@ -60,16 +62,6 @@
 		AEE820B118FC6D4C000C49A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE820B018FC6D4C000C49A4 /* main.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		AE10BCD118FC82C100E9FE34 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AEAC789518FC4E3B00C4FF0D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AEAC789C18FC4E3B00C4FF0D;
-			remoteInfo = PivotPong;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		08A4848F1AD94DAC94B68488 /* Pods-PivotPong.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PivotPong.xcconfig"; path = "Pods/Pods-PivotPong.xcconfig"; sourceTree = "<group>"; };
 		298179B670EC4C65BA84F82F /* libPods-PivotPong.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PivotPong.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +84,8 @@
 		AE10BCE918FC8D1100E9FE34 /* IdentificationControllerSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = IdentificationControllerSpec.mm; path = Controllers/IdentificationControllerSpec.mm; sourceTree = "<group>"; };
 		AE10BCEB18FC8D2700E9FE34 /* AttestationControllerSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AttestationControllerSpec.mm; path = Controllers/AttestationControllerSpec.mm; sourceTree = "<group>"; };
 		AE10BCED18FC8DA200E9FE34 /* AppDelegateSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegateSpec.mm; sourceTree = "<group>"; };
+		AE2197F519071E6B00B6877B /* environment_production.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = environment_production.json; path = Config/environment_production.json; sourceTree = "<group>"; };
+		AE2F7B151907197000B0DDBE /* environment_development.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = environment_development.json; path = Config/environment_development.json; sourceTree = "<group>"; };
 		AE4F245C18FDD681006907CA /* libPods-Specs.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Specs.a"; path = "../Pods/build/Debug-iphoneos/libPods-Specs.a"; sourceTree = "<group>"; };
 		AE5EAF0918FDEA39008222E1 /* libPods-PivotPong.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-PivotPong.a"; path = "../Pods/build/Debug-iphoneos/libPods-PivotPong.a"; sourceTree = "<group>"; };
 		AE5EAF0B18FDEAB7008222E1 /* libPods-Specs.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Specs.a"; path = "../Pods/build/Debug-iphoneos/libPods-Specs.a"; sourceTree = "<group>"; };
@@ -122,6 +116,7 @@
 		AEAAD32219005FD700A10D57 /* Configurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configurator.h; sourceTree = "<group>"; };
 		AEAAD32319005FD700A10D57 /* Configurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configurator.m; sourceTree = "<group>"; };
 		AEAAD3261900602700A10D57 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		AEAB239A190720250006840A /* environment.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = environment.json; path = Config/environment.json; sourceTree = "<group>"; };
 		AEAC789D18FC4E3B00C4FF0D /* PivotPong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PivotPong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEAC78A018FC4E3B00C4FF0D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AEAC78A218FC4E3B00C4FF0D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -134,6 +129,7 @@
 		AEAC78B018FC4E3B00C4FF0D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AEAC78B218FC4E3B00C4FF0D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AEAC78B918FC4E3B00C4FF0D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		AEB853C7190724F700D1D896 /* environment_test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = environment_test.json; path = Config/environment_test.json; sourceTree = "<group>"; };
 		AEC2389918FE045C00F6217A /* pivID_blue-1004x400.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pivID_blue-1004x400.png"; sourceTree = "<group>"; };
 		AEDF07DB1905DEC300AB07CC /* PlayerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlayerCell.xib; path = UI/PlayerCell.xib; sourceTree = "<group>"; };
 		AEE820A618FC6D4C000C49A4 /* Specs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Specs.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -198,6 +194,17 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		AE2F7B0E1907101800B0DDBE /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				AEAB239A190720250006840A /* environment.json */,
+				AE2F7B151907197000B0DDBE /* environment_development.json */,
+				AE2197F519071E6B00B6877B /* environment_production.json */,
+				AEB853C7190724F700D1D896 /* environment_test.json */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
 		AEAAD30319005DA300A10D57 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +252,7 @@
 		AEAAD32119005FD700A10D57 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				AE2F7B0E1907101800B0DDBE /* Config */,
 				AEAAD3261900602700A10D57 /* Constants.h */,
 				AEAAD32219005FD700A10D57 /* Configurator.h */,
 				AEAAD32319005FD700A10D57 /* Configurator.m */,
@@ -384,6 +392,7 @@
 				77B912EC34A54E6E94862258 /* Check Pods Manifest.lock */,
 				AEAC789918FC4E3B00C4FF0D /* Sources */,
 				AEAC789A18FC4E3B00C4FF0D /* Frameworks */,
+				AE2F7B141907193C00B0DDBE /* Setup Magic Environment JSON file */,
 				AEAC789B18FC4E3B00C4FF0D /* Resources */,
 				68FED82D53344BD0B9A75210 /* Copy Pods Resources */,
 			);
@@ -409,7 +418,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				AE10BCD218FC82C100E9FE34 /* PBXTargetDependency */,
 			);
 			name = Specs;
 			productName = Specs;
@@ -448,6 +456,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEA262691907279800E96B44 /* environment.json in Resources */,
 				AEDF07DC1905DEC300AB07CC /* PlayerCell.xib in Resources */,
 				AE7D5F2F190093B30070F512 /* Localizable.strings in Resources */,
 				AEAC78AB18FC4E3B00C4FF0D /* InfoPlist.strings in Resources */,
@@ -461,6 +470,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEA2626C1907280D00E96B44 /* environment_test.json in Resources */,
 				AEDF07DD1905DEC300AB07CC /* PlayerCell.xib in Resources */,
 				AE7D5F30190093B30070F512 /* Localizable.strings in Resources */,
 				AEC2389B18FE051700F6217A /* pivID_blue-1004x400.png in Resources */,
@@ -517,6 +527,20 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		AE2F7B141907193C00B0DDBE /* Setup Magic Environment JSON file */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Setup Magic Environment JSON file";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "dir=${PROJECT_DIR}/${PROJECT_NAME}/Support/Config\necho ${ENVIRONMENT}\ncp $dir/environment_${ENVIRONMENT}.json $dir/environment.json";
 		};
 		B4CE0B1831B043EA955962E8 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -582,14 +606,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		AE10BCD218FC82C100E9FE34 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AEAC789C18FC4E3B00C4FF0D /* PivotPong */;
-			targetProxy = AE10BCD118FC82C100E9FE34 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AEAC78A918FC4E3B00C4FF0D /* InfoPlist.strings */ = {
@@ -690,6 +706,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				ENVIRONMENT = development;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PivotPong/PivotPong-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -716,6 +733,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				ENVIRONMENT = production;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PivotPong/PivotPong-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
