@@ -46,6 +46,10 @@ describe(@"IdentificationController", ^{
             expect(controller.tableView.delegate).to(be_same_instance_as(controller));
         });
 
+        it(@"disables the GO button", ^{
+            expect(controller.navigationItem.rightBarButtonItem.enabled).to_not(be_truthy);
+        });
+
         it(@"displays the players in the table view", ^{
             expect([controller.tableView numberOfRowsInSection:0]).to(equal(2));
             UITableViewCell *cell = [controller.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
@@ -56,12 +60,19 @@ describe(@"IdentificationController", ^{
         });
 
         describe(@"choosing a user", ^{
-            it(@"persists the user in the standard user defaults", ^{
+            beforeEach(^{
                 expect([controller.tableView numberOfRowsInSection:0]).to(equal(2));
-                expect([[NSUserDefaults standardUserDefaults] objectForKey:PivotPongCurrentUserKey]).to(be_nil);
+            });
+
+            it(@"persists the user in the standard user defaults", ^{
                 [[controller.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]] tap];
                 [controller.navigationItem.rightBarButtonItem tap];
                 expect([[NSUserDefaults standardUserDefaults] objectForKey:PivotPongCurrentUserKey][@"name"]).to(equal(@"Bob Tuna"));
+            });
+
+            it(@"enables the GO button", ^{
+                [[controller.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]] tap];
+                expect(controller.navigationItem.rightBarButtonItem.enabled).to(be_truthy);
             });
         });
     });

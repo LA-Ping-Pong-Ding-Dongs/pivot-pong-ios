@@ -5,6 +5,16 @@
 
 @implementation IdentificationController
 
+-(void)viewDidLoad {
+    [super viewDidLoad];
+    self.navigationItem.rightBarButtonItem.enabled = NO;
+}
+
+#pragma UITableViewDelegate
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.navigationItem.rightBarButtonItem.enabled = YES;
+}
+
 #pragma mark Actions
 - (IBAction)doneTapped:(id)sender {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
