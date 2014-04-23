@@ -1,1 +1,0 @@
-../../PivotalCoreKit/UIKit/SpecHelper/UIKit+PivotalSpecHelper.h

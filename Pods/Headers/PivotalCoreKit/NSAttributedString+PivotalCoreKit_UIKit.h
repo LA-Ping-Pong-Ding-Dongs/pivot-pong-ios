@@ -1,1 +1,0 @@
-../../PivotalCoreKit/UIKit/Core/Extensions/NSAttributedString+PivotalCoreKit_UIKit.h

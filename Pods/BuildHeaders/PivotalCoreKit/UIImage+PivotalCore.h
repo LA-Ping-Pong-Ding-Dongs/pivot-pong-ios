@@ -1,1 +1,0 @@
-../../PivotalCoreKit/UIKit/Core/Extensions/UIImage+PivotalCore.h

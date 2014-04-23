@@ -29,16 +29,19 @@
 		AE5EAF0D18FDECE1008222E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE0F2E2F18FC9FEC007B6EF0 /* Main.storyboard */; };
 		AE7D5F2F190093B30070F512 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AE7D5F2E190093B30070F512 /* Localizable.strings */; };
 		AE7D5F30190093B30070F512 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AE7D5F2E190093B30070F512 /* Localizable.strings */; };
+		AE802114190829B300642E80 /* MatchesControllerSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE802113190829B300642E80 /* MatchesControllerSpec.mm */; };
 		AEA262691907279800E96B44 /* environment.json in Resources */ = {isa = PBXBuildFile; fileRef = AEAB239A190720250006840A /* environment.json */; };
 		AEA2626C1907280D00E96B44 /* environment_test.json in Resources */ = {isa = PBXBuildFile; fileRef = AEB853C7190724F700D1D896 /* environment_test.json */; };
+		AEA2626F190731FF00E96B44 /* MatchesController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA2626E190731FF00E96B44 /* MatchesController.m */; };
+		AEA26270190731FF00E96B44 /* MatchesController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA2626E190731FF00E96B44 /* MatchesController.m */; };
 		AEAAD30A19005DA300A10D57 /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAAD30519005DA300A10D57 /* HTTPClient.m */; };
 		AEAAD30B19005DA300A10D57 /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAAD30519005DA300A10D57 /* HTTPClient.m */; };
-		AEAAD30C19005DA300A10D57 /* JSONClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAAD30719005DA300A10D57 /* JSONClient.m */; };
-		AEAAD30D19005DA300A10D57 /* JSONClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAAD30719005DA300A10D57 /* JSONClient.m */; };
+		AEAAD30C19005DA300A10D57 /* DataClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAAD30719005DA300A10D57 /* DataClient.m */; };
+		AEAAD30D19005DA300A10D57 /* DataClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAAD30719005DA300A10D57 /* DataClient.m */; };
 		AEAAD30E19005DA300A10D57 /* PivotPongClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAAD30919005DA300A10D57 /* PivotPongClient.m */; };
 		AEAAD30F19005DA300A10D57 /* PivotPongClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAAD30919005DA300A10D57 /* PivotPongClient.m */; };
 		AEAAD31619005F9C00A10D57 /* HTTPClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AEAAD31319005F9C00A10D57 /* HTTPClientSpec.mm */; };
-		AEAAD31719005F9C00A10D57 /* JSONClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AEAAD31419005F9C00A10D57 /* JSONClientSpec.mm */; };
+		AEAAD31719005F9C00A10D57 /* DataClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AEAAD31419005F9C00A10D57 /* DataClientSpec.mm */; };
 		AEAAD31819005F9C00A10D57 /* PivotPongClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AEAAD31519005F9C00A10D57 /* PivotPongClientSpec.mm */; };
 		AEAAD31F19005FA400A10D57 /* Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAAD31B19005FA400A10D57 /* Factory.m */; };
 		AEAAD32019005FA400A10D57 /* SpecConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAAD31E19005FA400A10D57 /* SpecConfigurator.m */; };
@@ -94,19 +97,23 @@
 		AE7297DA18FD9BB200F58A30 /* libPods-PivotPong-Blindside.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-PivotPong-Blindside.a"; path = "../Pods/build/Release-iphoneos/libPods-PivotPong-Blindside.a"; sourceTree = "<group>"; };
 		AE7297DC18FD9BDE00F58A30 /* libPods-PivotPong.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-PivotPong.a"; path = "../Pods/build/Debug-iphoneos/libPods-PivotPong.a"; sourceTree = "<group>"; };
 		AE7D5F2E190093B30070F512 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		AE802113190829B300642E80 /* MatchesControllerSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MatchesControllerSpec.mm; path = Controllers/MatchesControllerSpec.mm; sourceTree = "<group>"; };
+		AE802115190842F200642E80 /* environment_staging.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = environment_staging.json; path = Config/environment_staging.json; sourceTree = "<group>"; };
+		AEA2626D190731FF00E96B44 /* MatchesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MatchesController.h; path = Controllers/MatchesController.h; sourceTree = "<group>"; };
+		AEA2626E190731FF00E96B44 /* MatchesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MatchesController.m; path = Controllers/MatchesController.m; sourceTree = "<group>"; };
 		AEA95BD018FDBA2B00306B2A /* libPods-Specs.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Specs.a"; path = "../Pods/build/Debug-iphoneos/libPods-Specs.a"; sourceTree = "<group>"; };
 		AEA95BD218FDBAC100306B2A /* libPods-Specs.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Specs.a"; path = "../Pods/build/Debug-iphoneos/libPods-Specs.a"; sourceTree = "<group>"; };
 		AEA95BD418FDBAC800306B2A /* libPods-PivotPong.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-PivotPong.a"; path = "../Pods/build/Debug-iphoneos/libPods-PivotPong.a"; sourceTree = "<group>"; };
 		AEA95BD718FDBE4000306B2A /* libPods-Specs.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Specs.a"; path = "../Pods/build/Debug-iphoneos/libPods-Specs.a"; sourceTree = "<group>"; };
 		AEAAD30419005DA300A10D57 /* HTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPClient.h; sourceTree = "<group>"; };
 		AEAAD30519005DA300A10D57 /* HTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPClient.m; sourceTree = "<group>"; };
-		AEAAD30619005DA300A10D57 /* JSONClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONClient.h; sourceTree = "<group>"; };
-		AEAAD30719005DA300A10D57 /* JSONClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONClient.m; sourceTree = "<group>"; };
+		AEAAD30619005DA300A10D57 /* DataClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataClient.h; sourceTree = "<group>"; };
+		AEAAD30719005DA300A10D57 /* DataClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataClient.m; sourceTree = "<group>"; };
 		AEAAD30819005DA300A10D57 /* PivotPongClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PivotPongClient.h; sourceTree = "<group>"; };
 		AEAAD30919005DA300A10D57 /* PivotPongClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PivotPongClient.m; sourceTree = "<group>"; };
 		AEAAD31119005E0400A10D57 /* Injectable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Injectable.h; sourceTree = "<group>"; };
 		AEAAD31319005F9C00A10D57 /* HTTPClientSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HTTPClientSpec.mm; sourceTree = "<group>"; };
-		AEAAD31419005F9C00A10D57 /* JSONClientSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = JSONClientSpec.mm; sourceTree = "<group>"; };
+		AEAAD31419005F9C00A10D57 /* DataClientSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DataClientSpec.mm; sourceTree = "<group>"; };
 		AEAAD31519005F9C00A10D57 /* PivotPongClientSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PivotPongClientSpec.mm; sourceTree = "<group>"; };
 		AEAAD31A19005FA400A10D57 /* Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Factory.h; sourceTree = "<group>"; };
 		AEAAD31B19005FA400A10D57 /* Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Factory.m; sourceTree = "<group>"; };
@@ -180,6 +187,8 @@
 				AE0F2E3218FCA070007B6EF0 /* HomeController.m */,
 				AE03B72F1905C46300E4E644 /* PlayerTableViewController.h */,
 				AE03B7301905C46300E4E644 /* PlayerTableViewController.m */,
+				AEA2626D190731FF00E96B44 /* MatchesController.h */,
+				AEA2626E190731FF00E96B44 /* MatchesController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -190,6 +199,7 @@
 				AE10BCE918FC8D1100E9FE34 /* IdentificationControllerSpec.mm */,
 				AE10BCEB18FC8D2700E9FE34 /* AttestationControllerSpec.mm */,
 				AE0F2E3518FCA342007B6EF0 /* HomeControllerSpec.mm */,
+				AE802113190829B300642E80 /* MatchesControllerSpec.mm */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -200,6 +210,7 @@
 				AEAB239A190720250006840A /* environment.json */,
 				AE2F7B151907197000B0DDBE /* environment_development.json */,
 				AE2197F519071E6B00B6877B /* environment_production.json */,
+				AE802115190842F200642E80 /* environment_staging.json */,
 				AEB853C7190724F700D1D896 /* environment_test.json */,
 			);
 			name = Config;
@@ -210,8 +221,8 @@
 			children = (
 				AEAAD30419005DA300A10D57 /* HTTPClient.h */,
 				AEAAD30519005DA300A10D57 /* HTTPClient.m */,
-				AEAAD30619005DA300A10D57 /* JSONClient.h */,
-				AEAAD30719005DA300A10D57 /* JSONClient.m */,
+				AEAAD30619005DA300A10D57 /* DataClient.h */,
+				AEAAD30719005DA300A10D57 /* DataClient.m */,
 				AEAAD30819005DA300A10D57 /* PivotPongClient.h */,
 				AEAAD30919005DA300A10D57 /* PivotPongClient.m */,
 			);
@@ -230,7 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				AEAAD31319005F9C00A10D57 /* HTTPClientSpec.mm */,
-				AEAAD31419005F9C00A10D57 /* JSONClientSpec.mm */,
+				AEAAD31419005F9C00A10D57 /* DataClientSpec.mm */,
 				AEAAD31519005F9C00A10D57 /* PivotPongClientSpec.mm */,
 			);
 			path = API;
@@ -564,9 +575,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEAAD30C19005DA300A10D57 /* JSONClient.m in Sources */,
+				AEAAD30C19005DA300A10D57 /* DataClient.m in Sources */,
 				AEAC78B118FC4E3B00C4FF0D /* AppDelegate.m in Sources */,
 				AE10BCE318FC8CE600E9FE34 /* IdentificationController.m in Sources */,
+				AEA2626F190731FF00E96B44 /* MatchesController.m in Sources */,
 				AEAAD32419005FD700A10D57 /* Configurator.m in Sources */,
 				AE03B72D19058D8000E4E644 /* BlindsidedStoryboard.m in Sources */,
 				AE03B7311905C46300E4E644 /* PlayerTableViewController.m in Sources */,
@@ -583,8 +595,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEAAD31F19005FA400A10D57 /* Factory.m in Sources */,
-				AEAAD30D19005DA300A10D57 /* JSONClient.m in Sources */,
+				AEAAD30D19005DA300A10D57 /* DataClient.m in Sources */,
 				AE0F2E3418FCA070007B6EF0 /* HomeController.m in Sources */,
+				AEA26270190731FF00E96B44 /* MatchesController.m in Sources */,
 				AE0F2E2E18FC98F7007B6EF0 /* AppDelegate.m in Sources */,
 				AEE820B118FC6D4C000C49A4 /* main.m in Sources */,
 				AE03B72E19058D8000E4E644 /* BlindsidedStoryboard.m in Sources */,
@@ -593,8 +606,9 @@
 				AE10BCEC18FC8D2700E9FE34 /* AttestationControllerSpec.mm in Sources */,
 				AEAAD31619005F9C00A10D57 /* HTTPClientSpec.mm in Sources */,
 				AE03B7321905C46300E4E644 /* PlayerTableViewController.m in Sources */,
+				AE802114190829B300642E80 /* MatchesControllerSpec.mm in Sources */,
 				AE0F2E3618FCA342007B6EF0 /* HomeControllerSpec.mm in Sources */,
-				AEAAD31719005F9C00A10D57 /* JSONClientSpec.mm in Sources */,
+				AEAAD31719005F9C00A10D57 /* DataClientSpec.mm in Sources */,
 				AE10BCEA18FC8D1100E9FE34 /* IdentificationControllerSpec.mm in Sources */,
 				AEAAD32519005FD700A10D57 /* Configurator.m in Sources */,
 				AE10BCE818FC8CF600E9FE34 /* AttestationController.m in Sources */,
@@ -627,7 +641,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		AEAC78C718FC4E3B00C4FF0D /* Debug */ = {
+		AE8021171908434600642E80 /* Staging */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -664,49 +678,16 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Debug;
+			name = Staging;
 		};
-		AEAC78C818FC4E3B00C4FF0D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		AEAC78CA18FC4E3B00C4FF0D /* Debug */ = {
+		AE8021181908434600642E80 /* Staging */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 08A4848F1AD94DAC94B68488 /* Pods-PivotPong.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				ENVIRONMENT = development;
+				ENVIRONMENT = staging;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PivotPong/PivotPong-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -724,35 +705,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
-			name = Debug;
+			name = Staging;
 		};
-		AEAC78CB18FC4E3B00C4FF0D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 08A4848F1AD94DAC94B68488 /* Pods-PivotPong.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				ENVIRONMENT = production;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PivotPong/PivotPong-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"\"${PODS_ROOT}/Headers\"",
-					"\"${PODS_ROOT}/Headers/Blindside\"",
-					"\"${PODS_ROOT}/Headers/Cedar\"",
-					"\"${PODS_ROOT}/Headers/Cedar/Cedar-iOS\"",
-					"\"${PODS_ROOT}/Headers/KSDeferred\"",
-					"\"${PODS_ROOT}/Headers/PivotalCoreKit\"",
-					"$(SDKROOT)/usr/include/libxml2",
-				);
-				INFOPLIST_FILE = "PivotPong/PivotPong-Info.plist";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		AEE820B918FC6D4C000C49A4 /* Debug */ = {
+		AE8021191908434600642E80 /* Staging */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = ABC4B57A38244710987C4B1B /* Pods-Specs.xcconfig */;
 			buildSettings = {
@@ -788,9 +743,172 @@
 				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
 			};
-			name = Debug;
+			name = Staging;
 		};
-		AEE820BA18FC6D4C000C49A4 /* Release */ = {
+		AEAC78C718FC4E3B00C4FF0D /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Development;
+		};
+		AEAC78C818FC4E3B00C4FF0D /* Production */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Production;
+		};
+		AEAC78CA18FC4E3B00C4FF0D /* Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08A4848F1AD94DAC94B68488 /* Pods-PivotPong.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				ENVIRONMENT = development;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PivotPong/PivotPong-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers\"",
+					"\"${PODS_ROOT}/Headers/Blindside\"",
+					"\"${PODS_ROOT}/Headers/Cedar\"",
+					"\"${PODS_ROOT}/Headers/Cedar/Cedar-iOS\"",
+					"\"${PODS_ROOT}/Headers/KSDeferred\"",
+					"\"${PODS_ROOT}/Headers/PivotalCoreKit\"",
+					"$(SDKROOT)/usr/include/libxml2",
+				);
+				INFOPLIST_FILE = "PivotPong/PivotPong-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Development;
+		};
+		AEAC78CB18FC4E3B00C4FF0D /* Production */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08A4848F1AD94DAC94B68488 /* Pods-PivotPong.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				ENVIRONMENT = production;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PivotPong/PivotPong-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers\"",
+					"\"${PODS_ROOT}/Headers/Blindside\"",
+					"\"${PODS_ROOT}/Headers/Cedar\"",
+					"\"${PODS_ROOT}/Headers/Cedar/Cedar-iOS\"",
+					"\"${PODS_ROOT}/Headers/KSDeferred\"",
+					"\"${PODS_ROOT}/Headers/PivotalCoreKit\"",
+					"$(SDKROOT)/usr/include/libxml2",
+				);
+				INFOPLIST_FILE = "PivotPong/PivotPong-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Production;
+		};
+		AEE820B918FC6D4C000C49A4 /* Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABC4B57A38244710987C4B1B /* Pods-Specs.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Specs/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/**",
+					"\"${PODS_ROOT}/Headers\"",
+					"\"${PODS_ROOT}/Headers/Blindside\"",
+					"\"${PODS_ROOT}/Headers/Cedar\"",
+					"\"${PODS_ROOT}/Headers/Cedar/Cedar-iOS\"",
+					"\"${PODS_ROOT}/Headers/KSDeferred\"",
+					"\"${PODS_ROOT}/Headers/PivotalCoreKit\"",
+				);
+				INFOPLIST_FILE = "Specs/Specs-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-all_load",
+					"-lstdc++",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s i386";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Development;
+		};
+		AEE820BA18FC6D4C000C49A4 /* Production */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = ABC4B57A38244710987C4B1B /* Pods-Specs.xcconfig */;
 			buildSettings = {
@@ -823,7 +941,7 @@
 				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
-			name = Release;
+			name = Production;
 		};
 /* End XCBuildConfiguration section */
 
@@ -831,29 +949,32 @@
 		AEAC789818FC4E3B00C4FF0D /* Build configuration list for PBXProject "PivotPong" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AEAC78C718FC4E3B00C4FF0D /* Debug */,
-				AEAC78C818FC4E3B00C4FF0D /* Release */,
+				AEAC78C718FC4E3B00C4FF0D /* Development */,
+				AE8021171908434600642E80 /* Staging */,
+				AEAC78C818FC4E3B00C4FF0D /* Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Production;
 		};
 		AEAC78C918FC4E3B00C4FF0D /* Build configuration list for PBXNativeTarget "PivotPong" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AEAC78CA18FC4E3B00C4FF0D /* Debug */,
-				AEAC78CB18FC4E3B00C4FF0D /* Release */,
+				AEAC78CA18FC4E3B00C4FF0D /* Development */,
+				AE8021181908434600642E80 /* Staging */,
+				AEAC78CB18FC4E3B00C4FF0D /* Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Production;
 		};
 		AEE820B818FC6D4C000C49A4 /* Build configuration list for PBXNativeTarget "Specs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AEE820B918FC6D4C000C49A4 /* Debug */,
-				AEE820BA18FC6D4C000C49A4 /* Release */,
+				AEE820B918FC6D4C000C49A4 /* Development */,
+				AE8021191908434600642E80 /* Staging */,
+				AEE820BA18FC6D4C000C49A4 /* Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Production;
 		};
 /* End XCConfigurationList section */
 	};
