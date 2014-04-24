@@ -19,7 +19,7 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.destinationViewController isKindOfClass:[AttestationController class]]) {
-        ((AttestationController *)segue.destinationViewController).won = [segue.identifier isEqualToString:@"wonSegue"];
+        ((AttestationController *)segue.destinationViewController).won = [segue.identifier isEqualToString:@"pushAttestationsWon"];
     }
 }
 

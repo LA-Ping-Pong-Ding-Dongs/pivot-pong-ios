@@ -1,4 +1,5 @@
 #import "AttestationController.h"
+#import "MatchesController.h"
 
 using namespace Cedar::Matchers;
 using namespace Cedar::Doubles;
@@ -8,6 +9,7 @@ SPEC_BEGIN(AttestationControllerSpec)
 describe(@"AttestationController", ^{
     __block AttestationController *controller;
     __block id<BSBinder, BSInjector> injector;
+    __block UINavigationController *nav;
     __block NSArray *players = @[
                                  @{@"name": @"Bob Tuna",
                                    @"url": @"/players/btuna",
@@ -23,6 +25,7 @@ describe(@"AttestationController", ^{
     beforeEach(^{
         injector = [Factory injector];
         controller = (AttestationController *)[Factory viewControllerFromStoryBoard:[AttestationController class] injector:injector];
+        nav = [[UINavigationController alloc] initWithRootViewController:controller];
         [[NSUserDefaults standardUserDefaults] setObject:players.firstObject forKey:PivotPongCurrentUserKey];
     });
 
@@ -38,6 +41,10 @@ describe(@"AttestationController", ^{
             [deferred resolveWithValue:players];
             client stub_method("getPlayers").and_return(deferred.promise);
             (void)controller.view;
+        });
+        
+        it(@"disables the GO button", ^{
+            expect(controller.navigationItem.rightBarButtonItem.enabled).to_not(be_truthy);
         });
 
         it(@"sets itself as the datasource and delegate",^{
@@ -64,7 +71,31 @@ describe(@"AttestationController", ^{
                 expect(controller.title).to(contain(@"won"));
             });
         });
+        
+        describe(@"choosing a user", ^{
+            beforeEach(^{
+                (void)[controller.tableView numberOfRowsInSection:0];
+            });
+            
+            it(@"enables the GO button", ^{
+                [[controller.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]] tap];
+                expect(controller.navigationItem.rightBarButtonItem.enabled).to(be_truthy);
+            });
+        });
+        
+        describe(@"tapping the GO button", ^{
+            beforeEach(^{
+                (void)[controller.tableView numberOfRowsInSection:0];
+                [[controller.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]] tap];
+            });
+
+            it(@"goes to the matches controller", ^{
+                [controller.navigationItem.rightBarButtonItem tap];
+                expect(controller.navigationController.topViewController).to(be_instance_of([MatchesController class]));
+            });
+        });
     });
+    
 });
 
 SPEC_END

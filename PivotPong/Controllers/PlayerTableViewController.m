@@ -14,21 +14,22 @@
     [self.tableView registerNib:[UINib nibWithNibName:PivotPongPlayerTableViewCellKey bundle:nil] forCellReuseIdentifier:PivotPongPlayerTableViewCellKey];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    NSLog(@"================> view loaded!");
+    [self loadPlayers];
 }
 
--(NSArray *)players {
-    if (!_players) {
-        __weak typeof(self) weakSelf = self;
-        PivotPongClient *client = [self.injector getInstance:[PivotPongClient class]];
-        KSPromise *promise = [client getPlayers];
-        [promise then:^NSArray *(NSArray *players) {
-            NSPredicate *filter = [self playerFilterPredicate];
-            weakSelf.players = filter ? [players filteredArrayUsingPredicate:[self playerFilterPredicate]] : players;
-            [weakSelf.tableView reloadData];
-            return players;
-        } error:nil];
-    }
-    return _players;
+-(void)loadPlayers {
+    __weak typeof(self) weakSelf = self;
+    PivotPongClient *client = [self.injector getInstance:[PivotPongClient class]];
+    KSPromise *promise = [client getPlayers];
+    NSLog(@"================> the promise is: %@", promise);
+    [promise then:^NSArray *(NSArray *players) {
+        NSLog(@"================> controller -> %@", weakSelf);
+        NSPredicate *filter = [weakSelf playerFilterPredicate];
+        weakSelf.players = filter ? [players filteredArrayUsingPredicate:[weakSelf playerFilterPredicate]] : players;
+        [weakSelf.tableView reloadData];
+        return players;
+    } error:nil];
 }
 
 -(NSPredicate *)playerFilterPredicate {

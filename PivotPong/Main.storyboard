@@ -39,7 +39,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Onf-3w-THP" kind="push" identifier="wonSegue" id="o6E-Yo-TIF"/>
+                                    <segue destination="Onf-3w-THP" kind="push" identifier="pushAttestationsWon" id="o6E-Yo-TIF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATA-rY-2FC">
@@ -50,7 +50,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Onf-3w-THP" kind="push" identifier="lostSegue" id="79z-ae-qkP"/>
+                                    <segue destination="Onf-3w-THP" kind="push" identifier="pushAttestationsLost" id="79z-ae-qkP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -88,7 +88,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Who are you!?" id="kQq-4y-qva">
-                        <barButtonItem key="rightBarButtonItem" title="Go" id="jSr-4D-qW3">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Go" id="jSr-4D-qW3">
                             <connections>
                                 <action selector="doneTapped:" destination="AIz-P6-lBY" id="SjT-JT-jS2"/>
                             </connections>
@@ -112,11 +112,47 @@
                             <outlet property="delegate" destination="Onf-3w-THP" id="29A-Jx-VAD"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="t2K-js-6Pc"/>
+                    <navigationItem key="navigationItem" id="t2K-js-6Pc">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Go" id="201-j4-HdS">
+                            <connections>
+                                <action selector="doneTapped:" destination="Onf-3w-THP" id="rbg-lv-XuF"/>
+                                <segue destination="WkZ-eT-iLV" kind="push" identifier="pushMatches" id="zS6-OM-P38"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iQQ-xi-Jrh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-626" y="4"/>
+        </scene>
+        <!--Matches Controller-->
+        <scene sceneID="DHh-7C-v8L">
+            <objects>
+                <tableViewController storyboardIdentifier="MatchesController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WkZ-eT-iLV" customClass="MatchesController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ycC-Xg-Z8l">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MatchPrototypeCell" id="RTR-dr-Jer">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RTR-dr-Jer" id="cVe-b6-IQK">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="WkZ-eT-iLV" id="bh3-hA-JNL"/>
+                            <outlet property="delegate" destination="WkZ-eT-iLV" id="sM1-qO-bnj"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="IYG-pj-Mc4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CH5-Jg-dQS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-118" y="4"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OTV-U1-tbQ">

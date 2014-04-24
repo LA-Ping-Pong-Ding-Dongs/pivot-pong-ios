@@ -1,10 +1,10 @@
 #import "PivotPongClient.h"
 #import "KSDeferred.h"
-#import "JSONClient.h"
+#import "DataClient.h"
 
 @interface PivotPongClient ()
 
-@property (nonatomic, strong) JSONClient *jsonClient;
+@property (nonatomic, strong) DataClient *dataClient;
 @property (nonatomic, strong) NSDictionary *apiURLs;
 
 @end
@@ -15,23 +15,30 @@
 
 +(BSInitializer *)bsInitializer {
     return [BSInitializer initializerWithClass:self
-                                      selector:@selector(initWithJSONClient:apiURLs:)
-                                  argumentKeys:[JSONClient class], PivotPongApiURLs, nil];
+                                      selector:@selector(initWithDataClient:apiURLs:)
+                                  argumentKeys:[DataClient class], PivotPongApiURLs, nil];
 }
 
--(instancetype)initWithJSONClient:(JSONClient *)jsonClient
+-(instancetype)initWithDataClient:(DataClient *)dataClient
                         apiURLs:(NSDictionary *)apiURLs {
     if (self = [super init]) {
-        self.jsonClient = jsonClient;
+        self.dataClient = dataClient;
         self.apiURLs    = apiURLs;
     }
     return self;
 }
 
 -(KSPromise *)getPlayers {
-    return [[self.jsonClient fetchUrl:[self.apiURLs objectForKey:PivotPongGetPlayers]] then:^NSArray *(NSDictionary *jsonData) {
-        return [jsonData objectForKey:PivotPongJSONResponsePlayersKey];
+    return [[self.dataClient fetchUrl:[self.apiURLs objectForKey:PivotPongApiGetPlayersKey]] then:^NSArray *(NSDictionary *jsonData) {
+        return [jsonData objectForKey:PivotPongApiGetPlayersJSONResponseKey];
     } error:nil];
+}
+
+-(KSPromise *)postMatch:(NSDictionary *)data {
+    return [[self.dataClient postData:data url:[self.apiURLs objectForKey:PivotPongApiPostMatchKey]] then:^NSArray *(NSDictionary *jsonData) {
+        return [jsonData objectForKey:PivotPongApiPostMatchJSONResponseKey];
+    } error:nil];
+    
 }
 
 @end

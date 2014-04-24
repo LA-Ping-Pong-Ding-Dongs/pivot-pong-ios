@@ -1,6 +1,7 @@
 #import "Configurator.h"
 
 @interface Configurator ()
+@property (nonatomic, strong) NSDictionary *environment;
 @end
 
 @implementation Configurator
@@ -11,7 +12,7 @@
         return [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     }];
 
-    [binder bind:PivotPongApiURLs toInstance:@{PivotPongGetPlayers: [self urlWithPath:@"/api/players.json"]}];
+    [binder bind:PivotPongApiURLs toInstance:@{PivotPongApiGetPlayersKey: [self urlWithPath:@"/api/players.json"]}];
 
     [binder bind:[NSURLSession class] toInstance:[NSURLSession sharedSession]];
     [binder bind:[NSOperationQueue class] toInstance:[NSOperationQueue mainQueue]];

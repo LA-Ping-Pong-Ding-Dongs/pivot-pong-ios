@@ -19,4 +19,16 @@
     return [NSPredicate predicateWithFormat:[PivotPongPlayerNameKey stringByAppendingString:@"!= %@"], name];
 }
 
+#pragma mark - UITableViewDelegate
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.navigationItem.rightBarButtonItem.enabled = YES;
+}
+
+#pragma mark - Actions
+
+- (IBAction)doneTapped:(id)sender {
+    [self performSegueWithIdentifier:@"pushMatches" sender:nil];
+}
+
 @end

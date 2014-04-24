@@ -1,13 +1,34 @@
+#import <objc/runtime.h>
 #import "SpecConfigurator.h"
+#import "Configurator.h"
 
-@implementation SpecConfigurator
+@interface Configurator ()
+-(NSString *)environmentConfigFile;
+@end
 
--(void)configure:(id<BSBinder, BSInjector>)binder {
-    [super configure:binder];
+@implementation Configurator (SpecOverrides)
++ (void)load {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        Class class = [self class];
+        
+        Method original = class_getInstanceMethod(class, @selector(environmentConfigFile));
+        Method swizzled = class_getInstanceMethod(class, @selector(swizzledEnvironmentConfigFile));
+        
+        method_exchangeImplementations(original, swizzled);
+    });
 }
-
--(NSString *)environmentConfigFile {
+                  
+-(NSString *)swizzledEnvironmentConfigFile {
     return @"environment_test";
 }
 
 @end
+
+@implementation SpecConfigurator
+
+-(void)configure:(id<BSBinder, BSInjector>)binder {
+}
+
+@end
+

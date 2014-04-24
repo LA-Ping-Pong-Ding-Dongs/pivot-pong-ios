@@ -16,8 +16,6 @@ describe(@"HomeController", ^{
         injector = [Factory injector];
         homeController = (HomeController *)[Factory viewControllerFromStoryBoard:[HomeController class] injector:injector];
         nav = [[UINavigationController alloc] initWithRootViewController:homeController];
-        UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-        window.rootViewController = nav;
     });
 
     describe(@"When a user has not yet been identified", ^{

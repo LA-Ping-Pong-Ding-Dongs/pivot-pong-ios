@@ -1,6 +1,5 @@
 #import "HTTPClient.h"
 #import "KSDeferred.h"
-#import "FakeOperationQueue.h"
 
 @interface HTTPClient ()
 @property (strong, nonatomic) NSURLSession *session;
@@ -27,34 +26,66 @@
 }
 
 -(KSPromise *)fetchUrl:(NSString *)urlString {
-    KSDeferred *deferred = [self.injector getInstance:[KSDeferred class]];
-    NSURL *url = [[NSURL alloc] initWithString:urlString];
-
-    [[self.session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        [self.mainQueue addOperationWithBlock:^{
-            NSUInteger statusCode = ((NSHTTPURLResponse *)response).statusCode;
-            if (!error && statusCode == 200) {
-                [deferred resolveWithValue:data];
-            } else {
-                [deferred rejectWithError:[self deferredErrorFor:error statusCode:statusCode]];
-            }
+    KSDeferred *deferred = [self deferred];
+    __weak typeof(self) weakSelf = self;
+    [[self.session dataTaskWithURL:[NSURL URLWithString:urlString] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        [weakSelf.mainQueue addOperationWithBlock:^{
+            [weakSelf resolveOrReject:deferred
+                                 data:data
+                             response:response
+                                error:error
+                       expectedStatus:200];
         }];
     }] resume];
 
     return deferred.promise;
 }
 
--(NSError *)deferredErrorFor:(NSError *)dataTaskWithURlError
-                  statusCode:(NSUInteger)statusCode {
-    NSString *message;
+-(KSPromise *)postData:(NSData *)data url:(NSString *)urlString {
+    KSDeferred *deferred = [self deferred];
+    NSMutableURLRequest *request = [self.injector getInstance:[NSMutableURLRequest class]];
+    request.HTTPMethod = @"POST";
+    request.HTTPBody   = data;
+    request.URL        = [NSURL URLWithString:urlString];
+    
+    [[self.session dataTaskWithRequest:request
+                    completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                        [self resolveOrReject:deferred
+                                         data:data
+                                     response:response
+                                        error:error
+                               expectedStatus:201];
+                    }] resume];
 
-    if (dataTaskWithURlError) {
+    return deferred.promise;
+}
+
+-(void)resolveOrReject:(KSDeferred *)deferred
+                  data:(NSData *)data
+              response:(NSURLResponse *)response
+                 error:(NSError *)error
+        expectedStatus:(NSUInteger)expectedStatus {
+    NSUInteger statusCode = ((NSHTTPURLResponse *)response).statusCode;
+    if (!error && statusCode == expectedStatus) {
+        [deferred resolveWithValue:data];
+    } else {
+        [deferred rejectWithError:[self errorForStatusCode:statusCode sessionError:error]];
+    }
+}
+
+-(NSError *)errorForStatusCode:(PivotPongErrorCode)statusCode sessionError:(NSError *)sessionError {
+    NSString *message;
+    if (sessionError) {
         message = NSLocalizedString(@"NetworkConnectivityError", nil);
     } else {
         message = [NSString stringWithFormat:NSLocalizedString(@"ServerResponseError", nil), statusCode];
     }
 
     return [NSError errorWithDomain:message code:PivotPongErrorCodeServerError userInfo:nil];
+}
+
+-(KSDeferred *)deferred {
+    return [self.injector getInstance:[KSDeferred class]];
 }
 
 @end

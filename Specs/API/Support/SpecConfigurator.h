@@ -1,5 +1,5 @@
 #import "Configurator.h"
 
-@interface SpecConfigurator : Configurator
+@interface SpecConfigurator : NSObject <BSModule>
 
 @end

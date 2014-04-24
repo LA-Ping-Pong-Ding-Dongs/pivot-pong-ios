@@ -7,15 +7,16 @@
 
 -(void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.rightBarButtonItem.enabled = NO;
 }
 
-#pragma UITableViewDelegate
+#pragma mark - UITableViewDelegate
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     self.navigationItem.rightBarButtonItem.enabled = YES;
 }
 
-#pragma mark Actions
+#pragma mark - Actions
+
 - (IBAction)doneTapped:(id)sender {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:[self selectedPlayer] forKey:PivotPongCurrentUserKey];
@@ -24,6 +25,7 @@
 }
 
 #pragma mark - UIViewController
+
 -(BOOL)prefersStatusBarHidden { return YES; }
 
 @end
