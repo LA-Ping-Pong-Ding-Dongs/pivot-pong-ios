@@ -7,6 +7,7 @@ static NSString * const PivotPongApiGetPlayersKey             = @"getPlayers";
 static NSString * const PivotPongApiPostMatchKey              = @"postMatch";
 static NSString * const PivotPongApiGetPlayersJSONResponseKey = @"players";
 static NSString * const PivotPongApiPostMatchJSONResponseKey  = @"matches";
+static NSString * const PivotPongApiAuthenticityTokenKey      = @"authToken";
 
 // user defaults //
 static NSString * const PivotPongCurrentUserKey               = @"currentUser";

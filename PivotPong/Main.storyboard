@@ -113,13 +113,15 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="t2K-js-6Pc">
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Go" id="201-j4-HdS">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Go" id="fNT-41-lOo">
                             <connections>
-                                <action selector="doneTapped:" destination="Onf-3w-THP" id="rbg-lv-XuF"/>
-                                <segue destination="WkZ-eT-iLV" kind="push" identifier="pushMatches" id="zS6-OM-P38"/>
+                                <action selector="doneTapped:" destination="Onf-3w-THP" id="aoe-bL-hcw"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="WkZ-eT-iLV" kind="push" identifier="pushMatches" id="yUd-o2-fwE"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iQQ-xi-Jrh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -167,7 +169,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wo5-ro-Sqm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-604" y="694"/>
+            <point key="canvasLocation" x="-626" y="694"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -176,6 +178,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="79z-ae-qkP"/>
+        <segue reference="o6E-Yo-TIF"/>
     </inferredMetricsTieBreakers>
 </document>

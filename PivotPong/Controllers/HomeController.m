@@ -9,7 +9,6 @@
 @implementation HomeController
 @synthesize injector = _injector;
 
-
 -(void)viewDidLoad {
     [self labelButtons];
     if (![[NSUserDefaults standardUserDefaults] objectForKey:PivotPongCurrentUserKey]) {
@@ -25,9 +24,10 @@
 
 -(void)labelButtons {
     NSArray *wonValues = @[
-                           @"I WON!",
+                           @"I won!",
                            @"Winning!",
-                           @"I sucked less"
+                           @"I knew what I was capable of!",
+                           @"I'm the best!"
                            ];
     NSArray *lostValues = @[
                             @"I need to play harder",

@@ -52,30 +52,29 @@ describe(@"PivotPongClient", ^{
             expect(resultPromise.value).to(equal(@[@"foo", @"bar"]));
         });
     });
-    
+
     describe(@"-postMatch:", ^{
         __block KSDeferred *dataClientDeferred;
+        __block NSDictionary *postData;
+
         beforeEach(^{
             dataClientDeferred = [injector getInstance:[KSDeferred class]];
             NSDictionary *result = @{PivotPongApiPostMatchJSONResponseKey: @[@"foo", @"bar"]};
-           
+            postData = @{@"winner": @"Bob Tuna", @"loser": @"Zargon"};
+
             [dataClientDeferred resolveWithValue:result];
             dataClient stub_method("postData:url:").and_return(dataClientDeferred.promise);
         });
-        
+
         it(@"makes a request to the create matches endpoint", ^{
-            [client getPlayers];
             NSString *postMatchURLString = [[injector getInstance:PivotPongApiURLs] objectForKey:PivotPongApiPostMatchKey];
-            NSDictionary *data = @{@"winner": @"Bob Tuna", @"loser": @"Zargon"};
-            expect(dataClient).to(have_received("postData:url:").with(data).and_with(postMatchURLString));
+            [client postMatch:postData];
+            expect(dataClient).to(have_received("postData:url:").with(postData).and_with(postMatchURLString));
         });
-        
-        it(@"returns a promise", ^{
-            expect([client getPlayers]).to(be_instance_of([KSPromise class]));
-        });
-        
-        it(@"returns data from the players key of the response", ^{
-            KSPromise *resultPromise = [client getPlayers];
+
+        it(@"returns a promise with the response as a dictionary", ^{
+            KSPromise *resultPromise = [client postMatch:postData];
+
             expect(resultPromise.value).to(equal(@[@"foo", @"bar"]));
         });
     });

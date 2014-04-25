@@ -1,5 +1,5 @@
 #import "Injectable.h"
 
-@interface MatchesController : UITableViewController<Injectable>
+@interface MatchesController : UITableViewController <Injectable>
 
 @end

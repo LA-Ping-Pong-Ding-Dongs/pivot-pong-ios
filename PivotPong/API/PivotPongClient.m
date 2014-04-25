@@ -29,16 +29,17 @@
 }
 
 -(KSPromise *)getPlayers {
-    return [[self.dataClient fetchUrl:[self.apiURLs objectForKey:PivotPongApiGetPlayersKey]] then:^NSArray *(NSDictionary *jsonData) {
+    NSString *url = [self.apiURLs objectForKey:PivotPongApiGetPlayersKey];
+    return [[self.dataClient fetchUrl:url] then:^NSArray *(NSDictionary *jsonData) {
         return [jsonData objectForKey:PivotPongApiGetPlayersJSONResponseKey];
     } error:nil];
 }
 
 -(KSPromise *)postMatch:(NSDictionary *)data {
-    return [[self.dataClient postData:data url:[self.apiURLs objectForKey:PivotPongApiPostMatchKey]] then:^NSArray *(NSDictionary *jsonData) {
+    NSString *url = [self.apiURLs objectForKey:PivotPongApiPostMatchKey];
+    return [[self.dataClient postData:data url:url] then:^NSArray *(NSDictionary *jsonData) {
         return [jsonData objectForKey:PivotPongApiPostMatchJSONResponseKey];
     } error:nil];
-    
 }
 
 @end

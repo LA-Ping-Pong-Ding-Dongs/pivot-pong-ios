@@ -5,8 +5,9 @@
 @implementation Factory
 
 +(id<BSInjector>)injector {
+    Configurator *configurator = [[Configurator alloc] init];
     SpecConfigurator *specConfigurator = [[SpecConfigurator alloc] init];
-    return [Blindside injectorWithModules:@[specConfigurator]];
+    return [Blindside injectorWithModules:@[configurator, specConfigurator]];
 }
 
 +(UIViewController *)viewControllerFromStoryBoard:(Class)viewControllerClass

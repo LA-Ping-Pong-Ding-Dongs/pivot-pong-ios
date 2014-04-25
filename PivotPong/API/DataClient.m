@@ -25,9 +25,7 @@
 -(KSPromise *)fetchUrl:(NSString *)urlString {
     KSDeferred *deferred = [self deferred];
     __weak typeof(self) weakSelf = self;
-    NSLog(@"================> wut %@", weakSelf);
     [[self.httpClient fetchUrl:urlString] then:^NSDictionary *(NSData *responseData) {
-        NSLog(@"================> wut2 %@", weakSelf);
         return [weakSelf resolveOrReject:deferred
                                     data:responseData];
     } error:^id(NSError *error) {
@@ -60,19 +58,17 @@
     }
     return deferred.promise;
 }
-         
+
 -(NSDictionary *)resolveOrReject:(KSDeferred *)deferred
                             data:(NSData *)data {
      NSError *parseError;
      NSDictionary *result = [NSJSONSerialization JSONObjectWithData:data
                                                             options:NSJSONReadingMutableContainers
                                                               error:&parseError];
-     
+
      if (!parseError && result) {
-         NSLog(@"================> %@", result);
          [deferred resolveWithValue:result];
      } else {
-         NSLog(@"================> wut?");
          [deferred rejectWithError:parseError];
      }
      return result;

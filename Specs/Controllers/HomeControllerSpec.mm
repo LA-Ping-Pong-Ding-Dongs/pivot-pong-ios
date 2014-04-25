@@ -41,7 +41,7 @@ describe(@"HomeController", ^{
                 [homeController.wonButton tap];
                 AttestationController *destinationController = (AttestationController *)homeController.navigationController.topViewController;
                 expect(destinationController).to(be_instance_of([AttestationController class]));
-                expect(destinationController.won).to(be_truthy);
+                expect(destinationController.won).to(equal(YES));
             });
         });
 
@@ -50,7 +50,7 @@ describe(@"HomeController", ^{
                 [homeController.lostButton tap];
                 AttestationController *destinationController = (AttestationController *)homeController.navigationController.topViewController;
                 expect(destinationController).to(be_instance_of([AttestationController class]));
-                expect(destinationController.won).to_not(be_truthy);
+                expect(destinationController.won).to(equal(NO));
             });
         });
     });

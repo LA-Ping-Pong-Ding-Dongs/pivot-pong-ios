@@ -4,11 +4,10 @@
 @end
 
 @implementation MatchesController
+@synthesize injector = _injector;
+
 -(void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"================> View did LOL!!!!!!!!!!!");
 }
-
-
 
 @end

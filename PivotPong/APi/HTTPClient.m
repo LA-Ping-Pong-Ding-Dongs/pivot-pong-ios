@@ -47,10 +47,11 @@
     request.HTTPMethod = @"POST";
     request.HTTPBody   = data;
     request.URL        = [NSURL URLWithString:urlString];
-    
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-type"];
+    __weak typeof(self) weakSelf = self;
     [[self.session dataTaskWithRequest:request
                     completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-                        [self resolveOrReject:deferred
+                        [weakSelf resolveOrReject:deferred
                                          data:data
                                      response:response
                                         error:error

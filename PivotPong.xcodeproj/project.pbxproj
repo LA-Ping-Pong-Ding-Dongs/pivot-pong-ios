@@ -56,6 +56,9 @@
 		AEAC78B318FC4E3B00C4FF0D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEAC78B218FC4E3B00C4FF0D /* Images.xcassets */; };
 		AEC2389A18FE045C00F6217A /* pivID_blue-1004x400.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC2389918FE045C00F6217A /* pivID_blue-1004x400.png */; };
 		AEC2389B18FE051700F6217A /* pivID_blue-1004x400.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC2389918FE045C00F6217A /* pivID_blue-1004x400.png */; };
+		AED343A11909B88D002C4C29 /* MatchPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = AED343A01909B88D002C4C29 /* MatchPresenter.m */; };
+		AED343A21909B88D002C4C29 /* MatchPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = AED343A01909B88D002C4C29 /* MatchPresenter.m */; };
+		AED343A61909B8B5002C4C29 /* MatchPresenterSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AED343A51909B8B5002C4C29 /* MatchPresenterSpec.mm */; };
 		AEDF07DC1905DEC300AB07CC /* PlayerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEDF07DB1905DEC300AB07CC /* PlayerCell.xib */; };
 		AEDF07DD1905DEC300AB07CC /* PlayerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEDF07DB1905DEC300AB07CC /* PlayerCell.xib */; };
 		AEE820A718FC6D4C000C49A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEAC78A418FC4E3B00C4FF0D /* UIKit.framework */; };
@@ -138,6 +141,9 @@
 		AEAC78B918FC4E3B00C4FF0D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		AEB853C7190724F700D1D896 /* environment_test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = environment_test.json; path = Config/environment_test.json; sourceTree = "<group>"; };
 		AEC2389918FE045C00F6217A /* pivID_blue-1004x400.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pivID_blue-1004x400.png"; sourceTree = "<group>"; };
+		AED3439F1909B88D002C4C29 /* MatchPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MatchPresenter.h; path = Presenters/MatchPresenter.h; sourceTree = "<group>"; };
+		AED343A01909B88D002C4C29 /* MatchPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MatchPresenter.m; path = Presenters/MatchPresenter.m; sourceTree = "<group>"; };
+		AED343A51909B8B5002C4C29 /* MatchPresenterSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MatchPresenterSpec.mm; path = Presenters/MatchPresenterSpec.mm; sourceTree = "<group>"; };
 		AEDF07DB1905DEC300AB07CC /* PlayerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlayerCell.xib; path = UI/PlayerCell.xib; sourceTree = "<group>"; };
 		AEE820A618FC6D4C000C49A4 /* Specs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Specs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEE820AC18FC6D4C000C49A4 /* Specs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Specs-Info.plist"; sourceTree = "<group>"; };
@@ -322,19 +328,20 @@
 		AEAC78A618FC4E3B00C4FF0D /* PivotPong */ = {
 			isa = PBXGroup;
 			children = (
-				AEDF07D71905DE7300AB07CC /* UI */,
 				AEAAD30319005DA300A10D57 /* API */,
 				AEAC78AF18FC4E3B00C4FF0D /* AppDelegate.h */,
 				AEAC78B018FC4E3B00C4FF0D /* AppDelegate.m */,
 				AEC2389818FE045C00F6217A /* Assets */,
+				AE03B72B19058D8000E4E644 /* BlindsidedStoryboard.h */,
+				AE03B72C19058D8000E4E644 /* BlindsidedStoryboard.m */,
 				AE10BCD818FC88EB00E9FE34 /* Controllers */,
 				AEAC78B218FC4E3B00C4FF0D /* Images.xcassets */,
 				AE0F2E2F18FC9FEC007B6EF0 /* Main.storyboard */,
+				AED343A31909B899002C4C29 /* Presenters */,
 				AEAAD31019005E0400A10D57 /* Protocols */,
 				AEAAD32119005FD700A10D57 /* Support */,
 				AEAC78A718FC4E3B00C4FF0D /* Target Files */,
-				AE03B72B19058D8000E4E644 /* BlindsidedStoryboard.h */,
-				AE03B72C19058D8000E4E644 /* BlindsidedStoryboard.m */,
+				AEDF07D71905DE7300AB07CC /* UI */,
 			);
 			path = PivotPong;
 			sourceTree = "<group>";
@@ -360,6 +367,23 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		AED343A31909B899002C4C29 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				AED3439F1909B88D002C4C29 /* MatchPresenter.h */,
+				AED343A01909B88D002C4C29 /* MatchPresenter.m */,
+			);
+			name = Presenters;
+			sourceTree = "<group>";
+		};
+		AED343A41909B8A0002C4C29 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				AED343A51909B8B5002C4C29 /* MatchPresenterSpec.mm */,
+			);
+			name = Presenters;
+			sourceTree = "<group>";
+		};
 		AEDF07D71905DE7300AB07CC /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -375,6 +399,7 @@
 				AE10BCED18FC8DA200E9FE34 /* AppDelegateSpec.mm */,
 				AEE820B418FC6D4C000C49A4 /* Cedar-iOS.framework */,
 				AE10BCE018FC8C1F00E9FE34 /* Controllers */,
+				AED343A41909B8A0002C4C29 /* Presenters */,
 				AEE820B318FC6D4C000C49A4 /* Rakefile */,
 				AEAAD31919005FA400A10D57 /* Support */,
 				AEE820AB18FC6D4C000C49A4 /* Target Files */,
@@ -575,6 +600,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AED343A11909B88D002C4C29 /* MatchPresenter.m in Sources */,
 				AEAAD30C19005DA300A10D57 /* DataClient.m in Sources */,
 				AEAC78B118FC4E3B00C4FF0D /* AppDelegate.m in Sources */,
 				AE10BCE318FC8CE600E9FE34 /* IdentificationController.m in Sources */,
@@ -599,7 +625,9 @@
 				AE0F2E3418FCA070007B6EF0 /* HomeController.m in Sources */,
 				AEA26270190731FF00E96B44 /* MatchesController.m in Sources */,
 				AE0F2E2E18FC98F7007B6EF0 /* AppDelegate.m in Sources */,
+				AED343A61909B8B5002C4C29 /* MatchPresenterSpec.mm in Sources */,
 				AEE820B118FC6D4C000C49A4 /* main.m in Sources */,
+				AED343A21909B88D002C4C29 /* MatchPresenter.m in Sources */,
 				AE03B72E19058D8000E4E644 /* BlindsidedStoryboard.m in Sources */,
 				AEAAD30F19005DA300A10D57 /* PivotPongClient.m in Sources */,
 				AE10BCEE18FC8DA200E9FE34 /* AppDelegateSpec.mm in Sources */,

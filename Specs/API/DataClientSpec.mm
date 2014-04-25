@@ -30,12 +30,12 @@ describe(@"DataClient", ^{
 
     describe(@"-fetchUrl:", ^{
         beforeEach(^{
-            NSData *data = [@"{\"foo\":\"bar\"}" dataUsingEncoding:NSUTF8StringEncoding];
-            [requestDeferred resolveWithValue:data];
             httpClient stub_method("fetchUrl:").and_return(requestDeferred.promise);
         });
-        
+
         it(@"resolves with a dictionary representation of the HTTP response data", ^{
+            NSData *data = [@"{\"foo\":\"bar\"}" dataUsingEncoding:NSUTF8StringEncoding];
+            [requestDeferred resolveWithValue:data];
             KSPromise *result = [client fetchUrl:@"http://example.com/index.json"];
             expect(result).to(be_instance_of([KSPromise class]));
             expect(result.value).to(equal(@{@"foo":@"bar"}));
@@ -52,7 +52,7 @@ describe(@"DataClient", ^{
             });
         });
     });
-    
+
     describe(@"-postData:url:", ^{
         __block NSDictionary *postData;
 

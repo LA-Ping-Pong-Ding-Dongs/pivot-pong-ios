@@ -3,6 +3,8 @@
 #import "KSPromise.h"
 
 @interface PlayerTableViewController ()
+@property (nonatomic, strong, readwrite) PivotPongClient *client;
+@property (nonatomic, strong, readwrite) NSArray *players;
 @end
 
 @implementation PlayerTableViewController
@@ -10,21 +12,15 @@
             players  = _players;
 
 -(void)viewDidLoad {
-    [super viewDidLoad];
     [self.tableView registerNib:[UINib nibWithNibName:PivotPongPlayerTableViewCellKey bundle:nil] forCellReuseIdentifier:PivotPongPlayerTableViewCellKey];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-    NSLog(@"================> view loaded!");
     [self loadPlayers];
 }
 
 -(void)loadPlayers {
     __weak typeof(self) weakSelf = self;
-    PivotPongClient *client = [self.injector getInstance:[PivotPongClient class]];
-    KSPromise *promise = [client getPlayers];
-    NSLog(@"================> the promise is: %@", promise);
-    [promise then:^NSArray *(NSArray *players) {
-        NSLog(@"================> controller -> %@", weakSelf);
+    [[self.client getPlayers] then:^NSArray *(NSArray *players) {
         NSPredicate *filter = [weakSelf playerFilterPredicate];
         weakSelf.players = filter ? [players filteredArrayUsingPredicate:[weakSelf playerFilterPredicate]] : players;
         [weakSelf.tableView reloadData];
@@ -34,6 +30,13 @@
 
 -(NSPredicate *)playerFilterPredicate {
     return nil;
+}
+
+-(PivotPongClient *)client {
+    if (!_client) {
+        _client = [self.injector getInstance:[PivotPongClient class]];
+    }
+    return _client;
 }
 
 # pragma mark - UITableViewDataSource
@@ -51,7 +54,7 @@ numberOfRowsInSection:(NSInteger)section {
     return cell;
  }
 
-#pragma mark Private methods
+#pragma mark - private methods
 -(NSDictionary *)selectedPlayer {
     return [self.players objectAtIndex:[self.tableView indexPathForSelectedRow].row];
 }

@@ -12,7 +12,10 @@
         return [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     }];
 
-    [binder bind:PivotPongApiURLs toInstance:@{PivotPongApiGetPlayersKey: [self urlWithPath:@"/api/players.json"]}];
+    [binder bind:PivotPongApiURLs toInstance:@{
+                                               PivotPongApiGetPlayersKey: [self urlWithPath:@"/api/players.json"],
+                                               PivotPongApiPostMatchKey: [self urlWithPath:@"/api/matches"]
+                                               }];
 
     [binder bind:[NSURLSession class] toInstance:[NSURLSession sharedSession]];
     [binder bind:[NSOperationQueue class] toInstance:[NSOperationQueue mainQueue]];

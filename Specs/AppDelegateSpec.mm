@@ -7,7 +7,7 @@ using namespace Cedar::Doubles;
 
 SPEC_BEGIN(AppDelegateSpec)
 
-fdescribe(@"AppDelegate", ^{
+describe(@"AppDelegate", ^{
     __block AppDelegate *delegate;
     __block id<BSInjector> injector;
 
