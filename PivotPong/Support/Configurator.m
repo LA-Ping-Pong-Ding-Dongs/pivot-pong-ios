@@ -14,6 +14,7 @@
 
     [binder bind:PivotPongApiURLs toInstance:@{
                                                PivotPongApiGetPlayersKey: [self urlWithPath:@"/api/players.json"],
+                                               PivotPongApiGetMatchesKey: [self urlWithPath:@"/api/matches.json"],
                                                PivotPongApiPostMatchKey: [self urlWithPath:@"/api/matches"]
                                                }];
 

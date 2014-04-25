@@ -39,6 +39,10 @@
     return _client;
 }
 
+-(NSDictionary *)selectedPlayer {
+    return [self.players objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+}
+
 # pragma mark - UITableViewDataSource
 
 -(NSInteger)tableView:(UITableView *)tableView
@@ -52,11 +56,6 @@ numberOfRowsInSection:(NSInteger)section {
     NSDictionary *player = self.players[indexPath.row];
     cell.textLabel.text = [player objectForKey:PivotPongPlayerNameKey];
     return cell;
- }
-
-#pragma mark - private methods
--(NSDictionary *)selectedPlayer {
-    return [self.players objectAtIndex:[self.tableView indexPathForSelectedRow].row];
 }
 
 @end

@@ -1,13 +1,49 @@
 #import "MatchesController.h"
+#import "PivotPongClient.h"
 
 @interface MatchesController ()
+@property (nonatomic, strong) PivotPongClient *client;
+@property (nonatomic, strong) NSArray *matches;
 @end
 
 @implementation MatchesController
 @synthesize injector = _injector;
 
 -(void)viewDidLoad {
-    [super viewDidLoad];
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    [self loadMatches];
+}
+
+-(void)loadMatches {
+    __weak typeof(self) weakSelf = self;
+    [[self.client getMatches] then:^NSArray *(NSArray *matches) {
+        weakSelf.matches = matches;
+        [weakSelf.tableView reloadData];
+        return matches;
+    } error:nil];
+}
+
+-(PivotPongClient *)client {
+    if (!_client) {
+        _client = [self.injector getInstance:[PivotPongClient class]];
+    }
+    return _client;
+}
+
+# pragma mark - UITableViewDataSource
+
+-(NSInteger)tableView:(UITableView *)tableView
+numberOfRowsInSection:(NSInteger)section {
+    return [self.matches count];
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView
+        cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:PivotPongMatchesTableViewCellKey];
+    NSDictionary *match = self.matches[indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ vs. %@", [match objectForKey:PivotPongWinnerKey], [match objectForKey:PivotPongLoserKey]];
+    return cell;
 }
 
 @end

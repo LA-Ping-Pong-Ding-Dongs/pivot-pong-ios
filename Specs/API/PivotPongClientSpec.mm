@@ -52,6 +52,28 @@ describe(@"PivotPongClient", ^{
             expect(resultPromise.value).to(equal(@[@"foo", @"bar"]));
         });
     });
+    
+    describe(@"-getMatches", ^{
+        __block KSDeferred *dataClientDeferred;
+        beforeEach(^{
+            dataClientDeferred = [injector getInstance:[KSDeferred class]];
+            NSDictionary *result = @{PivotPongApiGetMatchesJSONResponseKey: @[@"foo", @"bar"]};
+            [dataClientDeferred resolveWithValue:result];
+            dataClient stub_method("fetchUrl:").and_return(dataClientDeferred.promise);
+        });
+        
+        it(@"makes a request to the get matches endpoint", ^{
+            [client getMatches];
+            NSString *getMatchesURLString = [[injector getInstance:PivotPongApiURLs] objectForKey:PivotPongApiGetMatchesKey];
+            expect(dataClient).to(have_received("fetchUrl:").with(getMatchesURLString));
+        });
+        
+        it(@"returns a promise with the matches", ^{
+            KSPromise *resultPromise = [client getMatches];
+            expect(resultPromise).to(be_instance_of([KSPromise class]));
+            expect(resultPromise.value).to(equal(@[@"foo", @"bar"]));
+        });
+    });
 
     describe(@"-postMatch:", ^{
         __block KSDeferred *dataClientDeferred;
