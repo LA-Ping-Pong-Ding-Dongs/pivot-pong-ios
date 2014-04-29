@@ -1,5 +1,6 @@
 #import "MatchesController.h"
 #import "PivotPongClient.h"
+#import "MatchesTableViewCell.h"
 
 @interface MatchesController ()
 @property (nonatomic, strong) PivotPongClient *client;
@@ -40,9 +41,10 @@ numberOfRowsInSection:(NSInteger)section {
 
 -(UITableViewCell *)tableView:(UITableView *)tableView
         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:PivotPongMatchesTableViewCellKey];
+    MatchesTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:PivotPongMatchesTableViewCellKey];
     NSDictionary *match = self.matches[indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ vs. %@", [match objectForKey:PivotPongWinnerKey], [match objectForKey:PivotPongLoserKey]];
+    cell.winner.text = [match objectForKey:PivotPongApiMatchesWinnerKey];
+    cell.loser.text  = [match objectForKey:PivotPongApiMatchesLoserKey];
     return cell;
 }
 

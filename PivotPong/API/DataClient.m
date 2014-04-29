@@ -25,7 +25,7 @@
 -(KSPromise *)fetchUrl:(NSString *)urlString {
     KSDeferred *deferred = [self deferred];
     __weak typeof(self) weakSelf = self;
-    [[self.httpClient fetchUrl:urlString] then:^NSDictionary *(NSData *responseData) {
+    [[self.httpClient fetchUrl:urlString] then:^id(NSData *responseData) {
         return [weakSelf resolveOrReject:deferred
                                     data:responseData];
     } error:^id(NSError *error) {

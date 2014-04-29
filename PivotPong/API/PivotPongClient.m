@@ -37,14 +37,14 @@
 
 -(KSPromise *)getMatches {
     NSString *url = [self.apiURLs objectForKey:PivotPongApiGetMatchesKey];
-    return [[self.dataClient fetchUrl:url] then:^NSArray *(NSDictionary *jsonData) {
-        return [jsonData objectForKey:PivotPongApiGetMatchesJSONResponseKey];
+    return [[self.dataClient fetchUrl:url] then:^NSArray *(NSArray *jsonData) {
+        return jsonData;
     } error:nil];
 }
 
 -(KSPromise *)postMatch:(NSDictionary *)data {
     NSString *url = [self.apiURLs objectForKey:PivotPongApiPostMatchKey];
-    return [[self.dataClient postData:data url:url] then:^NSArray *(NSDictionary *jsonData) {
+    return [[self.dataClient postData:data url:url] then:^NSDictionary *(NSDictionary *jsonData) {
         return [jsonData objectForKey:PivotPongApiPostMatchJSONResponseKey];
     } error:nil];
 }

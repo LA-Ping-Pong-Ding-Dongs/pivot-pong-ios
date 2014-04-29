@@ -1,6 +1,7 @@
 #import <objc/runtime.h>
 #import "SpecConfigurator.h"
 #import "Configurator.h"
+#import "FakeOperationQueue.h"
 
 @interface Configurator ()
 -(NSString *)environmentConfigFile;
@@ -28,6 +29,9 @@
 @implementation SpecConfigurator
 
 -(void)configure:(id<BSBinder, BSInjector>)binder {
+    FakeOperationQueue *fakeQueue = [FakeOperationQueue new];
+    fakeQueue.runSynchronously = YES;
+    [binder bind:[NSOperationQueue class] toInstance:fakeQueue];
 }
 
 @end

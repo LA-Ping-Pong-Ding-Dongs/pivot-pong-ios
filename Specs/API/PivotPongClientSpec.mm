@@ -57,7 +57,7 @@ describe(@"PivotPongClient", ^{
         __block KSDeferred *dataClientDeferred;
         beforeEach(^{
             dataClientDeferred = [injector getInstance:[KSDeferred class]];
-            NSDictionary *result = @{PivotPongApiGetMatchesJSONResponseKey: @[@"foo", @"bar"]};
+            NSArray *result = @[@"foo", @"bar"];
             [dataClientDeferred resolveWithValue:result];
             dataClient stub_method("fetchUrl:").and_return(dataClientDeferred.promise);
         });

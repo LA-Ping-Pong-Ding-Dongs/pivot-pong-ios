@@ -20,10 +20,10 @@ describe(@"MatchesController", ^{
             [injector bind:[PivotPongClient class] toInstance:client];
             KSDeferred *deferred = [injector getInstance:[KSDeferred class]];
             [deferred resolveWithValue:@[
-                                         @{@"winner": @"Bob Tuna",
-                                           @"loser": @"Zargon"},
-                                         @{@"winner": @"Suzanne Reilley",
-                                           @"loser": @"Jerry Seinfeld"}
+                                         @{PivotPongApiMatchesWinnerKey: @"Bob Tuna",
+                                           PivotPongApiMatchesLoserKey:  @"Zargon"},
+                                         @{PivotPongApiMatchesWinnerKey: @"Suzanne Reilley",
+                                           PivotPongApiMatchesLoserKey:  @"Jerry Seinfeld"}
                                          ]];
             client stub_method("getMatches").and_return(deferred.promise);
             (void)controller.view;
@@ -37,7 +37,8 @@ describe(@"MatchesController", ^{
         it(@"displays the matches in the table view", ^{
             expect([controller.tableView numberOfRowsInSection:0]).to(equal(2));
             UITableViewCell *cell = [controller.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
-            expect(cell.textLabel.text).to(equal(@"Bob Tuna vs. Zargon"));
+            expect(cell.textLabel.text).to(equal(@"Bob Tuna"));
+            expect(cell.detailTextLabel.text).to(equal(@"Bob Tuna"));
         });
     });
 });

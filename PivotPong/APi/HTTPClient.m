@@ -51,11 +51,13 @@
     __weak typeof(self) weakSelf = self;
     [[self.session dataTaskWithRequest:request
                     completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                                [weakSelf.mainQueue addOperationWithBlock:^{
                         [weakSelf resolveOrReject:deferred
                                          data:data
                                      response:response
                                         error:error
                                expectedStatus:201];
+                                }];
                     }] resume];
 
     return deferred.promise;
@@ -74,7 +76,7 @@
     }
 }
 
--(NSError *)errorForStatusCode:(PivotPongErrorCode)statusCode sessionError:(NSError *)sessionError {
+-(NSError *)errorForStatusCode:(NSUInteger)statusCode sessionError:(NSError *)sessionError {
     NSString *message;
     if (sessionError) {
         message = NSLocalizedString(@"NetworkConnectivityError", nil);

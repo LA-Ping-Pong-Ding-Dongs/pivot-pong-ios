@@ -18,8 +18,8 @@
 
 -(NSPredicate *)playerFilterPredicate {
     NSDictionary *currentUser = [[NSUserDefaults standardUserDefaults] objectForKey:PivotPongCurrentUserKey];
-    NSString *name = [currentUser objectForKey:PivotPongPlayerNameKey];
-    return [NSPredicate predicateWithFormat:[PivotPongPlayerNameKey stringByAppendingString:@"!= %@"], name];
+    NSString *name = [currentUser objectForKey:PivotPongApiPlayerNameKey];
+    return [NSPredicate predicateWithFormat:[PivotPongApiPlayerNameKey stringByAppendingString:@"!= %@"], name];
 }
 
 #pragma mark - UITableViewDelegate
@@ -38,6 +38,7 @@
     (void)[[self.client postMatch:[matchPresenter present]] then:^id(NSDictionary *data) {
         [weakSelf performSegueWithIdentifier:@"pushMatches" sender:nil];
         return nil;
+
     } error:^id(NSError *error) {
         weakSelf.navigationItem.rightBarButtonItem.enabled = YES;
         return nil;

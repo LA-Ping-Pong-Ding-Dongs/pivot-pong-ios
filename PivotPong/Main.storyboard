@@ -17,7 +17,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ijB-iO-meJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2318" y="316"/>
+            <point key="canvasLocation" x="-2206" y="378"/>
         </scene>
         <!--Home Controller-->
         <scene sceneID="vB9-ye-RHX">
@@ -115,34 +115,72 @@
                     <navigationItem key="navigationItem" id="t2K-js-6Pc">
                         <barButtonItem key="rightBarButtonItem" enabled="NO" title="Go" id="fNT-41-lOo">
                             <connections>
-                                <action selector="doneTapped:" destination="Onf-3w-THP" id="aoe-bL-hcw"/>
+                                <action selector="doneTapped:" destination="Onf-3w-THP" id="9dp-oX-6kp"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="WkZ-eT-iLV" kind="push" identifier="pushMatches" id="yUd-o2-fwE"/>
+                        <segue destination="WkZ-eT-iLV" kind="push" identifier="pushMatches" id="hmV-s2-iE1"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iQQ-xi-Jrh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-626" y="4"/>
         </scene>
-        <!--Matches Controller-->
+        <!--Matches Controller - Matches-->
         <scene sceneID="DHh-7C-v8L">
             <objects>
-                <tableViewController storyboardIdentifier="MatchesController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WkZ-eT-iLV" customClass="MatchesController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MatchesController" title="Matches" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WkZ-eT-iLV" customClass="MatchesController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ycC-Xg-Z8l">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="bhd-sG-V7k">
+                            <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Winners" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Axd-yr-quF">
+                                    <rect key="frame" x="20" y="11" width="108" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Losers" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9v-xh-pHY">
+                                    <rect key="frame" x="207" y="11" width="93" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        </view>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MatchPrototypeCell" id="RTR-dr-Jer">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MatchPrototypeCell" id="RTR-dr-Jer" customClass="MatchesTableViewCell">
+                                <rect key="frame" x="0.0" y="130" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RTR-dr-Jer" id="cVe-b6-IQK">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkp-hG-Tmh" userLabel="Label - Winner">
+                                            <rect key="frame" x="20" y="11" width="140" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ta1-SQ-RCT" userLabel="Label - Loser">
+                                            <rect key="frame" x="160" y="11" width="140" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="loser" destination="ta1-SQ-RCT" id="f0v-Qa-1gl"/>
+                                    <outlet property="winner" destination="zkp-hG-Tmh" id="O1d-hL-5NC"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

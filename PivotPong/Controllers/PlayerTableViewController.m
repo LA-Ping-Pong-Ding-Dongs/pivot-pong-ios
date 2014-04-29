@@ -54,7 +54,7 @@ numberOfRowsInSection:(NSInteger)section {
         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:PivotPongPlayerTableViewCellKey];
     NSDictionary *player = self.players[indexPath.row];
-    cell.textLabel.text = [player objectForKey:PivotPongPlayerNameKey];
+    cell.textLabel.text = [player objectForKey:PivotPongApiPlayerNameKey];
     return cell;
 }
 

@@ -17,12 +17,12 @@ describe(@"HTTPClient", ^{
     __block NSError *error;
     __block KSDeferred *deferred;
     __block void(^completionHandler)(NSData *data, NSURLResponse *response, NSError *error);
+    __block NSOperationQueue *operationQueue;
 
     beforeEach(^{
         injector = [Factory injector];
-        FakeOperationQueue *fakeQueue = [FakeOperationQueue new];
-        fakeQueue.runSynchronously = YES;
-        [injector bind:[NSOperationQueue class] toInstance:fakeQueue];
+        operationQueue = [injector getInstance:[NSOperationQueue class]];
+        spy_on(operationQueue);
         session = nice_fake_for([NSURLSession class]);
         [injector bind:[NSURLSession class] toInstance:session];
         client = [injector getInstance:[HTTPClient class]];
@@ -58,11 +58,12 @@ describe(@"HTTPClient", ^{
                     error = nil;
                 });
 
-                it(@"resolves with value on the KSDeferred object", ^{
+                it(@"queues an operation that resolves with value", ^{
                     [client fetchUrl:@"http://example.com/url.json"];
                     NSInvocation *invocation = [[session sent_messages] lastObject];
                     [invocation getArgument:&completionHandler atIndex:3];
                     completionHandler(data, response, error);
+                    expect(operationQueue).to(have_received("addOperationWithBlock:"));
                     expect(deferred).to(have_received("resolveWithValue:"));
                     expect(deferred.promise.value).to(equal(data));
                     expect(deferred.promise.error).to(be_nil);
@@ -76,11 +77,12 @@ describe(@"HTTPClient", ^{
                     error = nil;
                 });
 
-                it(@"rejects with error on the KSDeferred object", ^{
+                it(@"queues an operation that rejects with error", ^{
                     [client fetchUrl:@"http://example.com/url.json"];
                     NSInvocation *invocation = [[session sent_messages] lastObject];
                     [invocation getArgument:&completionHandler atIndex:3];
                     completionHandler(data, response, error);
+                    expect(operationQueue).to(have_received("addOperationWithBlock:"));
                     expect(deferred).to_not(have_received("resolveWithValue:"));
                     expect(deferred).to(have_received("rejectWithError:"));
                     expect(deferred.promise.error.localizedDescription)
@@ -96,11 +98,12 @@ describe(@"HTTPClient", ^{
                 error = [[NSError alloc] initWithDomain:@"failure!" code:PivotPongErrorCodeServerError userInfo:nil];
             });
 
-            it(@"rejects with error on the KSDeferred object", ^{
+            it(@"queues an operation that rejects with error", ^{
                 [client fetchUrl:@"http://example.com/url.json"];
                 NSInvocation *invocation = [[session sent_messages] lastObject];
                 [invocation getArgument:&completionHandler atIndex:3];
                 completionHandler(data, response, error);
+                expect(operationQueue).to(have_received("addOperationWithBlock:"));
                 expect(deferred).to_not(have_received("resolveWithValue:"));
                 expect(deferred).to(have_received("rejectWithError:"));
                 expect(deferred.promise.error).to_not(be_nil);
@@ -139,12 +142,13 @@ describe(@"HTTPClient", ^{
                     error = nil;
                 });
                 
-                it(@"resolves with value on the KSDeferred object", ^{
+                it(@"queues an operation that resolves with value", ^{
                     [client postData:data url:@"http://example.com/lol"];
                     NSInvocation *invocation = [[session sent_messages] lastObject];
                     [invocation getArgument:&completionHandler atIndex:3];
                     NSData *responseBody = [@"lol" dataUsingEncoding:NSUTF8StringEncoding];
                     completionHandler(responseBody, response, error);
+                    expect(operationQueue).to(have_received("addOperationWithBlock:"));
                     expect(deferred).to(have_received("resolveWithValue:"));
                     expect(deferred.promise.value).to(equal(data));
                     expect(deferred.promise.error).to(be_nil);
@@ -157,12 +161,13 @@ describe(@"HTTPClient", ^{
                     error = nil;
                 });
                 
-                it(@"rejects with error on the KSDeferred object", ^{
+                it(@"queues an operation that rejects with error", ^{
                     [client postData:data url:@"http://example.com/lol"];
                     NSInvocation *invocation = [[session sent_messages] lastObject];
                     [invocation getArgument:&completionHandler atIndex:3];
                     NSData *receivedData = [@"lol" dataUsingEncoding:NSUTF8StringEncoding];
                     completionHandler(receivedData, response, error);
+                    expect(operationQueue).to(have_received("addOperationWithBlock:"));
                     expect(deferred).to_not(have_received("resolveWithValue:"));
                     expect(deferred).to(have_received("rejectWithError:"));
                     expect(deferred.promise.error.localizedDescription).to(contain([NSString stringWithFormat:NSLocalizedString(@"ServerResponseError", nil), 500]));
@@ -176,11 +181,12 @@ describe(@"HTTPClient", ^{
                 error = [[NSError alloc] initWithDomain:@"failure!" code:PivotPongErrorCodeServerError userInfo:nil];
             });
             
-            it(@"rejects with error on the KSDeferred object", ^{
+            it(@"queues an operation that rejects with error", ^{
                 [client postData:data url:@"http://example.com/lol"];
                 NSInvocation *invocation = [[session sent_messages] lastObject];
                 [invocation getArgument:&completionHandler atIndex:3];
                 completionHandler(data, response, error);
+                expect(operationQueue).to(have_received("addOperationWithBlock:"));
                 expect(deferred).to_not(have_received("resolveWithValue:"));
                 expect(deferred).to(have_received("rejectWithError:"));
                 expect(deferred.promise.error).to_not(be_nil);

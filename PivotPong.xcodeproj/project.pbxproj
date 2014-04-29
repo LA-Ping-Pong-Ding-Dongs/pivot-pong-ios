@@ -27,6 +27,8 @@
 		AE10BCEC18FC8D2700E9FE34 /* AttestationControllerSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE10BCEB18FC8D2700E9FE34 /* AttestationControllerSpec.mm */; };
 		AE10BCEE18FC8DA200E9FE34 /* AppDelegateSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE10BCED18FC8DA200E9FE34 /* AppDelegateSpec.mm */; };
 		AE5EAF0D18FDECE1008222E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE0F2E2F18FC9FEC007B6EF0 /* Main.storyboard */; };
+		AE609270190F2DEA00522808 /* MatchesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE60926F190F2DEA00522808 /* MatchesTableViewCell.m */; };
+		AE609271190F2DEA00522808 /* MatchesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE60926F190F2DEA00522808 /* MatchesTableViewCell.m */; };
 		AE7D5F2F190093B30070F512 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AE7D5F2E190093B30070F512 /* Localizable.strings */; };
 		AE7D5F30190093B30070F512 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AE7D5F2E190093B30070F512 /* Localizable.strings */; };
 		AE802114190829B300642E80 /* MatchesControllerSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE802113190829B300642E80 /* MatchesControllerSpec.mm */; };
@@ -95,6 +97,8 @@
 		AE4F245C18FDD681006907CA /* libPods-Specs.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Specs.a"; path = "../Pods/build/Debug-iphoneos/libPods-Specs.a"; sourceTree = "<group>"; };
 		AE5EAF0918FDEA39008222E1 /* libPods-PivotPong.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-PivotPong.a"; path = "../Pods/build/Debug-iphoneos/libPods-PivotPong.a"; sourceTree = "<group>"; };
 		AE5EAF0B18FDEAB7008222E1 /* libPods-Specs.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Specs.a"; path = "../Pods/build/Debug-iphoneos/libPods-Specs.a"; sourceTree = "<group>"; };
+		AE60926E190F2DEA00522808 /* MatchesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MatchesTableViewCell.h; path = UI/MatchesTableViewCell.h; sourceTree = "<group>"; };
+		AE60926F190F2DEA00522808 /* MatchesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MatchesTableViewCell.m; path = UI/MatchesTableViewCell.m; sourceTree = "<group>"; };
 		AE7297D618FD9B8D00F58A30 /* libPods-PivotPong-Blindside.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-PivotPong-Blindside.a"; path = "../Pods/build/Release-iphoneos/libPods-PivotPong-Blindside.a"; sourceTree = "<group>"; };
 		AE7297D818FD9BA200F58A30 /* libPods-PivotPong-Blindside.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-PivotPong-Blindside.a"; path = "../Pods/build/Release-iphoneos/libPods-PivotPong-Blindside.a"; sourceTree = "<group>"; };
 		AE7297DA18FD9BB200F58A30 /* libPods-PivotPong-Blindside.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-PivotPong-Blindside.a"; path = "../Pods/build/Release-iphoneos/libPods-PivotPong-Blindside.a"; sourceTree = "<group>"; };
@@ -388,6 +392,8 @@
 			isa = PBXGroup;
 			children = (
 				AEDF07DB1905DEC300AB07CC /* PlayerCell.xib */,
+				AE60926E190F2DEA00522808 /* MatchesTableViewCell.h */,
+				AE60926F190F2DEA00522808 /* MatchesTableViewCell.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -607,6 +613,7 @@
 				AEA2626F190731FF00E96B44 /* MatchesController.m in Sources */,
 				AEAAD32419005FD700A10D57 /* Configurator.m in Sources */,
 				AE03B72D19058D8000E4E644 /* BlindsidedStoryboard.m in Sources */,
+				AE609270190F2DEA00522808 /* MatchesTableViewCell.m in Sources */,
 				AE03B7311905C46300E4E644 /* PlayerTableViewController.m in Sources */,
 				AEAAD30E19005DA300A10D57 /* PivotPongClient.m in Sources */,
 				AE10BCE718FC8CF600E9FE34 /* AttestationController.m in Sources */,
@@ -635,6 +642,7 @@
 				AEAAD31619005F9C00A10D57 /* HTTPClientSpec.mm in Sources */,
 				AE03B7321905C46300E4E644 /* PlayerTableViewController.m in Sources */,
 				AE802114190829B300642E80 /* MatchesControllerSpec.mm in Sources */,
+				AE609271190F2DEA00522808 /* MatchesTableViewCell.m in Sources */,
 				AE0F2E3618FCA342007B6EF0 /* HomeControllerSpec.mm in Sources */,
 				AEAAD31719005F9C00A10D57 /* DataClientSpec.mm in Sources */,
 				AE10BCEA18FC8D1100E9FE34 /* IdentificationControllerSpec.mm in Sources */,
